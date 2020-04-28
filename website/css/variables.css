@@ -10,19 +10,16 @@
   --body-font: Arial;
   --title-font: Garamond;
 
-  --bg-dark-theme: #006060; /* acc */
+  --body-bg: #fff;
+  --body-default-color: #000;
+
+  --bg-dark-theme: #006060; 
   --bg-dark-theme-border: #003d3d;
-  --text-medium-dark-theme: #ffeaeb; /* acc */
+  --text-medium-dark-theme: #ffeaeb;                   
   --text-large-dark-theme: #fff;
   --text-medium-dark-theme-highlight: #edbec2;
   --text-large-dark-theme-highlight: #edbec2;
-
-  --bg-light-theme: #FFC0CB;
-  --bg-light-theme-border: #fad8de;
-  --text-medium-light-theme: #003131; /* acc */
-  --text-large-light-theme: #013c3c;
-  --text-medium-light-theme-highlight: #006060;
-  --text-large-light-theme-highlight: #006060;
+;
 }
 /*
 Core breakpoints

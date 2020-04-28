@@ -1,17 +1,19 @@
 .body-text {
   font-family: var(--body-font), sans-serif;
-  font-weight: 400;
+  font-weight: var(--body-font-weight);
   font-style: normal;
 }
 
 .title-text {
-  font-family: var(--title-font), sans-serif;
+  font-family: var(--primary-title-font), sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.pre-text {
-  font-weight: 400;
+label,
+legend {
+  font-family: var(--title-font), sans-serif;
+  font-weight: var(--title-font-weight);
   font-style: normal;
 }
 
@@ -20,7 +22,6 @@
 --------------------------------------------------------------*/
 
 body,
-label,
 select,
 option,
 li,
@@ -37,7 +38,8 @@ body {
   margin: 0;
   width: 100%;
   min-height: 100%;
-  color: var(--text-medium-dark-theme);
+  color: var(--body-default-color);
+  background: var(--body-bg);
 }
 
 body.dark {
@@ -57,20 +59,21 @@ h5,
 h6 {
   clear: both;
   font-family: var(--title-font), sans-serif;
-  font-weight: 700;
+  font-weight: var(--title-font-weight);
   font-style: normal;
 }
 
 a {
-  color: var(--text-medium-dark-theme-highlight);
-  text-decoration: none;
+  color: var(--bg-light-theme);
+  text-decoration: underline;
 }
 
 .light a {
   color: var(--text-medium-light-theme-highlight);
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   text-decoration: underline;
 }
 
@@ -109,10 +112,10 @@ blockquote {
 }
 
 blockquote::before {
-  content: '“';
+  content: "“";
   font-family: var(--title-font);
   line-height: 0.5;
-  font-weight: 700;
+  font-weight: var(--title-font-weight);
   font-size: 6rem;
   position: absolute;
   top: 0;
@@ -128,6 +131,11 @@ cite {
   font-size: var(--text-large);
   line-height: 1;
   font-style: normal;
+}
+
+strong {
+  font-family: var(--title-font);
+  font-weight: var(--title-font-weight);
 }
 
 cite img {
