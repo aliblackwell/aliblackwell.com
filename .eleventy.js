@@ -1,4 +1,8 @@
-module.exports = function(config) {
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
+module.exports = function (config) {
+
+  config.addPlugin(eleventyNavigationPlugin);
   // pass some assets right through
   config.addPassthroughCopy("./website/css")
   config.addPassthroughCopy("./website/img")

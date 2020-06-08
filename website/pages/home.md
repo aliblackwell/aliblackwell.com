@@ -1,8 +1,9 @@
 ---
 title: Home
 layout: layouts/home.njk 
-language: 'en'
 permalink: '/'
-dir: 'ltr'
+eleventyNavigation:
+  key: Home
+  order: 0
 ---
 
