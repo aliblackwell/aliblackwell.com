@@ -1,9 +1,28 @@
 backend:
   name: github
   repo: aliblackwell/jamstack-starter # Path to your GitHub repository
+
+# when using the default proxy server port
+local_backend: true
+# local_backend:
+#   # when using a custom proxy server port
+#   url: http://localhost:8082/api/v1
+#   # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
+#   allowed_hosts: ['192.168.0.1']
+
 media_folder: "website/img" 
 public_folder: "/img" 
 collections:
+  - label: "Core Options"
+    name: "options"
+    files:
+      - label: "Header and navigation options"
+        name: "options"
+        file: "website/_data/options.json"
+        fields:
+          - {label: Logo alignment - centre or left?, name: logo, widget: string}
+          - {label: Primary menu - burger or bottom?, name: menuStyle, widget: string}
+          - {label: If burger menu - always or mobile, name: showBurger, widget: string}
   - label: "Pages"
     name: "pages"
     files:
@@ -13,3 +32,21 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
+
+  # Our pages e.g. About
+  - name: "services"
+    label: "Services"
+    folder: "website/services"
+    create: true # Change to true to allow editors to create new pages
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+        name: "eleventyNavigation"
+        widget: "object"
+        fields:
+          - { label: "Parent", name: "parent", widget: "string" }
+          - { label: "Key", name: "key", widget: "string" }
+          - { label: "Order", name: "order", widget: "number", default: 0 }
+      - { label: "Body", name: "body", widget: "markdown" }

@@ -1,6 +1,5 @@
 {
-    "logo": "centre",
-    "menuStyle": "burger",
-    "showBurger": "mobile"
-  }
-  
+  "logo": "centre",
+  "menuStyle": "burger",
+  "showBurger": "mobile"
+}

@@ -29,3 +29,6 @@ collections:
               - {label: Position, name: position, widget: string}
               - {label: Photo, name: photo, widget: image}
 ```
+## Working with a Local Git Repository
+
+Netlify CMS [Docs](https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository)

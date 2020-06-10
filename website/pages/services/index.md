@@ -8,7 +8,7 @@ eleventyNavigation:
 intro: |-
   We offer a wide variety of services which you can browse below.
 
-  > The services offered by Jamstack Blaster are really profound
+  > The services offered by Jamstack Blaster are amazing
 
   Look at this:
 

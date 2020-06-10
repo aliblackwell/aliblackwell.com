@@ -11,7 +11,7 @@
         <div class="contain-content-all">
             <section>
                 <h1>{{title}}</h1>
-                {{intro}}
+                {{intro | safe }}
                 {% include 'navigation-components/contents-nav.njk' %}
 
             </section>
