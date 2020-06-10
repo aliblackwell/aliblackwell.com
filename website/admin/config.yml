@@ -20,9 +20,33 @@ collections:
         name: "options"
         file: "website/_data/options.json"
         fields:
-          - {label: Logo alignment - centre or left?, name: logo, widget: string}
-          - {label: Primary menu - burger or bottom?, name: menuStyle, widget: string}
-          - {label: If burger menu - always or mobile, name: showBurger, widget: string}
+          - label: Logo alignment
+            hint: Where would you like your logo to appear?
+            name: logo
+            widget: "select"            
+            options: 
+              - label: "Align centre"
+                value: "centre"
+              - label: "Align left"
+                value: "left"
+          - label: Primary menu mobile format 
+            hint: On mobile, what should happen to your primary menu?
+            name: menuStyle
+            widget: "select"
+            options: 
+              - label: "Hamburger Menu - I have a long menu and it just won't fit on mobile (not recommended)"
+                value: "burger"
+              - label: "Move to bottom - It's closer to my user's thumbs and they can see all the options immediately. (recommended)"
+                value: "bottom"
+          - label: Always hamburger or just on mobile?
+            hint: If you've chosen a hamburger menu, do you want it to appear the whole time, or only on mobile?
+            name: showBurger
+            widget: "select"
+            options: 
+              - label: "Never show my menu items without a click (not recommended)"
+                value: "always"
+              - label: "Only use the hamburger for mobile users (recommended)"
+                value: "mobile"
   - label: "Pages"
     name: "pages"
     files:
@@ -36,7 +60,7 @@ collections:
   # Our pages e.g. About
   - name: "services"
     label: "Services"
-    folder: "website/services"
+    folder: "website/pages/services"
     create: true # Change to true to allow editors to create new pages
     slug: "{{slug}}"
     fields:
@@ -46,7 +70,7 @@ collections:
         name: "eleventyNavigation"
         widget: "object"
         fields:
-          - { label: "Parent", name: "parent", widget: "string" }
-          - { label: "Key", name: "key", widget: "string" }
+          - { label: "Navigation label", name: "key", widget: "string"}
+          - { label: "Parent", name: "parent", widget: "string", default: "Services"  }          
           - { label: "Order", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
