@@ -6,9 +6,14 @@
 </head>
 <body class="home">
   <main class="container">
-    <header class="banner">
-      {% include 'partials/nav.njk' %}
-    </header>
+
+    {% include 'navigation-components/main-nav.njk' %}
+    <div class="contain-content-all">
+      {{ content | safe }}
+    </div>
+
+    {% include 'partials/footer.njk' %}
+
   </main>
   {% include 'partials/global-js.njk' %}
   <script>

@@ -1,0 +1,5 @@
+.contain-content-all {
+    width: var(--widest-width);
+    margin: 0 auto;
+    position: relative;
+}

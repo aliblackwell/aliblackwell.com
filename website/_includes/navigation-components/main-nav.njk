@@ -1,0 +1,48 @@
+<a class="skip-link" href="#primary">Skip to content</a>
+<header class="nav-container logo-{{options.logo}} menu-{{options.menuStyle}} {% if options.menuStyle == 'burger' %} show-burger-{{options.showBurger}} {% endif %}">
+  <div class="contain-content-all">
+    <nav class="main-nav group" aria-labelledby="site-logo">
+      <h1 class="logo-container" id="site-logo">
+        <a href="/">{{ config.siteTitle }}</a>
+      </h1>
+
+      {% set navPages = collections.all | eleventyNavigation %}
+      <div class="navs">
+        <div class="primary-nav-container">
+          {% if options.menuStyle == 'burger' %}
+            <div class="burger-menu">
+              <input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="vh">
+              <label for="toggle" data-opens-menu="data-opens-menu">
+                &#x2630; Menu
+                <span class="vh expanded-text">expanded</span>
+                <span class="vh collapsed-text">collapsed</span>
+              </label>
+              <div role="menu" data-menu-origin="left">
+
+              {% endif %}
+              <ul>
+                {%- for entry in navPages %}
+                  <li{% if entry.url == page.url %} class="my-active-class" {% endif %}>
+                    <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                  </li>
+                {%- endfor %}
+              </ul>
+              {% if options.menuStyle == 'burger' %}
+              </div>
+            </div><!-- / .burger-menu -->
+          {% endif %}
+        </div>
+        <div class="secondary-nav-container">
+          {% set navPages = collections.all | eleventyNavigation('Secondary') %}
+          <ul>
+            {%- for entry in navPages %}
+              <li{% if entry.url == page.url %} class="my-active-class" {% endif %}>
+                <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+              </li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

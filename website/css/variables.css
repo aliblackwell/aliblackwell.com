@@ -10,9 +10,17 @@
   --body-font: Arial;
   --title-font: Garamond;
 
+  --widest-width: 1600px;
+
   --body-bg: #fff;
   --body-default-color: #000;
 
+  --nav-bg: #c0ffee;
+  --text-color: #111;
+
+
+  
+  --bg-default-theme: #fff;
   --bg-dark-theme: #006060; 
   --bg-dark-theme-border: #003d3d;
   --text-medium-dark-theme: #ffeaeb;                   
@@ -24,6 +32,18 @@
 /*
 Core breakpoints
 */
+@media (max-width:  1600px) {
+  :root {
+    --widest-width: 90%;
+  }
+}
+
+@media (max-width:  1100px) {
+  :root {
+    --widest-width: 95%;
+  }
+}
+
 
 @media (max-width: 900px) {
   :root {

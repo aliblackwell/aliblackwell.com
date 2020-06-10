@@ -5,9 +5,7 @@ html {
   scroll-behavior: smooth;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
@@ -21,7 +19,7 @@ img {
 
 /* Text meant only for screen readers. */
 
-.screen-reader-text {
+.screen-reader-text, .vh {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -56,6 +54,34 @@ img {
   /* Above WP toolbar. */
 }
 
+body .skip-link {
+  background-color: #f1f1f1;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  color: #21759b;
+  display: block;
+  font: bold 14px/normal "Noto Sans", sans-serif;
+  left: -9999em;
+  outline: none;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  text-transform: none;
+  top: -50em;
+  position: absolute;
+  transition: none;
+  width: 10rem;
+  text-align: center;
+}
+
+html body [href].skip-link:focus {
+  clip: auto;
+  height: auto;
+  left: 50%;
+  top: 7px;
+  margin-left: -5rem;
+  z-index: 100000;
+  position: absolute;
+}
+
 /* Do not show the outline on the skip link target. */
 
 #content[tabindex="-1"]:focus {
@@ -87,9 +113,7 @@ html {
   line-height: 1.4;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit;
 }
@@ -101,9 +125,7 @@ html {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.001s !important;
     transition-duration: 0.001s !important;
   }

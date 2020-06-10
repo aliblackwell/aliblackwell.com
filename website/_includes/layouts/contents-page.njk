@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    {% include 'partials/head-default.njk' %}
+    {% include 'partials/meta-tags-default.njk' %}
+</head>
+<body class="dark">
+    <main class="container">
+
+        {% include 'navigation-components/main-nav.njk' %}
+
+        <div class="contain-content-all">
+            {% include 'navigation-components/contents-nav.njk' %}
+            {{ content | safe }}
+        </div>
+
+        {% include 'partials/footer.njk' %}
+
+    </main>
+    {% include 'partials/global-js.njk' %}
+</body>
+</html>

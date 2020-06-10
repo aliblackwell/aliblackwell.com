@@ -1,8 +1,8 @@
 backend:
   name: github
   repo: aliblackwell/jamstack-starter # Path to your GitHub repository
-media_folder: "website/img" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/img" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "website/img" 
+public_folder: "/img" 
 collections:
   - label: "Pages"
     name: "pages"

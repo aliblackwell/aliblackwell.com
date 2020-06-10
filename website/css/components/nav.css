@@ -1,0 +1,148 @@
+.nav-container {
+    width: 100%;
+    height: auto;
+    background: var(--nav-bg);
+    position: relative;
+    z-index: 100;
+}
+
+.nav-container h1.logo-container {
+    margin: 0;
+    font-size: var(--text-medium);
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 1rem;
+}
+
+.logo-centre.nav-container h1.logo-container {
+    text-align: center;
+    right: 0;
+}
+
+.logo-left h1.logo-container {
+    text-align: left;
+    left: 0;
+}
+
+h1.logo-container img {
+    width: 5rem;
+}
+
+.main-nav ul, .main-nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.main-nav li a, [data-opens-menu] {
+    display: block;
+    padding: 1rem;
+    line-height: 1;
+    color: var(--text-color);
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+
+ 
+
+.logo-centre .primary-nav-container {
+    width: 100%;
+}
+
+.logo-centre .secondary-nav-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.logo-left .navs {
+    width: 100%;
+    text-align: right;
+    float: left;
+}
+
+[data-menu-component] {
+    position: relative;
+    display: inline-block;
+}
+
+.show-burger-always [role="menu"] {
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+[data-opens-menu] {
+    display: none;
+}
+
+.show-burger-always [data-opens-menu] {
+    display: inline-block;
+}
+
+@media (max-width: 900px) {
+    [data-opens-menu] {
+        display: inline-block;
+    }
+    [role="menu"] {
+        position: absolute;
+        left: 0;
+        display: none;
+    }
+}
+
+[role="menu"] ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+[role="menu"] a { 
+    text-align: left; 
+}
+
+[type="checkbox"]:focus+[data-opens-menu], [role="menu"] a:focus {
+    outline: 2px solid transparent;
+    /* ↑ for WHCM */
+    box-shadow: inset 0 0 0 2px DodgerBlue;
+}
+
+:checked+label .expanded-text {
+    display: inline;
+}
+
+:checked+label .collapsed-text {
+    display: none;
+}
+
+[type="checkbox"]:not(:checked)+label .expanded-text {
+    display: none;
+}
+
+[type="checkbox"]:not(:checked)+label .collapsed-text {
+    display: inline;
+}
+
+:checked~[role="menu"] {
+    display: block;
+    padding: 6rem 0 3rem;
+    width: 100%;
+    top: 0rem;
+    background: var(--nav-bg); 
+    text-align: center;
+
+}
+
+[data-menu-origin="right"] {
+    left: auto;
+    right: 0;
+}
+
+[role="menu"] a {
+    display: block;
+    min-width: 100%; 
+    white-space: nowrap;
+}
