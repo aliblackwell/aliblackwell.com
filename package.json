@@ -13,6 +13,7 @@
   },
   "scripts": {
     "test": "mocha",
+    "local-cms": "npx netlify-cms-proxy-server",
     "start": "dotenv -- cross-var netlify dev",
     "site:serve": "dotenv -- cross-var npx eleventy --serve",
     "site:build": "npx eleventy && npm run functions:build",

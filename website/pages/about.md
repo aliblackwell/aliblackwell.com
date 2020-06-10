@@ -1,9 +1,10 @@
 ---
 title: About
-layout: layouts/page.njk 
-permalink: '/about/'
+layout: layouts/contents-page.njk
+permalink: /about/
 eleventyNavigation:
   key: About
-  order: 1
+  order: 0
+  parent: Primary
 ---
-
+We have a website.

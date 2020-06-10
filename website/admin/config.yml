@@ -1,5 +1,6 @@
 backend:
   name: github
+  squash_merges: true
   repo: aliblackwell/jamstack-starter # Path to your GitHub repository
 
 # when using the default proxy server port
@@ -47,20 +48,52 @@ collections:
                 value: "always"
               - label: "Only use the hamburger for mobile users (recommended)"
                 value: "mobile"
-  - label: "Pages"
-    name: "pages"
-    files:
-      - label: "Services Page"
-        name: "services"
-        file: "website/pages/services/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
 
-  # Our pages e.g. About
+  # Pages
+  - name: "pages"
+    label: "Pages"
+    folder: "website/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:      
+      - {label: Title, name: title, widget: string}
+      - label: Page template
+        hint: Which template should we use to render this page?
+        name: layout
+        widget: "select"
+        options: 
+          - label: "Homepage"
+            value: "layouts/home.njk"
+          - label: "Normal page"
+            value: "layouts/page.njk"     
+          - label: "Page with children (e.g. services)"
+            value: "layouts/contents-page.njk"     
+      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+        name: "eleventyNavigation"
+        widget: "object"
+        fields:
+          - { label: "Navigation label", name: "key", widget: "string"}
+          - label: Navigation location 
+            hint: Which menu should this page appear in?
+            name: parent
+            widget: "select"
+            options: 
+              - label: "Primary menu. Defaults top-left."
+                value: "Primary"
+              - label: "Secondary menu. Defaults top-right."
+                value: "Secondary"     
+              - label: "Footer menu"
+                value: "Footer"    
+              - label: "Don't show in site menus."
+                value: "none"      
+          - { label: "Order", name: "order", widget: "number", default: 0 }
+      
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Services
   - name: "services"
     label: "Services"
-    folder: "website/pages/services"
+    folder: "website/services"
     create: true # Change to true to allow editors to create new pages
     slug: "{{slug}}"
     fields:

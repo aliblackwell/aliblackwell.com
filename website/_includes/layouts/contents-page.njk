@@ -9,14 +9,15 @@
         {% include 'navigation-components/main-nav.njk' %}
 
         <div class="contain-content-all">
+            {% include 'navigation-components/contents-nav.njk' %}
+
             <section>
+
                 <h1>{{title}}</h1>
-                {{intro | safe }}
-                {% include 'navigation-components/contents-nav.njk' %}
+                {{ content | safe }}
 
             </section>
 
-            {{ content | safe }}
         </div>
 
         {% include 'partials/footer.njk' %}

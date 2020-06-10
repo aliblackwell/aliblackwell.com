@@ -32,3 +32,13 @@ collections:
 ## Working with a Local Git Repository
 
 Netlify CMS [Docs](https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository)
+
+Open two terminals and run:
+
+`$ npm run local-cms`
+
+in the first and:
+
+`$ npm start`
+
+in the second

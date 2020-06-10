@@ -1,6 +1,15 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-
+const markdownIt = require("markdown-it");
 module.exports = function (config) {
+
+  
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  
+  config.setLibrary("md", markdownIt(options));
 
   config.addPlugin(eleventyNavigationPlugin);
   // pass some assets right through

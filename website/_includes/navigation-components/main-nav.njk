@@ -6,7 +6,7 @@
         <a href="/">{{ config.siteTitle }}</a>
       </h1>
 
-      {% set navPages = collections.all | eleventyNavigation %}
+      {% set navPages = collections.all | eleventyNavigation('Primary') %}
       <div class="navs">
         <div class="primary-nav-container">
           {% if options.menuStyle == 'burger' %}
