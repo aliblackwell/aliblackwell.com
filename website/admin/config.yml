@@ -87,8 +87,70 @@ collections:
               - label: "Don't show in site menus."
                 value: "none"      
           - { label: "Order", name: "order", widget: "number", default: 0 }
-      
       - { label: "Body", name: "body", widget: "markdown" }
+      - label: Dynamic Content
+        name: dynamicContent
+        widget: "list"
+        types:
+          - label: Testimonial
+            name: testimonial
+            widget: "list"
+            summary: '{{fields.testimonial}} - {{fields.author.name}}'
+            fields:
+              - {label: Testimonial, name: testimonial, widget: string, default: "Everything is awesome!"}
+              - label: Author
+                name: author
+                widget: object
+                fields:
+                  - {label: Name, name: name, widget: string, default: "Emmet"}
+                  - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
+          - label: Sharer
+            name: sharer
+            widget: "list"
+            summary: 'Sharer Active - {{fields.sharerType}}'
+            fields:
+              - label: Show sharer 
+                hint: Do you want to display a sharing component?
+                name: sharerType
+                widget: "select"
+                options: 
+                  - label: "Full-width"
+                    value: "fullWidth"
+                  - label: "Button sharer"
+                    value: "buttonSharer"     
+                  - label: "None"
+                    value: "none"    
+          - label: Form
+            name: form
+            widget: "list"
+            summary: 'Form Active - {{fields.formName}}'
+            fields:
+              - {label: Form Name, name: formName, widget: string, default: "Contact"}
+              - {label: Success Message, name: formSuccessMessage, widget: string, default: "Thank you for getting in touch. We will respond soon."}
+              - label: Fields
+                name: fields
+                widget: "list"
+                summary: '{{fields.fieldType}} - {{fields.inputLabel}}'
+                fields:
+                  - { label: Input Label, name: inputLabel, widget: string, hint: "e.g. 'Your name' or 'Your email'"}
+                  - label: Field
+                    name: fieldType
+                    hint: "What type of input would you like?"
+                    widget: "select"
+                    options: 
+                      - label: "Email"
+                        value: "inputEmail"
+                      - label: "Text"
+                        value: "inputText" 
+                      - label: "Long Text"
+                        value: "textarea"
+                      - label: "Number"
+                        value: "inputNumber"        
+
+      
+      
+
+
 
   # Services
   - name: "services"
@@ -107,3 +169,8 @@ collections:
           - { label: "Parent", name: "parent", widget: "string", default: "Services"  }          
           - { label: "Order", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
+
+
+
+
+  

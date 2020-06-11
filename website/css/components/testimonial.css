@@ -1,0 +1,8 @@
+blockquote {
+    margin: 0 auto;
+    position: relative;
+    max-width: 90%;
+    padding-left: 4rem;
+    text-align: left;
+    font-size: var(--text-jumbo);
+}

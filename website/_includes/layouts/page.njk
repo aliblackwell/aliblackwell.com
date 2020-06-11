@@ -2,18 +2,60 @@
 <head>
   {% include 'partials/head-default.njk' %}
   {% include 'partials/meta-tags-default.njk' %}
+  {% if permalink == '/' %}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {% endif %}
 </head>
 <body class="dark">
   <main class="container">
 
     {% include 'navigation-components/main-nav.njk' %}
-    <div class="contain-content-all">
+    <div id="primary" class="contain-content-all">
+
       {{ content | safe }}
+
+      {% for thing in dynamicContent %}
+        {% if thing.type == 'testimonial' %}
+          {% testimonial thing.testimonial,
+          thing.author %}
+        {% endif %}
+        {% if thing.type == 'sharer' %}
+          {% include 'partials/sharer.njk' %}
+        {% endif %}
+        {% if thing.type == 'form' %}
+          {% form thing, thing.fields %}
+        {% endif %}
+      {% endfor %}
+
     </div>
 
     {% include 'partials/footer.njk' %}
 
   </main>
   {% include 'partials/global-js.njk' %}
+  {% for thing in dynamicContent %}
+    {% if thing.type == 'sharer' %}
+      <script src="/js/sharer.js"></script>
+    {% endif %}
+  {% endfor %}
+
+  {% if permalink == '/' %}
+    <script>
+      if (window.netlifyIdentity) {
+        window
+          .netlifyIdentity
+          .on("init", user => {
+            if (!user) {
+              window
+                .netlifyIdentity
+                .on("login", () => {
+                  document.location.href = "/admin/";
+                });
+            }
+          });
+      }
+    </script>
+  {% endif %}
+
 </body>
 </html>

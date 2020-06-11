@@ -36,16 +36,5 @@
     "lint-staged": "^10.1.1",
     "mocha": "^7.1.1",
     "prettier": "^2.0.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "./website/js/*.js": [
-      "eslint --fix",
-      "git add"
-    ]
   }
 }
