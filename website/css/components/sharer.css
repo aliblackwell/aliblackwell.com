@@ -2,8 +2,7 @@
 
 .sharer {
   position: relative;
-  z-index: 14;
-  display: inline-block;
+  z-index: 999; 
   margin-bottom: .5rem;
 }
 
@@ -106,16 +105,16 @@
 }
 
 .sharer li.fb a {
-  background-image: url("../img/facebook.svg");
+  background-image: url("../../img/facebook.svg");
 }
 .sharer li.tt a {
-  background-image: url("../img/twitter.svg");
+  background-image: url("../../img/twitter.svg");
 }
 .sharer li.wa a {
-  background-image: url("../img/whatsapp.svg");
+  background-image: url("../../img/whatsapp.svg");
 }
 .sharer li.el a {
-  background-image: url("../img/email.svg");
+  background-image: url("../../img/email.svg");
 }
 
 

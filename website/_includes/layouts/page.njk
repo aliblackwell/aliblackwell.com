@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="{{language}}" dir={{dir}}>
 <head>
   {% include 'partials/head-default.njk' %}
   {% include 'partials/meta-tags-default.njk' %}
@@ -7,55 +8,104 @@
   {% endif %}
 </head>
 <body class="dark">
-  <main class="container">
+  <a class="skip-link" href="#primary">Skip to content</a>
+  <header class="nav-container {{options.navStyle}} logo-{{options.logo}} menu-{{options.menuStyle}} {% if options.menuStyle == 'burger' %} show-burger-{{options.showBurger}} {% endif %}">
+    <div class="contain-content-all">
+      <h1 class="logo-container" id="site-logo">
+        <a href="/">{{ config.siteTitle }}</a>
+      </h1>
 
-    {% include 'navigation-components/main-nav.njk' %}
-    <div id="primary" class="contain-content-all">
+      {% include 'navigation-components/main-nav.njk' %}
+    </div>
+  </header>
+  <main id="primary" class="container">
+    <div class="contain-content-all">
 
-      {{ content | safe }}
+      <header>
+        <h1 id="page-title">{{title}}</h1>
+
+        {% if hasContents == true %}
+          {% include 'navigation-components/contents-nav.njk' %}
+        {% endif %}
+      </header>
+      <section class="content">
+        <div>
+          {{ content | safe }}
+        </div>
+      </section>
 
       {% for thing in dynamicContent %}
+
         {% if thing.type == 'testimonial' %}
-          {% testimonial thing.testimonial,
-          thing.author %}
+          <section class="testimonial">
+            {% testimonial thing.testimonial,
+            thing.author %}
+          </section>
         {% endif %}
+
         {% if thing.type == 'sharer' %}
-          {% include 'partials/sharer.njk' %}
+          <section class="sharer">
+            {% include 'partials/sharer.njk' %}
+          </section>
         {% endif %}
+
         {% if thing.type == 'form' %}
-          {% form thing, thing.fields %}
+          <section class="form">
+            {% form thing,
+            thing.fields %}
+            </section>
+          {% endif %}
+
+          {% if thing.type == 'cards' %}
+            <section class="cards {{thing.layout}}">
+              <header>
+                <h1>{{thing.title}}</h1>
+              </header>
+              {% for card in thing.cards %}
+                <article class="card">
+                  <figure class="img">
+                    {% if card.svg %}
+                      {% include 'undraw-illustrations/'+card.svg+'.svg' %}
+                    {% endif %}
+                  </figure>
+                  <div class="text">
+                    <h2>{{card.title}}</h2>
+                    <p>{{card.text}}</p>
+                  </div>
+                </article>
+              {% endfor %}
+            </section>
+          {% endif %}
+        {% endfor %}
+
+      </main>
+
+      {% include 'partials/footer.njk' %}
+
+      {% include 'partials/global-js.njk' %}
+      {% for thing in dynamicContent %}
+        {% if thing.type == 'sharer' %}
+          <script src="/js/sharer.js"></script>
         {% endif %}
       {% endfor %}
 
-    </div>
+      {% if permalink == '/' %}
+        <script>
+          if (window.netlifyIdentity) {
+            window
+              .netlifyIdentity
+              .on("init", user => {
+                if (!user) {
+                  window
+                    .netlifyIdentity
+                    .on("login", () => {
+                      document.location.href = "/admin/";
+                    });
+                }
+              });
+          }
+        </script>
+      {% endif %}
 
-    {% include 'partials/footer.njk' %}
-
-  </main>
-  {% include 'partials/global-js.njk' %}
-  {% for thing in dynamicContent %}
-    {% if thing.type == 'sharer' %}
-      <script src="/js/sharer.js"></script>
-    {% endif %}
-  {% endfor %}
-
-  {% if permalink == '/' %}
-    <script>
-      if (window.netlifyIdentity) {
-        window
-          .netlifyIdentity
-          .on("init", user => {
-            if (!user) {
-              window
-                .netlifyIdentity
-                .on("login", () => {
-                  document.location.href = "/admin/";
-                });
-            }
-          });
-      }
-    </script>
-  {% endif %}
-
-</body>
-</html>
+    </body>
+  </html>

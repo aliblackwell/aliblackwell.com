@@ -1,5 +1,4 @@
-<nav aria-labelledby="sections-heading">
-  <h2 id="sections-heading">{{title}}</h2>
+<nav aria-labelledby="page-title">
   {% set navPages = collections.all | eleventyNavigation(title) %}
   <ul>
     {%- for entry in navPages %}

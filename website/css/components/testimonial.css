@@ -1,8 +1,19 @@
+
+/* Quotes */
 blockquote {
-    margin: 0 auto;
-    position: relative;
-    max-width: 90%;
-    padding-left: 4rem;
-    text-align: left;
-    font-size: var(--text-jumbo);
+    display: block;
+    font-size: var(--text-large);
+    line-height: var(--line-height);
+    margin: 1rem auto;
+    max-width: var(--width-card-medium);
+    padding: 1.5rem 1rem;
+    text-align: var(--justify-important);
+}
+
+cite {
+    color: var(--color-text-secondary);
+    display: block;
+    font-size: var(--text-medium);
+    line-height: var(--line-height);
+    padding: 1.5rem 0;
 }

@@ -36,6 +36,7 @@ With its strong foundations in accessibility and privacy, and its scaffolding, t
 * No-class CSS with sensible defaults*
 * Prettier code formatting
 * Pre-commit linting
+* Light and dark theme support
 
 *Some of these features are works in progress! 
 

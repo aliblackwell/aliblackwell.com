@@ -130,3 +130,7 @@ html {
     transition-duration: 0.001s !important;
   }
 }
+
+[hidden] {
+  display: none;
+}

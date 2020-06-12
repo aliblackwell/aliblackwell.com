@@ -1,7 +1,18 @@
-let sharer = document.querySelector(".share-section ul")
-sharer && sharer.classList.add("hidden")
 
-function sharePage() {
+let sharer = document.querySelectorAll(".share-section ul")
+
+sharer && sharer.forEach(el => el.classList.add("hidden"))
+
+const sharers = document.querySelectorAll('.sharer-button')
+sharers && sharers.forEach(sharer => {
+  sharer.addEventListener('click', (evt) => {
+    sharePage(evt.target.nextElementSibling)
+  })
+})
+
+
+function sharePage(sharer) {
+
   let isVisible = sharer.classList.contains("hidden")
   let links = document.querySelectorAll(".share-link")
   if (isVisible) {
@@ -18,3 +29,4 @@ function sharePage() {
   }
   sharer.classList.toggle("hidden")
 }
+

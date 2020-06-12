@@ -1,6 +1,5 @@
 ---
 title: Contact Us
-layout: layouts/page.njk
 permalink: /contact/
 eleventyNavigation:
   key: Contact

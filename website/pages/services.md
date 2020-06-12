@@ -1,7 +1,7 @@
 ---
 title: Services
-layout: layouts/contents-page.njk
 permalink: /services/
+hasContents: true
 eleventyNavigation:
   key: Services
   parent: Primary

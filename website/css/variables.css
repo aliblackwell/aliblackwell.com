@@ -6,44 +6,70 @@
   --line-height: 1.2;
   --box-width: 30rem;
   --outline-focus: #fafa00;
-
-  --body-font: Arial;
-  --title-font: Garamond;
-
+  --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;;
+  --body-font-weight: 400;
+  --title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --title-font-weight: 400;
   --widest-width: 1600px;
-
   --body-bg: #fff;
   --body-default-color: #111;
-
-  --nav-bg: #c0ffee;
   --text-color: #111;
 
+  --default-spacing: 2rem;
 
-
-  --bg-default-theme: #fff;
-  --bg-dark-theme: #006060; 
-  --bg-dark-theme-border: #003d3d;
-  --text-medium-dark-theme: #ffeaeb;                   
-  --text-large-dark-theme: #fff;
-  --text-medium-dark-theme-highlight: #edbec2;
-  --text-large-dark-theme-highlight: #edbec2;
-;
+  /* Below names from MVP.css by Andy Brewer */
+  --border-radius: 5px;
+  --box-shadow: 2px 2px 10px;
+  --color: #114edd;
+  --color-accent: #118bee15;
+  --color-bg: #fff;
+  --color-bg-secondary: #e9e9e9;
+  --color-secondary: #480de9;
+  --color-secondary-accent: #920de90b;
+  --color-shadow: #f4f4f4;
+  --color-text: #000;
+  --color-text-secondary: #999; 
+  --hover-brightness: 1.2;
+  --justify-important: center;
+  --justify-normal: left;
+  --line-height: 1.5;
+  --width-card: 285px;
+  --width-card-medium: 460px;
+  --width-card-wide: 60rem;
+  --width-content: 1080px;
 }
+
+/*
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color: #0097fc;
+        --color-accent: #0097fc4f;
+        --color-bg: #333;
+        --color-bg-secondary: #555;
+        --color-secondary: #e20de9;
+        --color-secondary-accent: #e20de94f;
+        --color-shadow: #bbbbbb20;
+        --color-text: #f7f7f7;
+        --color-text-secondary: #aaa;
+    }
+}
+*/
+
 /*
 Core breakpoints
 */
-@media (max-width:  1600px) {
+
+@media (max-width : 1600px) {
   :root {
     --widest-width: 90%;
   }
 }
 
-@media (max-width:  1100px) {
+@media (max-width : 1100px) {
   :root {
     --widest-width: 95%;
   }
 }
-
 
 @media (max-width: 900px) {
   :root {

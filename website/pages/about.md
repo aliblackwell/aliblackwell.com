@@ -1,6 +1,5 @@
 ---
 title: About
-layout: layouts/contents-page.njk
 permalink: /about/
 eleventyNavigation:
   key: About

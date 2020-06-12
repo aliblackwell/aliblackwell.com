@@ -11,8 +11,8 @@ local_backend: true
 #   # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
 #   allowed_hosts: ['192.168.0.1']
 
-media_folder: "website/img" 
-public_folder: "/img" 
+media_folder: "website/img"
+public_folder: "/img"
 collections:
   - label: "Core Options"
     name: "options"
@@ -24,17 +24,26 @@ collections:
           - label: Logo alignment
             hint: Where would you like your logo to appear?
             name: logo
-            widget: "select"            
-            options: 
+            widget: "select"
+            options:
               - label: "Align centre"
                 value: "centre"
               - label: "Align left"
                 value: "left"
-          - label: Primary menu mobile format 
+          - label: Nav style
+            hint: Would you like a bar of colour behind your nav?
+            name: navStyle
+            widget: "select"
+            options:
+              - label: "Yes"
+                value: "hasBg"
+              - label: "No"
+                value: "clearBg"
+          - label: Primary menu mobile format
             hint: On mobile, what should happen to your primary menu?
             name: menuStyle
             widget: "select"
-            options: 
+            options:
               - label: "Hamburger Menu - I have a long menu and it just won't fit on mobile (not recommended)"
                 value: "burger"
               - label: "Move to bottom - It's closer to my user's thumbs and they can see all the options immediately. (recommended)"
@@ -43,7 +52,7 @@ collections:
             hint: If you've chosen a hamburger menu, do you want it to appear the whole time, or only on mobile?
             name: showBurger
             widget: "select"
-            options: 
+            options:
               - label: "Never show my menu items without a click (not recommended)"
                 value: "always"
               - label: "Only use the hamburger for mobile users (recommended)"
@@ -55,102 +64,154 @@ collections:
     folder: "website/pages"
     create: true
     slug: "{{slug}}"
-    fields:      
-      - {label: Title, name: title, widget: string}
-      - label: Page template
-        hint: Which template should we use to render this page?
-        name: layout
-        widget: "select"
-        options: 
-          - label: "Homepage"
-            value: "layouts/home.njk"
-          - label: "Normal page"
-            value: "layouts/page.njk"     
-          - label: "Page with children (e.g. services)"
-            value: "layouts/contents-page.njk"     
+    fields:
+      - { label: Title, name: title, widget: string }
+      - {
+          label: permalink,
+          name: permalink,
+          widget: string,
+          hint: "Must include / at beginning and end e.g. /privacy/",
+        }
       - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
         name: "eleventyNavigation"
         widget: "object"
         fields:
-          - { label: "Navigation label", name: "key", widget: "string"}
-          - label: Navigation location 
+          - { label: "Navigation label", name: "key", widget: "string" }
+          - label: Navigation location
             hint: Which menu should this page appear in?
             name: parent
             widget: "select"
-            options: 
+            options:
               - label: "Primary menu. Defaults top-left."
                 value: "Primary"
               - label: "Secondary menu. Defaults top-right."
-                value: "Secondary"     
+                value: "Secondary"
               - label: "Footer menu"
-                value: "Footer"    
+                value: "Footer"
               - label: "Don't show in site menus."
-                value: "none"      
+                value: "none"
           - { label: "Order", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: Dynamic Content
         name: dynamicContent
         widget: "list"
         types:
+          - label: Cards
+            name: cards
+            widget: "list"
+            summary: "Cards: {{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Layout"
+                name: "layout"
+                widget: "select"
+                options:
+                  - label: "Full wide"
+                    value: "fullWide"
+                  - label: "Three up"
+                    value: "threeUp"
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - label: "Title"
+                    name: "title"
+                    widget: string
+                  - label: "Text"
+                    name: "text"
+                    widget: "markdown"
+                  - label: "SVG"
+                    name: "svg"
+                    widget: string
+                    hint: The filename excluding extension of an SVG inside website/_includes/undraw-illustrations e.g. undraw_gdpr_3xfb
+                  - label: "Image"
+                    name: img
+                    widget: image
+                    hint: Choose either an SVG or an image
           - label: Testimonial
             name: testimonial
             widget: "list"
-            summary: '{{fields.testimonial}} - {{fields.author.name}}'
+            summary: "{{fields.testimonial}} - {{fields.author.name}}"
             fields:
-              - {label: Testimonial, name: testimonial, widget: string, default: "Everything is awesome!"}
+              - {
+                  label: Testimonial,
+                  name: testimonial,
+                  widget: string,
+                  default: "Everything is awesome!",
+                }
               - label: Author
                 name: author
                 widget: object
                 fields:
-                  - {label: Name, name: name, widget: string, default: "Emmet"}
-                  - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
+                  - {
+                      label: Name,
+                      name: name,
+                      widget: string,
+                      default: "Emmet",
+                    }
+                  - {
+                      label: Avatar,
+                      name: avatar,
+                      widget: image,
+                      default: "/img/emmet.jpg",
+                    }
           - label: Sharer
             name: sharer
             widget: "list"
-            summary: 'Sharer Active - {{fields.sharerType}}'
+            summary: "Sharer Active - {{fields.sharerType}}"
             fields:
-              - label: Show sharer 
+              - label: Show sharer
                 hint: Do you want to display a sharing component?
                 name: sharerType
                 widget: "select"
-                options: 
+                options:
                   - label: "Full-width"
                     value: "fullWidth"
                   - label: "Button sharer"
-                    value: "buttonSharer"     
+                    value: "buttonSharer"
                   - label: "None"
-                    value: "none"    
+                    value: "none"
           - label: Form
             name: form
             widget: "list"
-            summary: 'Form Active - {{fields.formName}}'
+            summary: "Form Active - {{fields.formName}}"
             fields:
-              - {label: Form Name, name: formName, widget: string, default: "Contact"}
-              - {label: Success Message, name: formSuccessMessage, widget: string, default: "Thank you for getting in touch. We will respond soon."}
+              - {
+                  label: Form Name,
+                  name: formName,
+                  widget: string,
+                  default: "Contact",
+                }
+              - {
+                  label: Success Message,
+                  name: formSuccessMessage,
+                  widget: string,
+                  default: "Thank you for getting in touch. We will respond soon.",
+                }
               - label: Fields
                 name: fields
                 widget: "list"
-                summary: '{{fields.fieldType}} - {{fields.inputLabel}}'
+                summary: "{{fields.fieldType}} - {{fields.inputLabel}}"
                 fields:
-                  - { label: Input Label, name: inputLabel, widget: string, hint: "e.g. 'Your name' or 'Your email'"}
+                  - {
+                      label: Input Label,
+                      name: inputLabel,
+                      widget: string,
+                      hint: "e.g. 'Your name' or 'Your email'",
+                    }
                   - label: Field
                     name: fieldType
                     hint: "What type of input would you like?"
                     widget: "select"
-                    options: 
+                    options:
                       - label: "Email"
                         value: "inputEmail"
                       - label: "Text"
-                        value: "inputText" 
+                        value: "inputText"
                       - label: "Long Text"
                         value: "textarea"
                       - label: "Number"
-                        value: "inputNumber"        
-
-      
-      
-
-
+                        value: "inputNumber"
 
   # Services
   - name: "services"
@@ -165,12 +226,12 @@ collections:
         name: "eleventyNavigation"
         widget: "object"
         fields:
-          - { label: "Navigation label", name: "key", widget: "string"}
-          - { label: "Parent", name: "parent", widget: "string", default: "Services"  }          
+          - { label: "Navigation label", name: "key", widget: "string" }
+          - {
+              label: "Parent",
+              name: "parent",
+              widget: "string",
+              default: "Services",
+            }
           - { label: "Order", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
-
-
-
-
-  
