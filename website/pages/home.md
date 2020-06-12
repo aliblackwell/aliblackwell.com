@@ -9,11 +9,6 @@ eleventyNavigation:
 dynamicContent:
   - type: sharer
     sharerType: buttonSharer
-  - type: testimonial
-    testimonial: Everything is magical!
-    author:
-      name: Imogen
-      avatar: /img/img_2598.jpeg
 ---
 Welcome to our site.
 
