@@ -101,9 +101,10 @@ You can browse all available commands in the scripts section of `package.json`
 
 It would be wonderful for you to contribute code and ideas. Pull requests are welcome.
 
-## Inspiration
+## Inspiration and credit
 
 * [Eleventy Netlify Boilerplate](https://github.com/danurbanowicz/eleventy-netlify-boilerplate) by Dan Urbanowicz
 * [Accessibility For Everyone](https://laurakalbag.com/book/) by Laura Kalbag
 * [Inclusive Components](https://inclusive-components.design/) (the book) by Heydon Pickering
 * [MVP.css](https://andybrewer.github.io/mvp/) by Andy Brewer
+* [unDraw Illustrations](https://undraw.co/) by Katerina Limpitsouni
