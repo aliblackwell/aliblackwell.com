@@ -1,7 +1,7 @@
 /* Nav */
 
 header.nav-container nav {
-    margin-bottom: 7rem;
+    margin-bottom:0rem;
 }
 
 nav ul {
@@ -23,15 +23,6 @@ nav ul li {
     z-index: 100;
 }
 
-.nav-container.hasBg {
-    background: var(--color);
-    color: var(--color-bg);
-}
-
-.nav-container.has-bg h1 a {
-    color: var(--color-bg)
-}
-
 .nav-container h1.logo-container {
     margin: 0;
     font-size: var(--text-medium);
@@ -44,10 +35,6 @@ nav ul li {
 .logo-centre.nav-container h1.logo-container {
     text-align: center;
     right: 0;
-}
-
-.hasBg h1.logo-container a {
-    color: var(--color-bg);
 }
 
 .logo-left h1.logo-container {
@@ -73,10 +60,6 @@ h1.logo-container img {
     position: relative;
     z-index: 10;
     cursor: pointer;
-}
-
-.hasBg .main-nav li a, .hasBg [data-opens-menu] {
-    color: var(--color-bg)
 }
 
 .logo-centre .primary-nav-container {
@@ -163,10 +146,6 @@ h1.logo-container img {
     width: 100%;
     top: 0rem;
     text-align: center;
-}
-
-.hasBg :checked~[role="menu"] {
-    background: var(--color);
 }
 
 [data-menu-origin="right"] {

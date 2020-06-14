@@ -1,5 +1,6 @@
 ---
 title: Contact Us
+showTitle: true
 permalink: /contact/
 eleventyNavigation:
   key: Contact

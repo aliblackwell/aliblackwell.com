@@ -31,14 +31,30 @@ collections:
               - label: "Align left"
                 value: "left"
           - label: Nav style
-            hint: Would you like a bar of colour behind your nav?
+            hint: What colour would you like behind your nav?
             name: navStyle
             widget: "select"
+            default: "primary-bg"
             options:
-              - label: "Yes"
-                value: "hasBg"
-              - label: "No"
-                value: "clearBg"
+              - label: "Primary"
+                value: "primary-bg"
+              - label: "Secondary"
+                value: "secondary-bg"
+              - label: "None"
+                value: "no-bg"
+          - label: Footer style
+            hint: What colour would you like behind your nav?
+            name: footerStyle
+            widget: "select"
+            default: "secondary-bg"
+            options:
+              - label: "Primary"
+                value: "primary-bg"
+              - label: "Secondary"
+                value: "secondary-bg"
+              - label: "None"
+                value: "no-bg"
+
           - label: Primary menu mobile format
             hint: On mobile, what should happen to your primary menu?
             name: menuStyle
@@ -66,6 +82,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: Title, name: title, widget: string }
+      - { label: Show title?, name: showTitle, widget: boolean, default: true }
       - {
           label: permalink,
           name: permalink,
@@ -91,11 +108,40 @@ collections:
               - label: "Don't show in site menus."
                 value: "none"
           - { label: "Order", name: "order", widget: "number", default: 0 }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
       - label: Dynamic Content
         name: dynamicContent
         widget: "list"
         types:
+          - label: Gallery
+            name: gallery
+            widget: list
+            summary: Gallery
+            fields:
+              - label: "Items"
+                name: "galleryItems"
+                widget: "list"
+                fields:
+                  - { label: Url, name: url, widget: string, required: false }
+                  - {
+                      label: Description,
+                      name: description,
+                      widget: text,
+                      required: false,
+                    }
+                  - {
+                      label: "Image Attribution",
+                      name: attribution,
+                      widget: string,
+                      required: false,
+                    }
+                  - { label: Image alt text, name: alt, widget: text }
+                  - {
+                      label: Image,
+                      name: image,
+                      widget: image,
+                      default: "/img/holding.jpg",
+                    }
           - label: Cards
             name: cards
             widget: "list"
@@ -119,7 +165,7 @@ collections:
                     widget: string
                   - label: "Text"
                     name: "text"
-                    widget: "markdown"
+                    widget: "text"
                   - label: "SVG"
                     name: "svg"
                     widget: string
@@ -128,6 +174,7 @@ collections:
                     name: img
                     widget: image
                     hint: Choose either an SVG or an image
+                    required: false
           - label: Testimonial
             name: testimonial
             widget: "list"

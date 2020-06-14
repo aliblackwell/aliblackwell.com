@@ -1,6 +1,7 @@
 {
   "logo": "centre",
   "menuStyle": "burger",
-  "showBurger": "always",
-  "navStyle": "hasBg"
+  "showBurger": "mobile",
+  "navStyle": "primary-bg",
+  "footerStyle": "secondary-bg"
 }

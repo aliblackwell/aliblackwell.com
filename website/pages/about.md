@@ -1,5 +1,6 @@
 ---
 title: About
+showTitle: true
 permalink: /about/
 eleventyNavigation:
   key: About

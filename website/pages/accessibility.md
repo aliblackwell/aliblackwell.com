@@ -1,5 +1,6 @@
 ---
 title: Accessibility
+showTitle: true
 permalink: /accessibility/
 eleventyNavigation:
   order: 2

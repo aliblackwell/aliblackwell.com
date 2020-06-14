@@ -1,6 +1,6 @@
 /* Links */
 a {
-  color: var(--color-secondary);
+  color: var(--color-links);
   display: inline-block;
   font-family: var(--title-font);
   font-weight: var(--title-font-weight);
@@ -8,6 +8,7 @@ a {
 }
 
 a:hover {
+  color: var(--color-links-hover);
   filter: brightness(var(--hover-brightness));
   text-decoration: underline;
 }
@@ -16,6 +17,7 @@ a b,
 a em,
 a i,
 a strong,
+strong a,
 button {
   border-radius: var(--border-radius);
   display: inline-block;
@@ -23,6 +25,10 @@ button {
   font-weight: bold;
   line-height: var(--line-height);
   margin: 0.5rem 0;
+  padding: 0.5rem 1.5rem;
+}
+
+.big-button {
   padding: 1rem 2rem;
 }
 
@@ -37,17 +43,28 @@ button:hover {
 
 a b,
 a strong,
+strong a,
 button {
-  background-color: var(--color);
-  border: 2px solid var(--color);
-  color: var(--color-bg);
+  background-color: var(--body-bg-accent);
+  border: 2px solid var(--body-bg-accent);
+  color: var(--body-bg-accent-color);
 }
+
+a:hover b,
+a:hover strong,
+strong a:hover,
+button:hover {
+ text-decoration: none;
+  color: var(--body-bg-accent-color-hover);
+}
+
+
 
 a em,
 a i {
-  border: 2px solid var(--color);
+  border: 2px solid var(--main-bg-color);
   border-radius: var(--border-radius);
-  color: var(--color);
+  color: var(--main-bg-color);
   display: inline-block;
   padding: 1rem 2rem;
 }
@@ -56,7 +73,7 @@ a i {
 /* Outline button */
 .button.outline-button {
   margin-bottom: var(--default-spacing);
-  color: var(--body-default-color);
+  color: inherit;
   text-transform: none;
   font-weight: var(--bold-font-weight);
   font-family: var(--bold-font);

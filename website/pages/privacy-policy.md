@@ -2,6 +2,7 @@
 title: Privacy policy
 permalink: /privacy/
 layout: layouts/page.njk
+showTitle: true
 eleventyNavigation:
   order: 0
   key: Privacy

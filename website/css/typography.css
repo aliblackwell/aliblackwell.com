@@ -1,18 +1,17 @@
 .body-text {
-  font-family: var(--body-font), sans-serif;
+  font-family: var(--body-font);
   font-weight: var(--body-font-weight);
   font-style: normal;
 }
 
 .title-text {
-  font-family: var(--primary-title-font), sans-serif;
-  font-weight: 700;
+  font-family: var(--title-font);
+  font-weight: var(--title-font-weight);
   font-style: normal;
 }
 
-label,
-legend {
-  font-family: var(--title-font), sans-serif;
+label, legend {
+  font-family: var(--title-font);
   font-weight: var(--title-font-weight);
   font-style: normal;
 }
@@ -21,71 +20,79 @@ legend {
 # Core Typography
 --------------------------------------------------------------*/
 
-body,
-select,
-option,
-li,
-span,
-optgroup,
-input,
-textarea {
-  font-family: var(--body-font), sans-serif;
-  font-weight: 400;
+body, select, option, li, span, optgroup, input, textarea, p {
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
   font-style: normal;
+  line-height: var(--line-height);
 }
 
 body {
   margin: 0;
   width: 100%;
   min-height: 100%;
-  color: var(--body-default-color);
+  color: var(--body-color);
   background: var(--body-bg);
+  margin: 0;
+  overflow-x: hidden; 
 }
 
-body.dark {
-  background: var(--bg-dark-theme);
+.primary-bg {
+  background: var(--primary-bg);
+  color: var(--primary-color);
 }
 
-body.light {
-  background: var(--bg-light-theme);
-  color: var(--text-medium-light-theme);
+.secondary-bg {
+  background: var(--secondary-bg);
+  color: var(--secondary-color);
 }
 
 h1 {
   font-size: var(--text-jumbo);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
+  color: var(--body-highlight-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: var(--title-font), sans-serif;
+  font-family: var(--title-font);
   font-weight: var(--title-font-weight);
   font-style: normal;
 }
 
 a {
-  color: var(--color-secondary);
+  color: var(--body-link-color);
   text-decoration: underline;
 }
 
-
-a:hover,
-a:active {
+a:hover, a:active {
+  color: var(--body-link-hover);
   text-decoration: underline;
+}
+
+.primary-bg a {
+  color: var(--primary-link-color);
+}
+
+.primary-bg a:hover, .primary-bg a:active {
+  color: var(--primary-link-hover);
+}
+
+.secondary-bg a {
+  color: var(--secondary-link-color);
+}
+
+.secondary-bg a:hover, .secondary-bg a:active {
+  color: var(--secondary-link-hover);
 }
 
 p {
   margin-bottom: 1.5em;
 }
 
-dfn,
-cite,
-em,
-i {
+dfn, cite, em, i {
   font-style: italic;
 }
 
@@ -102,14 +109,6 @@ blockquote {
   padding-left: 4rem;
   text-align: left;
   font-size: var(--text-jumbo);
-}
-
-.theme blockquote {
-  color: var(--text-large-dark-theme);
-}
-
-.light .theme blockquote {
-  color: var(--text-large-light-theme);
 }
 
 blockquote::before {
@@ -143,16 +142,13 @@ cite img {
   display: inline;
   margin-right: 1rem;
   border-radius: 100%;
-  border: solid 0.25rem var(--bg-dark-theme-border);
-  width: 4rem;
-  margin-bottom: -1.8rem;
-}
-
-.light cite img {
-  border: solid 0.25rem var(--bg-light-theme-border);
 }
 
 .title-text {
   font-size: var(--text-jumbo);
   line-height: 1;
+}
+
+section.content p:first-child:last-child {
+  font-size: var(--text-jumbo);
 }

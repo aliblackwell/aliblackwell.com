@@ -13,5 +13,5 @@ figure figcaption {
 }
 
 svg {
-    fill: var(--color);
+    fill: var(--secondary-bg);
 }

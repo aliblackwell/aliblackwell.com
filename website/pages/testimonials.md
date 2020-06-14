@@ -1,5 +1,7 @@
 ---
 title: Testimonials
+showTitle: true
+permalink: /testimonials/
 eleventyNavigation:
   order: 2
   key: Testimonials

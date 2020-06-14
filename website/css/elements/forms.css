@@ -2,8 +2,8 @@
 
 button:disabled,
 input:disabled {
-    background: var(--color-bg-secondary);
-    border-color: var(--color-bg-secondary);
+    background: var(--border-color);
+    border-color: var(--border-color);
     color: var(--color-text-secondary);
     cursor: not-allowed;
 }
@@ -13,7 +13,7 @@ button[disabled]:hover {
 }
 
 form {
-    border: 1px solid var(--color-bg-secondary);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow) var(--color-shadow);
     display: block;
@@ -37,14 +37,10 @@ textarea {
     max-width: var(--width-card-wide);
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-    display: inline-block;
-}
+
 
 input[type="checkbox"]+label,
 input[type="radio"]+label {
-    display: inline-block;
     font-weight: normal;
     position: relative;
     top: 1px;
@@ -53,7 +49,7 @@ input[type="radio"]+label {
 input,
 select,
 textarea {
-    border: 1px solid var(--color-bg-secondary);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
     padding: 0.4rem 0.8rem;
@@ -61,7 +57,7 @@ textarea {
 
 input[readonly],
 textarea[readonly] {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--border-color);
 }
 
 label {

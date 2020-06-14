@@ -1,19 +1,9 @@
-body {
-    background: var(--color-bg);
-    color: var(--color-text);
-    font-family: var(--body-font);
-    line-height: var(--line-height);
-    margin: 0;
-    overflow-x: hidden;
-    padding: 0 0 1rem 0;
-}
-
 footer, main {
     padding: 2rem 1rem;
 }
 
 hr {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--secondary-bg);
     border: none;
     height: 1px;
     margin: 4rem 0;
@@ -56,31 +46,6 @@ section header {
     width: 100%;
 }
 
-/* Layout */
-
-article aside {
-    background: var(--color-secondary-accent);
-    border-left: 4px solid var(--color-secondary);
-    padding: 0.01rem 0.8rem;
-}
-
-section aside {
-    border: 1px solid var(--color-bg-secondary);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow) var(--color-shadow);
-    margin: 1rem;
-    padding: 1.25rem;
-    width: var(--width-card);
-}
-
-section aside:hover {
-    box-shadow: var(--box-shadow) var(--color-bg-secondary);
-}
-
-section aside img, section aside svg {
-    max-width: 100%;
-}
-
 /* Footer */
 
 footer .content {
@@ -95,8 +60,6 @@ footer .content {
 footer {
     position: relative;
     min-height: 4rem;
-    color: var(--text-medium-light);
-    background: var(--bg-dark-theme);
     text-align: right;
     z-index: 10;
 }
@@ -131,3 +94,5 @@ footer nav ul li {
     display: block;
     text-align: right;
 }
+
+ 

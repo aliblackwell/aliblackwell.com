@@ -1,11 +1,29 @@
 ---
 title: Home
+showTitle: false
 permalink: /
 eleventyNavigation:
   key: Home
   order: 0
   parent: none
 dynamicContent:
+  - type: gallery
+    galleryItems:
+      - image: /img/luisa-brimble-eXlNXI0LfMM-unsplash.jpg
+        url: /services/
+        description: View our services
+        attribution: Photo by Luisa Brimble on Unsplash
+        alt: Clean white bed next to a window overlooking a harbour
+      - image: /img/wolfgang-hasselmann-5ag8p7cruny-unsplash.jpg
+        url: About us
+        description: Find out more about us
+        attribution: Photo by Wolfgang Hasselmann on Unsplash
+        alt: A bug on a yellow wall
+      - image: /img/luisa-brimble-Fp4qcya4L3c-unsplash.jpg
+        attribution: Photo by Luisa Brimble on Unsplash
+        alt: A white rowing boat full of duvets and flowers
+        url: /none
+        description: None
   - type: cards
     title: Websites with soul
     layout: fullWide
@@ -29,8 +47,6 @@ dynamicContent:
   - type: sharer
     sharerType: buttonSharer
 ---
-Welcome to our site.
+# Thank you for visiting the JAMstack Starter website. Everything you can see is editable via the CMS; page layouts are completely customisable.
 
-Everything you can see is editable using [Netlify CMS](https://www.netlifycms.org/).
-
-Please [login to edit](/admin).
+**[Find out more](/about/)**
