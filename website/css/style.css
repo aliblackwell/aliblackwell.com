@@ -10,6 +10,7 @@
 
 /* Custom components */
 
+@import url("./components/text-ctas.css");
 @import url("./components/cards.css");
 @import url("./components/sharer.css");
 @import url("./components/testimonial.css");

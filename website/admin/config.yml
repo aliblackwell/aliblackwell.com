@@ -36,24 +36,28 @@ collections:
             widget: "select"
             default: "primary-bg"
             options:
-              - label: "Primary"
-                value: "primary-bg"
-              - label: "Secondary"
-                value: "secondary-bg"
-              - label: "None"
-                value: "no-bg"
+              - label: Standard
+                value: standard-bg
+              - label: Primary
+                value: primary-bg
+              - label: Secondary
+                value: secondary-bg
+              - label: Contrast
+                value: contrast-bg
           - label: Footer style
             hint: What colour would you like behind your nav?
             name: footerStyle
             widget: "select"
             default: "secondary-bg"
             options:
-              - label: "Primary"
-                value: "primary-bg"
-              - label: "Secondary"
-                value: "secondary-bg"
-              - label: "None"
-                value: "no-bg"
+              - label: Standard
+                value: standard-bg
+              - label: Primary
+                value: primary-bg
+              - label: Secondary
+                value: secondary-bg
+              - label: Contrast
+                value: contrast-bg
 
           - label: Primary menu mobile format
             hint: On mobile, what should happen to your primary menu?
@@ -113,10 +117,36 @@ collections:
         name: dynamicContent
         widget: "list"
         types:
+          - label: Two-up text CTAs
+            name: textCTAs
+            widget: list
+            fields:
+              - &bg
+                label: Background Colour
+                name: bg
+                widget: select
+                options:
+                  - label: Standard
+                    value: standard-bg
+                  - label: Primary
+                    value: primary-bg-tint
+                  - label: Secondary
+                    value: secondary-bg-tint
+                  - label: Contrast
+                    value: contrast-bg
+              - label: Items
+                name: ctaItems
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Blurb, name: blurb, widget: text }
+                  - { label: Button Label, name: label, widget: string }
+                  - { label: URL, name: url, widget: string }
           - label: Free Content Section
             name: freeContent
             widget: list
             fields:
+              - *bg
               - {
                   label: Section Title,
                   name: title,
@@ -129,6 +159,7 @@ collections:
             widget: list
             summary: Gallery
             fields:
+              - *bg
               - label: "Items"
                 name: "galleryItems"
                 widget: "list"
@@ -158,6 +189,7 @@ collections:
             widget: "list"
             summary: "Cards: {{fields.title}}"
             fields:
+              - *bg
               - { label: "Title", name: "title", widget: "string" }
               - label: "Layout"
                 name: "layout"
@@ -191,6 +223,7 @@ collections:
             widget: "list"
             summary: "{{fields.testimonial}} - {{fields.author.name}}"
             fields:
+              - *bg
               - {
                   label: Testimonial,
                   name: testimonial,
@@ -218,6 +251,7 @@ collections:
             widget: "list"
             summary: "Sharer Active - {{fields.sharerType}}"
             fields:
+              - *bg
               - label: Show sharer
                 hint: Do you want to display a sharing component?
                 name: sharerType
@@ -234,6 +268,7 @@ collections:
             widget: "list"
             summary: "Form Active - {{fields.formName}}"
             fields:
+              - *bg
               - {
                   label: Form Name,
                   name: formName,

@@ -19,29 +19,45 @@
       </div>
     </header>
     <main id="primary" class="container">
-      <div class="contain-content-all">
 
-        <header>
+      <header>
+        <div class="contain-content-all">
           {% if showTitle == true %}
             <h1 id="page-title">{{title}}</h1>
           {% endif %}
           {% if hasContents == true %}
             {% include 'navigation-components/contents-nav.njk' %}
           {% endif %}
-        </header>
+        </div>
+      </header>
 
-        {% for content in dynamicContent %}
+      {% for content in dynamicContent %}
 
-          {% if content.type == 'freeContent'%}
-            <section class="content">
-              <div>
-                {{ content.content | markdownify | safe }}
-              </div>
-            </section>
-          {% endif %}
+        {% if content.type == 'textCTAs'%}
+          <section class="{{content.bg}} text-ctas two-up">
+            <div class="contain-content-all">
+              {% for item in content.ctaItems %}
+                <article>
+                  <h2>{{item.title}}</h2>
+                  <p>{{item.blurb}}</p>
+                  <a class="button" href="{{item.url}}">{{item.label}}</a>
+                </article>
+              {% endfor %}
+            </div>
+          </section>
+        {% endif %}
 
-          {% if content.type == 'gallery' %}
-            <section class="gallery">
+        {% if content.type == 'freeContent'%}
+          <section class="{{content.bg}} content no-flex">
+            <div class="contain-content-all">
+              {{ content.content | markdownify | safe }}
+            </div>
+          </section>
+        {% endif %}
+
+        {% if content.type == 'gallery' %}
+          <section class="{{content.bg}} gallery">
+            <div class="contain-content-all">
               {% for item in content.galleryItems %}
                 <article>
                   <figure>
@@ -50,31 +66,39 @@
                   </figure>
                 </article>
               {% endfor %}
-            </section>
-          {% endif %}
+            </div>
+          </section>
+        {% endif %}
 
-          {% if content.type == 'testimonial' %}
-            <section class="testimonial">
+        {% if content.type == 'testimonial' %}
+          <section class="{{content.bg}} testimonial">
+            <div class="contain-content-all">
               {% testimonial content.testimonial,
               content.author %}
-            </section>
-          {% endif %}
+            </div>
+          </section>
+        {% endif %}
 
-          {% if content.type == 'sharer' %}
-            <section class="sharer">
+        {% if content.type == 'sharer' %}
+          <section class="{{content.bg}} sharer">
+            <div class="contain-content-all">
               {% include 'partials/sharer.njk' %}
-            </section>
-          {% endif %}
+            </div>
+          </section>
+        {% endif %}
 
-          {% if content.type == 'form' %}
-            <section class="form">
+        {% if content.type == 'form' %}
+          <section class="{{content.bg}} form">
+            <div class="contain-content-all">
               {% form content,
               content.fields %}
-              </section>
-            {% endif %}
+              </div>
+            </section>
+          {% endif %}
 
-            {% if content.type == 'cards' %}
-              <section class="cards {{content.layout}}">
+          {% if content.type == 'cards' %}
+            <section class="{{content.bg}} cards {{content.layout}}">
+              <div class="contain-content-all">
                 <header>
                   <h1>{{content.title}}</h1>
                 </header>
@@ -91,38 +115,39 @@
                     </div>
                   </article>
                 {% endfor %}
-              </section>
-            {% endif %}
-          {% endfor %}
-
-        </main>
-
-        {% include 'partials/footer.njk' %}
-
-        {% include 'partials/global-js.njk' %}
-        {% for content in dynamicContent %}
-          {% if content.type == 'sharer' %}
-            <script src="/js/sharer.js"></script>
+              </div>
+            </section>
           {% endif %}
         {% endfor %}
 
-        {% if permalink == '/' %}
-          <script>
-            if (window.netlifyIdentity) {
-              window
-                .netlifyIdentity
-                .on("init", user => {
-                  if (!user) {
-                    window
-                      .netlifyIdentity
-                      .on("login", () => {
-                        document.location.href = "/admin/";
-                      });
-                  }
-                });
-            }
-          </script>
-        {% endif %}
+      </main>
 
-      </body>
-    </html>
+      {% include 'partials/footer.njk' %}
+
+      {% include 'partials/global-js.njk' %}
+      {% for content in dynamicContent %}
+        {% if content.type == 'sharer' %}
+          <script src="/js/sharer.js"></script>
+        {% endif %}
+      {% endfor %}
+
+      {% if permalink == '/' %}
+        <script>
+          if (window.netlifyIdentity) {
+            window
+              .netlifyIdentity
+              .on("init", user => {
+                if (!user) {
+                  window
+                    .netlifyIdentity
+                    .on("login", () => {
+                      document.location.href = "/admin/";
+                    });
+                }
+              });
+          }
+        </script>
+      {% endif %}
+
+    </body>
+  </html>

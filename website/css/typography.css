@@ -42,9 +42,24 @@ body {
   color: var(--primary-color);
 }
 
+.primary-bg-tint {
+  background: var(--primary-bg-tint);
+  color: var(--primary-tint-color);
+}
+
 .secondary-bg {
   background: var(--secondary-bg);
   color: var(--secondary-color);
+}
+
+.secondary-bg-tint {
+  background: var(--secondary-bg-tint);
+  color: var(--secondary-tint-color);
+}
+
+.contrast-bg {
+  background: var(--contrast-bg);
+  color: var(--contrast-color);
 }
 
 h1 {
@@ -53,6 +68,22 @@ h1 {
 
 h2 {
   color: var(--body-highlight-color);
+}
+
+.primary-bg h2 {
+  color: var(--primary-highlight-color);
+}
+
+.primary-bg-tint h2 {
+  color: var(--primary-tint-highlight-color);
+}
+
+.secondary-bg h2 {
+  color: var(--secondary-highlight-color);
+}
+
+.secondary-bg-tint h2 {
+  color: var(--secondary-tint-highlight-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -86,6 +117,14 @@ a:hover, a:active {
 
 .secondary-bg a:hover, .secondary-bg a:active {
   color: var(--secondary-link-hover);
+}
+
+.contrast-bg a {
+  color: var(--contrast-link-color);
+}
+
+.contrast-bg a:hover, .contrast-bg a:active {
+  color: var(--contrast-link-hover);
 }
 
 p {

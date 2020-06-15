@@ -1,0 +1,19 @@
+.two-up div {
+    display: flex;
+    flex-wrap: inherit;
+}
+
+@media (max-width: 700px) {
+    .two-up {
+        display: block;
+    }
+} 
+
+.two-up article {
+    margin-right: 2rem;
+    padding: 0;
+}
+
+.two-up article:last-child {
+    margin-right: 0;
+}

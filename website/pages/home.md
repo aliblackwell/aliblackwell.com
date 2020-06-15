@@ -15,6 +15,7 @@ dynamicContent:
 
 
       **[Find out more](/about/)**
+    bg: primary-bg-tint
   - type: gallery
     galleryItems:
       - image: /img/luisa-brimble-eXlNXI0LfMM-unsplash.jpg
@@ -32,6 +33,7 @@ dynamicContent:
         alt: A white rowing boat full of duvets and flowers
         url: /none
         description: None
+    bg: standard-bg
   - type: cards
     title: Websites with soul
     layout: fullWide
@@ -52,6 +54,7 @@ dynamicContent:
           site and even create new pages and layouts. You're empowered. We're
           delighted.
         svg: undraw_freelancer_b0my
+    bg: standard-bg
   - type: freeContent
     title: Customisable everything
     content: >-
@@ -104,6 +107,21 @@ dynamicContent:
 
 
       *Some of these features are works in progress! 
+    bg: standard-bg
   - type: sharer
     sharerType: buttonSharer
+    bg: standard-bg
+  - type: textCTAs
+    ctaItems:
+      - title: Simple components
+        blurb: Most websites only need a few very similar components. Why re-invent the
+          wheel every time?
+        label: Contact us
+        url: /contact/
+      - title: Custom layouts
+        blurb: Everything you might want to include, you can. From image galleries to
+          forms, JAMstack Starter has you covered.
+        label: About
+        url: /about/
+    bg: secondary-bg-tint
 ---

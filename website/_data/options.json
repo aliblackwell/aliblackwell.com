@@ -2,6 +2,6 @@
   "logo": "centre",
   "menuStyle": "burger",
   "showBurger": "mobile",
-  "navStyle": "no-bg",
-  "footerStyle": "secondary-bg"
+  "navStyle": "primary-bg",
+  "footerStyle": "contrast-bg"
 }

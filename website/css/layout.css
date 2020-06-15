@@ -1,4 +1,4 @@
-footer, main {
+footer {
     padding: 2rem 1rem;
 }
 
@@ -10,10 +10,12 @@ hr {
 }
 
 section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: var(--justify-important);
     padding: var(--default-spacing) 0;
+}
+
+section.no-flex {
+    display: block;
+    flex-wrap: unset;
 }
 
 .contain-content-all {
