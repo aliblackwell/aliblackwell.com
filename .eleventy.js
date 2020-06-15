@@ -1,16 +1,26 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 var slugify = require('slugify')
-const markdownIt = require("markdown-it");
+
 module.exports = function (config) {
 
-
-  let options = {
-    html: true,
+  const markdownIt = require('markdown-it');
+  const markdownItOptions = {
+    html: false,
     breaks: true,
-    linkify: true
+    linkify: true,
   };
+  const markdownItContainer = require('markdown-it-container');
+  const markdownItAbbr = require('markdown-it-abbr');
 
-  config.setLibrary("md", markdownIt(options));
+  const md = markdownIt(markdownItOptions)
+    .use(markdownItAbbr)
+    .use(markdownItContainer, 'info');
+  config.setLibrary('md', md);
+
+  // Add markdownify filter with Markdown-it configuration
+  config.addFilter('markdownify', (markdownString) =>
+    md.render(markdownString)
+  );
 
   config.addPlugin(eleventyNavigationPlugin);
   // pass some assets right through

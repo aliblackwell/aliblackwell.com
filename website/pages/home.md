@@ -7,6 +7,14 @@ eleventyNavigation:
   order: 0
   parent: none
 dynamicContent:
+  - type: freeContent
+    title: ""
+    content: >-
+      # Thank you for visiting the JAMstack Starter website. Everything you can
+      see is editable via the CMS; page layouts are completely customisable.
+
+
+      **[Find out more](/about/)**
   - type: gallery
     galleryItems:
       - image: /img/luisa-brimble-eXlNXI0LfMM-unsplash.jpg
@@ -44,9 +52,58 @@ dynamicContent:
           site and even create new pages and layouts. You're empowered. We're
           delighted.
         svg: undraw_freelancer_b0my
+  - type: freeContent
+    title: Customisable everything
+    content: >-
+      ### For your users
+
+
+      * 100% customisable pages via CMS
+
+      * Custom forms
+
+      * Choice of menus and layouts
+
+      * Sendgrid for sending emails*
+
+      * Stripe for handling payments (with privacy protection enabled)*
+
+      * WCAG(2.1) Compliance
+
+      * GDPR Compliance - no cookie notice needed
+
+
+      ### For developers
+
+
+      * [Eleventy](https://www.11ty.dev/) static site generator
+
+      * [Netlify CMS](https://www.netlifycms.org/) 
+
+      * Privacy-friendly analytics*
+
+      * [Netlify Dev](https://www.netlify.com/products/dev/) for local functions and forms
+
+      * Work with a local git repository
+
+      * Starter unit tests*
+
+      * Starter Netlify Functions
+
+      * Starter CMS with site options and dynamic page layouts
+
+      * Component library*
+
+      * No-class CSS with sensible defaults*
+
+      * Prettier code formatting
+
+      * Pre-commit linting
+
+      * Light and dark theme support
+
+
+      *Some of these features are works in progress! 
   - type: sharer
     sharerType: buttonSharer
 ---
-# Thank you for visiting the JAMstack Starter website. Everything you can see is editable via the CMS; page layouts are completely customisable.
-
-**[Find out more](/about/)**

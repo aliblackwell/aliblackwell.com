@@ -108,11 +108,22 @@ collections:
               - label: "Don't show in site menus."
                 value: "none"
           - { label: "Order", name: "order", widget: "number", default: 0 }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
-      - label: Dynamic Content
+      - &dynamicContent
+        label: Content
         name: dynamicContent
         widget: "list"
         types:
+          - label: Free Content Section
+            name: freeContent
+            widget: list
+            fields:
+              - {
+                  label: Section Title,
+                  name: title,
+                  widget: string,
+                  required: false,
+                }
+              - { label: Content, name: content, widget: markdown }
           - label: Gallery
             name: gallery
             widget: list
@@ -281,4 +292,4 @@ collections:
               default: "Services",
             }
           - { label: "Order", name: "order", widget: "number", default: 0 }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - *dynamicContent
