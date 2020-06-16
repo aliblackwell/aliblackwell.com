@@ -6,3 +6,6 @@
   command = "npm run site:build"
   publish = "ship-site"
   functions = "./lambda-built"
+
+[[plugins]]
+package = "netlify-plugin-image-optim"

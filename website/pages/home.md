@@ -34,7 +34,7 @@ dynamicContent:
         url: /none
         description: None
     bg: standard-bg
-  - type: cards
+  - type: cardsList
     title: Websites with soul
     layout: fullWide
     cards:

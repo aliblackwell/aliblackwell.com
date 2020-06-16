@@ -185,7 +185,7 @@ collections:
                       default: "/img/holding.jpg",
                     }
           - label: Cards
-            name: cards
+            name: cardsList
             widget: "list"
             summary: "Cards: {{fields.title}}"
             fields:
