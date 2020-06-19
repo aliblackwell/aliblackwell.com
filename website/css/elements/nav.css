@@ -24,12 +24,10 @@ nav ul li {
 }
 
 .nav-container h1.logo-container {
-    margin: 0;
     font-size: var(--text-medium);
     width: 100%;
     z-index: 1;
     position: absolute;
-    top: 1rem;
 }
 
 .logo-centre.nav-container h1.logo-container {

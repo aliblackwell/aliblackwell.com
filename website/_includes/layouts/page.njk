@@ -12,7 +12,13 @@
     <header class="nav-container {{options.navStyle}} logo-{{options.logoAlign}} menu-{{options.menuStyle}} {% if options.menuStyle == 'burger' %} show-burger-{{options.showBurger}} {% endif %}">
       <div class="contain-content-all">
         <h1 class="logo-container" id="site-logo">
-          <a href="/"><img alt="{{ config.siteTitle }}" src="{{options.logo}}"></a>
+          <a href="/">
+            {% if options.logo %}
+              <img alt="{{ meta.siteTitle }}" src="{{options.logo}}">
+            {% else %}
+              {{meta.siteTitle}}
+            {% endif %}
+          </a>
         </h1>
 
         {% include 'navigation-components/main-nav.njk' %}
@@ -44,7 +50,7 @@
                   <h2>{{item.title}}</h2>
                   <p>{{item.blurb}}</p>
                   {% if item.label %}
-                  <a class="button" href="{{item.url}}">{{item.label}}</a>
+                    <a class="button" href="{{item.url}}">{{item.label}}</a>
                   {% endif %}
                 </article>
               {% endfor %}
