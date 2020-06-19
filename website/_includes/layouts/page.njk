@@ -7,29 +7,32 @@
       <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     {% endif %}
   </head>
-  <body class="dark">
+  <body class="dark {{title | slug }}">
     <a class="skip-link" href="#primary">Skip to content</a>
-    <header class="nav-container {{options.navStyle}} logo-{{options.logo}} menu-{{options.menuStyle}} {% if options.menuStyle == 'burger' %} show-burger-{{options.showBurger}} {% endif %}">
+    <header class="nav-container {{options.navStyle}} logo-{{options.logoAlign}} menu-{{options.menuStyle}} {% if options.menuStyle == 'burger' %} show-burger-{{options.showBurger}} {% endif %}">
       <div class="contain-content-all">
         <h1 class="logo-container" id="site-logo">
-          <a href="/">{{ config.siteTitle }}</a>
+          <a href="/"><img alt="{{ config.siteTitle }}" src="{{options.logo}}"></a>
         </h1>
 
         {% include 'navigation-components/main-nav.njk' %}
       </div>
     </header>
     <main id="primary" class="container">
+      {% if hasContents == true %}
+        {% include 'navigation-components/contents-nav.njk' %}
+      {% endif %}
 
-      <header>
-        <div class="contain-content-all">
-          {% if showTitle == true %}
+      {% if showTitle == true %}
+        <header class="content">
+          <div class="contain-content-text">
+
             <h1 id="page-title">{{title}}</h1>
-          {% endif %}
-          {% if hasContents == true %}
-            {% include 'navigation-components/contents-nav.njk' %}
-          {% endif %}
-        </div>
-      </header>
+
+          </div>
+
+        </header>
+      {% endif %}
 
       {% for content in dynamicContent %}
 
@@ -40,7 +43,9 @@
                 <article>
                   <h2>{{item.title}}</h2>
                   <p>{{item.blurb}}</p>
+                  {% if item.label %}
                   <a class="button" href="{{item.url}}">{{item.label}}</a>
+                  {% endif %}
                 </article>
               {% endfor %}
             </div>
@@ -49,7 +54,7 @@
 
         {% if content.type == 'freeContent'%}
           <section class="{{content.bg}} content no-flex">
-            <div class="contain-content-all">
+            <div class="contain-content-text">
               {{ content.content | markdownify | safe }}
             </div>
           </section>
@@ -72,7 +77,7 @@
 
         {% if content.type == 'testimonial' %}
           <section class="{{content.bg}} testimonial">
-            <div class="contain-content-all">
+            <div class="contain-content-text">
               {% testimonial content.testimonial,
               content.author %}
             </div>
@@ -87,9 +92,27 @@
           </section>
         {% endif %}
 
+        {% if content.type == 'textWithImage' %}
+          <section class="{{content.bg}} text-with-image group">
+            <div class="contain-content-text">
+              <header>
+                <p>{{content.firstPara}}</p>
+              </header>
+              <div class="grid">
+                <figure>
+                  <img src="{{content.image}}" alt="{{content.alt}}"/>
+                </figure>
+                <article>
+                  {{ content.content | markdownify | safe }}
+                </article>
+              </div>
+            </div>
+          </section>
+        {% endif %}
+
         {% if content.type == 'form' %}
           <section class="{{content.bg}} form">
-            <div class="contain-content-all">
+            <div class="contain-content-text">
               {% form content,
               content.fields %}
               </div>
@@ -98,56 +121,65 @@
 
           {% if content.type == 'cardsList' %}
             <section class="{{content.bg}} cards {{content.layout}}">
-              <div class="contain-content-all">
-                <header>
-                  <h1>{{content.title}}</h1>
-                </header>
-                {% for card in content.cards %}
-                  <article class="card">
-                    <figure class="img">
-                      {% if card.svg %}
-                        {% include 'undraw-illustrations/'+card.svg+'.svg' %}
-                      {% endif %}
-                    </figure>
-                    <div class="text">
-                      <h2>{{card.title}}</h2>
-                      <p>{{card.text}}</p>
-                    </div>
-                  </article>
-                {% endfor %}
-              </div>
-            </section>
+              <div class="contain-content-text">
+                {% if content.title %}
+                  <header>
+                    <h1>{{content.title}}</h1>
+                  </header>
+                  {%endif%}
+                  {% for card in content.cards %}
+                    <article class="card">
+                      <figure class="img">
+                        {% if card.svg %}
+                          {% include 'undraw-illustrations/'+card.svg+'.svg' %}
+                        {% endif %}
+                        {% if card.img %}
+                          <img src="{{card.img}}" alt="{{card.alt}}"/>
+                        {% endif %}
+                      </figure>
+                      <div class="text">
+                        <h2>{{card.title}}</h2>
+                        <p>{{card.text}}</p>
+                        {% if card.label %}
+                          <a href="{{card.url}}">{{card.label}}
+                            →</a>
+                        {% endif %}
+                      </div>
+                    </article>
+                  {% endfor %}
+                </div>
+              </section>
+            {% endif %}
+          {% endfor %}
+
+        </main>
+
+        {% include 'partials/footer.njk' %}
+
+        {% include 'partials/global-js.njk' %}
+        {% for content in dynamicContent %}
+          {% if content.type == 'sharer' %}
+            <script src="/js/sharer.js"></script>
           {% endif %}
         {% endfor %}
 
-      </main>
-
-      {% include 'partials/footer.njk' %}
-
-      {% include 'partials/global-js.njk' %}
-      {% for content in dynamicContent %}
-        {% if content.type == 'sharer' %}
-          <script src="/js/sharer.js"></script>
+        {% if permalink == '/' %}
+          <script>
+            if (window.netlifyIdentity) {
+              window
+                .netlifyIdentity
+                .on("init", user => {
+                  if (!user) {
+                    window
+                      .netlifyIdentity
+                      .on("login", () => {
+                        document.location.href = "/admin/";
+                      });
+                  }
+                });
+            }
+          </script>
         {% endif %}
-      {% endfor %}
 
-      {% if permalink == '/' %}
-        <script>
-          if (window.netlifyIdentity) {
-            window
-              .netlifyIdentity
-              .on("init", user => {
-                if (!user) {
-                  window
-                    .netlifyIdentity
-                    .on("login", () => {
-                      document.location.href = "/admin/";
-                    });
-                }
-              });
-          }
-        </script>
-      {% endif %}
-
-    </body>
-  </html>
+      </body>
+    </html>

@@ -4,10 +4,14 @@
 }
 
 @media (max-width: 700px) {
-    .two-up {
+    .two-up div {
         display: block;
+        margin: 0 1rem;
     }
-} 
+    .two-up div article {
+        margin-bottom: var(--default-spacing);
+    }
+}
 
 .two-up article {
     margin-right: 2rem;

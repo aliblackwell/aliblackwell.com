@@ -1,7 +1,7 @@
 backend:
   name: github
   squash_merges: true
-  repo: aliblackwell/jamstack-starter # Path to your GitHub repository
+  repo: gwenhustwit/gwenhustwit.com # Path to your GitHub repository
 
 # when using the default proxy server port
 local_backend: true
@@ -17,13 +17,36 @@ collections:
   - label: "Core Options"
     name: "options"
     files:
+      - label: Meta info and content
+        name: meta
+        file: "website/_data/meta.json"
+        fields:
+          - label: Site Title
+            name: siteTitle
+            widget: string
+          - label: Site slogan
+            name: siteSlogan
+            widget: string
+            hint: Used as default share text when site is shared
+          - label: Site URL
+            name: siteUrl
+            widget: string
+            hint: Used as share URL
+          - label: Favicon
+            hint: The "favourites icon" that appears in the tab next to the title
+            widget: image
+            name: favicon
       - label: "Header and navigation options"
         name: "options"
         file: "website/_data/options.json"
         fields:
+          - label: Logo
+            hint: Please choose a logo
+            name: logo
+            widget: "image"
           - label: Logo alignment
             hint: Where would you like your logo to appear?
-            name: logo
+            name: logoAlign
             widget: "select"
             options:
               - label: "Align centre"
@@ -77,11 +100,41 @@ collections:
                 value: "always"
               - label: "Only use the hamburger for mobile users (recommended)"
                 value: "mobile"
+          - label: Parent/child navs
+            hint: Use this section combined with page navigation options to create child menus
+            name: childNavs
+            widget: list
+            summary: "Parent/child nav: {{fields.name}}"
+            fields:
+              - {
+                  label: Title of parent page,
+                  name: name,
+                  hint: What is the currently set title of the parent page? N.B. If you change the page's title in future you must update this menu.,
+                  widget: string,
+                  default: Services,
+                }
+              - {
+                  label: Permalink of parent page,
+                  name: path,
+                  hint: Must include opening and closing '/',
+                  default: "/services/",
+                }
+              - {
+                  label: Menu label,
+                  name: label,
+                  hint: What appears above the child menu? Most likely the name of the parent page,
+                  default: Services,
+                }
+              - label: Child item permalinks
+                name: children
+                hint: We need to know the permalinks of children so we can highlight the parent nav when a user is on a child page. Comma-separated list of permalinks
+                default: /service-one/, /service-two/
+                widget: list
 
   # Pages
   - name: "pages"
     label: "Pages"
-    folder: "website/pages"
+    folder: "website/starter-pages"
     create: true
     slug: "{{slug}}"
     fields:
@@ -111,6 +164,17 @@ collections:
                 value: "Footer"
               - label: "Don't show in site menus."
                 value: "none"
+              - label: "Show in child menu"
+                hint: "If you want to show this in child menu, add the parent page's title in the field below, then save and head to Options and add this page's permalink to the desired menu"
+                value: "About"
+          - {
+              label: "Parent menu item",
+              name: "parent",
+              widget: "string",
+              hint: Add e.g. Services or About to make this page a child of those pages. To add it to the menu,
+              head to Options and add this page's permalink to the desired menu.,
+              requred: false,
+            }
           - { label: "Order", name: "order", widget: "number", default: 0 }
       - &dynamicContent
         label: Content
@@ -118,6 +182,7 @@ collections:
         widget: "list"
         types:
           - label: Two-up text CTAs
+            summary: Two-up text CTAs
             name: textCTAs
             widget: list
             fields:
@@ -125,6 +190,7 @@ collections:
                 label: Background Colour
                 name: bg
                 widget: select
+                default: standard-bg
                 options:
                   - label: Standard
                     value: standard-bg
@@ -140,19 +206,19 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Blurb, name: blurb, widget: text }
-                  - { label: Button Label, name: label, widget: string }
-                  - { label: URL, name: url, widget: string }
+                  - {
+                      label: Button Label,
+                      name: label,
+                      widget: string,
+                      required: false,
+                    }
+                  - { label: URL, name: url, widget: string, required: false }
           - label: Free Content Section
+            summary: Free Content Section
             name: freeContent
             widget: list
             fields:
               - *bg
-              - {
-                  label: Section Title,
-                  name: title,
-                  widget: string,
-                  required: false,
-                }
               - { label: Content, name: content, widget: markdown }
           - label: Gallery
             name: gallery
@@ -184,13 +250,32 @@ collections:
                       widget: image,
                       default: "/img/holding.jpg",
                     }
+          - label: Text with image
+            name: textWithImage
+            widget: list
+            summary: "Text with Image: {{fields.firstPara}}"
+            fields:
+              - *bg
+              - {
+                  label: "Opening paragraph (bigger)",
+                  name: firstPara,
+                  widget: text,
+                }
+              - { label: "Image", name: "image", widget: image }
+              - { label: "Image Alt", name: "alt", widget: string }
+              - { label: "Free Content", name: "content", widget: markdown }
           - label: Cards
             name: cardsList
             widget: "list"
             summary: "Cards: {{fields.title}}"
             fields:
               - *bg
-              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  required: false,
+                }
               - label: "Layout"
                 name: "layout"
                 widget: "select"
@@ -211,6 +296,7 @@ collections:
                     widget: "text"
                   - label: "SVG"
                     name: "svg"
+                    required: false
                     widget: string
                     hint: The filename excluding extension of an SVG inside website/_includes/undraw-illustrations e.g. undraw_gdpr_3xfb
                   - label: "Image"
@@ -218,10 +304,20 @@ collections:
                     widget: image
                     hint: Choose either an SVG or an image
                     required: false
+                  - label: "Label"
+                    name: label
+                    widget: string
+                    hint: CTA text
+                    required: false
+                  - label: "URL"
+                    name: url
+                    widget: string
+                    hint: CTA URL
+                    required: false
           - label: Testimonial
             name: testimonial
             widget: "list"
-            summary: "{{fields.testimonial}} - {{fields.author.name}}"
+            summary: "Testimonial by {{fields.author.name}}"
             fields:
               - *bg
               - {
@@ -234,17 +330,12 @@ collections:
                 name: author
                 widget: object
                 fields:
-                  - {
-                      label: Name,
-                      name: name,
-                      widget: string,
-                      default: "Emmet",
-                    }
+                  - { label: Name, name: name, widget: string, required: true }
                   - {
                       label: Avatar,
                       name: avatar,
                       widget: image,
-                      default: "/img/emmet.jpg",
+                      required: false,
                     }
           - label: Sharer
             name: sharer
@@ -305,26 +396,3 @@ collections:
                         value: "textarea"
                       - label: "Number"
                         value: "inputNumber"
-
-  # Services
-  - name: "services"
-    label: "Services"
-    folder: "website/services"
-    create: true # Change to true to allow editors to create new pages
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
-        name: "eleventyNavigation"
-        widget: "object"
-        fields:
-          - { label: "Navigation label", name: "key", widget: "string" }
-          - {
-              label: "Parent",
-              name: "parent",
-              widget: "string",
-              default: "Services",
-            }
-          - { label: "Order", name: "order", widget: "number", default: 0 }
-      - *dynamicContent

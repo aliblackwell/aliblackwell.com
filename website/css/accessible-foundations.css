@@ -82,6 +82,10 @@ html body [href].skip-link:focus {
   position: absolute;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Do not show the outline on the skip link target. */
 
 #content[tabindex="-1"]:focus {
@@ -89,8 +93,61 @@ html body [href].skip-link:focus {
 }
 
 *:focus {
-  outline: none;
-  box-shadow: 2px 2px 0px 10px var(--outline-focus) !important;
+  outline: 1px dotted var(--body-muted-color);
+}
+
+[type="checkbox"]:focus+[data-opens-menu], [role="menu"] a:focus {
+  outline: 1px dotted var(--body-muted-color);
+  /* ↑ for WHCM */
+  box-shadow: none;
+}
+
+.primary-bg *:focus {
+  outline: 1px dotted var(--primary-muted-color);
+}
+
+.primary-bg [type="checkbox"]:focus+[data-opens-menu], .primary-bg  [role="menu"] a:focus {
+  outline: 1px dotted var(--primary-muted-color);
+  /* ↑ for WHCM */
+  box-shadow: none;
+}
+
+.secondary-bg *:focus {
+  outline: 1px dotted var(--secondary-muted-color);
+}
+
+.secondary-bg [type="checkbox"]:focus+[data-opens-menu], .secondary-bg  [role="menu"] a:focus {
+  outline: 1px dotted var(--secondary-muted-color);
+  /* ↑ for WHCM */
+  box-shadow: none;
+}
+
+.primary-bg-tint *:focus {
+  outline: 1px dotted var(--primary-tint-muted-color);
+}
+
+.primary-bg-tint [type="checkbox"]:focus+[data-opens-menu], .primary-bg-tint  [role="menu"] a:focus {
+  outline: 1px dotted var(--primary-tint-muted-color);
+  /* ↑ for WHCM */
+  box-shadow: none;
+}
+.secondary-bg-tint *:focus {
+  outline: 1px dotted var(--secondary-tint-muted-color);
+}
+
+.secondary-bg-tint [type="checkbox"]:focus+[data-opens-menu], .secondary-bg-tint  [role="menu"] a:focus {
+  outline: 1px dotted var(--secondary-tint-muted-color);
+  /* ↑ for WHCM */
+  box-shadow: none;
+}
+.contrast-bg *:focus {
+  outline: 1px dotted var(--contrast-muted-color);
+}
+
+.contrast-bg [type="checkbox"]:focus+[data-opens-menu], .contrast-bg  [role="menu"] a:focus {
+  outline: 1px dotted var(--contrast-muted-color);
+  /* ↑ for WHCM */
+  box-shadow: none;
 }
 
 /*--------------------------------------------------------------

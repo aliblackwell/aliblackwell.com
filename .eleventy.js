@@ -34,11 +34,13 @@ module.exports = function (config) {
 
 
   config.addShortcode("testimonial", function (testimonial, author) {
+    let image = author.avatar && `<img src="${author.avatar}" alt="Photo of ${author.name}" />`
+    image = image ? image : ''
     return `<div class="content">
       <blockquote>
           ${testimonial}</blockquote>
-      <cite><img src="${author.avatar}" alt="Photo of ${author.name}"/>
-          ${author.name}
+      <cite>${image}
+          <span>${author.name}</span>
       </cite>
   </div>`;
   });
@@ -66,7 +68,10 @@ module.exports = function (config) {
     for (let i = 0; i < fieldGroups.length; i++) {
       fieldGroupsNoCommas += fieldGroups[i]
     }
-    return `<form netlify>
+    return `<form netlify netlify-honeypot="username-1">
+    <p class="hidden">
+      <label>Don’t fill this out if you're human: <input name="username-1" /></label>
+    </p>
         ${fieldGroupsNoCommas}
         <button>Submit</button>
     </form>`;

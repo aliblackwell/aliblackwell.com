@@ -26,6 +26,7 @@ a b, a em, a i, a strong, strong a, .button, button {
   background-color: var(--body-bg-accent);
   border: 2px solid var(--body-bg-accent);
   color: var(--body-bg-accent-color);
+  text-decoration: none;
 }
 
 .big-button {

@@ -15,8 +15,21 @@
           {% endif %}
           <ul>
             {%- for entry in navPages %}
-              <li{% if entry.url == page.url %} class="my-active-class" {% endif %}>
-                <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+              {%if entry.url == page.url%}
+                {% set gotChild = 'got!' %}
+              {% else %}
+                {% set gotChild = 'not!' %}
+              {%endif %}
+              {% for nav in options.childNavs %}
+                {% if nav.name == entry.title%}
+                  {% if nav.children.includes(page.url)%}
+                     {% set gotChild = 'got!' %}
+
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+              <li{% if gotChild == 'got!' %} class="my-active-class" {% endif %}>
+                <a href="{{ entry.url | url }}" role="menuitem">{{ entry.title }}</a>
               </li>
             {%- endfor %}
           </ul>

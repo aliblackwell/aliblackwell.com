@@ -2,18 +2,47 @@
 /* Quotes */
 blockquote {
     display: block;
-    font-size: var(--text-large);
-    line-height: var(--line-height);
-    margin: 1rem auto;
-    max-width: var(--width-card-medium);
-    padding: 1.5rem 1rem;
-    text-align: var(--justify-important);
-}
-
-cite {
-    color: var(--color-text-secondary);
-    display: block;
     font-size: var(--text-medium);
     line-height: var(--line-height);
-    padding: 1.5rem 0;
+    margin: 3rem auto;
+ 
+    position: relative;
+    max-width: 90%;
+    text-align: left;
+  }
+  
+  section.content blockquote p {
+    font-size: var(--text-large);
+  }
+  
+  blockquote::before {
+    content: "“";
+    font-family: var(--title-font);
+    line-height: 0.5;
+    font-weight: var(--title-font-weight);
+    font-size: 6rem;
+    position: absolute;
+    top: 1rem;
+    left: -3rem;
+  }
+
+cite {
+    color: var(--color-text-secondary); 
+    font-size: var(--text-medium);
+    line-height: var(--line-height);
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
+
+cite span {
+    font-weight: 400;
+}
+ 
+cite img {
+    width: 2.5rem;
+    display: inline;
+    margin-right: 1rem;
+    border-radius: 100%;
+  }
