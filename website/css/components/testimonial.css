@@ -4,8 +4,7 @@ blockquote {
     display: block;
     font-size: var(--text-medium);
     line-height: var(--line-height);
-    margin: 3rem auto;
- 
+    margin: 3rem auto; 
     position: relative;
     max-width: 90%;
     text-align: left;

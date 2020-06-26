@@ -41,7 +41,17 @@ nav ul li {
 }
 
 h1.logo-container img {
-    width: 5rem;
+    width: 16rem;
+}
+
+@media (max-width: 600px) {
+    h1.logo-container img {
+        width: 9rem;
+    }
+    .nav-container h1.logo-container {
+        top: 2rem;
+    }
+ 
 }
 
 .main-nav ul, .main-nav li {
@@ -52,7 +62,8 @@ h1.logo-container img {
 }
 
 .main-nav li a, [data-opens-menu] {
-    display: block;
+    display: block;    
+    text-decoration: none;
     padding: 1rem;
     line-height: 1;
     position: relative;
@@ -174,10 +185,7 @@ h1.logo-container img {
 }
 
 /******
-
 Child Nav
-
-
 *****/
 
 .child-nav {
@@ -193,13 +201,6 @@ li.my-active-class a {
     font-weight: var(--body-bold-weight);
 }
 
-@media (max-width: 800px) {
-    h1.logo-container img {
-        width: 9rem;
-    }
- 
-}
-
 /* Bottom nav option */
 @media (max-width: 800px) {
     footer#main-footer {
@@ -209,7 +210,7 @@ li.my-active-class a {
     .menu-bottom .secondary-nav-container ul {
         float: right;
     }
-    
+
     .menu-bottom .primary-nav-container ul {
         position: fixed;
         z-index: 9999;
@@ -221,8 +222,5 @@ li.my-active-class a {
         padding: 0.5rem 0 0.5rem 0;
         max-width: 100%;
         text-align: center;
-    }
-    .logo-centre .secondary-nav-container {
-        position: relative;
     }
 }

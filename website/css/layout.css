@@ -9,8 +9,17 @@ hr {
     margin: 4rem 0;
 }
 
-section {
+section{
     padding: var(--default-spacing) 0;
+}
+
+header.content,
+.child-nav  {
+    padding-top: var(--default-spacing);
+}
+
+header.content + section {
+    padding-top: 0;
 }
 
 section.no-flex {
@@ -26,6 +35,16 @@ section.no-flex {
 
 .contain-content-text {
     width: var(--content-width);
+    margin: 0 auto;
+    position: relative;
+}
+
+.contain-content-text p {
+    max-width: var(--text-width);
+}
+
+.contain-content-narrow {
+    width: var(--narrow-width);
     margin: 0 auto;
     position: relative;
 }
@@ -104,6 +123,11 @@ footer ul, footer li {
     padding: 0;
 }
 
+footer li a {
+    font-size: var(--text-small);
+    text-decoration: none;
+}
+
 footer ul {
     text-align: right;
 }
@@ -113,4 +137,4 @@ footer nav ul li {
     text-align: right;
 }
 
- 
+
