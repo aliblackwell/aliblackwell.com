@@ -1,6 +1,6 @@
 {
     "siteTitle": "JAMstack Starter",
-    "siteSlogan": "Powerful CMS-enabled static websites with soul",
-    "siteUrl": "https://jamstack-blaster.netlify.app",
+    "separator": "-",
+    "titleOrder": "standard",
     "favicon": "/img/favicon.png"
   }

@@ -1,5 +1,6 @@
 ---
 title: Home
+metaDescription: JAMstack Starter is a boilerplate for building accessible static sites with Eleventy and Netlify CMS
 showTitle: false
 permalink: /
 eleventyNavigation:

@@ -1,7 +1,7 @@
 backend:
   name: github
   squash_merges: true
-  repo: gwenhustwit/gwenhustwit.com # Path to your GitHub repository
+  repo: aliblackwell/jamstack-starter # Path to your GitHub repository
 
 # when using the default proxy server port
 local_backend: true
@@ -17,6 +17,33 @@ collections:
   - label: "Core Options"
     name: "options"
     files:
+      - label: SEO and Social options
+        name: seocials
+        file: "website/_data/seocials.json"
+        fields:
+          - label: Site URL
+            name: siteUrl
+            widget: string
+            hint: Used as share URL
+          - label: Site slogan
+            name: siteSlogan
+            widget: string
+            hint: Used as default share text when site is shared
+          - label: Square social image
+            name: squareSocialImg
+            widget: image
+            hint: Appears when you share the site on Twitter and WhatsApp. 1080x1080px format. Limited text - mostly viewed as a thumbnail.
+          - label: Square social image alt description
+            name: squareSocialImgAlt
+            widget: string
+          - label: Landscape social image
+            name: landscapeSocialImg
+            widget: image
+            hint: Appears when you share the site on Facebook. 1024x512px format. Big text OK. Any text in the image must be added to alt description below.
+          - label: Landscape social image alt description
+            name: landscapeSocialImgAlt
+            widget: string
+          
       - label: Meta info and content
         name: meta
         file: "website/_data/meta.json"
@@ -24,14 +51,20 @@ collections:
           - label: Site Title
             name: siteTitle
             widget: string
-          - label: Site slogan
-            name: siteSlogan
+            hint: Appears in the tab beside the page title
+          - label: Separator
+            name: separator
             widget: string
-            hint: Used as default share text when site is shared
-          - label: Site URL
-            name: siteUrl
-            widget: string
-            hint: Used as share URL
+            hint: Choose - or ~ or // or anything you like!
+          - label: Title order
+            name: titleOrder
+            widget: select
+            hint: Choose Standard for "Page title [separator] Site title", or Reverse
+            options:
+              - label: Standard
+                value: standard
+              - label: Reverse
+                value: reverse    
           - label: Favicon
             hint: The "favourites icon" that appears in the tab next to the title
             widget: image
@@ -134,11 +167,12 @@ collections:
   # Pages
   - name: "pages"
     label: "Pages"
-    folder: "website/starter-pages"
+    folder: "website/pages"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: Title, name: title, widget: string }
+      - { label: Meta Description, name: metaDescription, widget: text, hint: https://moz.com/learn/seo/meta-description (50-160 characters, no quote marks!) }
       - { label: Show title?, name: showTitle, widget: boolean, default: true }
       - {
           label: permalink,
@@ -169,7 +203,7 @@ collections:
                 value: "About"
           - {
               label: "Parent menu item",
-              name: "parent",
+              name: "parentItem",
               widget: "string",
               hint: Add e.g. Services or About to make this page a child of those pages. To add it to the menu,
               head to Options and add this page's permalink to the desired menu.,

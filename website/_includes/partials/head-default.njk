@@ -2,5 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="icon" type="image/png" href="/favicon.png"/>
-<title>{{meta.siteTitle}} - {{title}}</title>
+{% if meta.titleOrder == 'standard' %}
+<title>{{title}} {{meta.separator}} {{meta.siteTitle}}</title>
+{% else %}
+<title>{{meta.siteTitle}} {{meta.separator}} {{title}}</title>
+{% endif %}
 <link rel="stylesheet" href="/css/style.css"/>

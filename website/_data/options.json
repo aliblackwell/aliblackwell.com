@@ -1,6 +1,6 @@
 {
   "logoAlign": "centre",
-  "menuStyle": "burger",
+  "menuStyle": "bottom",
   "showBurger": "mobile",
   "navStyle": "primary-bg",
   "footerStyle": "contrast-bg"

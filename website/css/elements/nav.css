@@ -1,7 +1,7 @@
 /* Nav */
 
 header.nav-container nav {
-    margin-bottom:0rem;
+    margin-bottom: 0rem;
 }
 
 nav ul {
@@ -194,13 +194,35 @@ li.my-active-class a {
 }
 
 @media (max-width: 800px) {
-    .nav-container h1.logo-container {
-        top:1.6rem;
-    }
     h1.logo-container img {
         width: 9rem;
     }
-    .logo-centre .primary-nav-container, .logo-centre .secondary-nav-container {
-        top: 1rem;
+ 
+}
+
+/* Bottom nav option */
+@media (max-width: 800px) {
+    footer#main-footer {
+        padding-bottom: 5rem;
+    }
+
+    .menu-bottom .secondary-nav-container ul {
+        float: right;
+    }
+    
+    .menu-bottom .primary-nav-container ul {
+        position: fixed;
+        z-index: 9999;
+        width: 100vw;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: var(--primary-bg);
+        padding: 0.5rem 0 0.5rem 0;
+        max-width: 100%;
+        text-align: center;
+    }
+    .logo-centre .secondary-nav-container {
+        position: relative;
     }
 }

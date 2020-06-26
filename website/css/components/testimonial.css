@@ -22,8 +22,8 @@ blockquote {
     font-weight: var(--title-font-weight);
     font-size: 6rem;
     position: absolute;
-    top: 1rem;
-    left: -3rem;
+    top: 0rem;
+    left: 0rem;
   }
 
 cite {
@@ -42,6 +42,7 @@ cite span {
  
 cite img {
     width: 2.5rem;
+    height: 2.5rem;
     display: inline;
     margin-right: 1rem;
     border-radius: 100%;
