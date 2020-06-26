@@ -61,6 +61,11 @@ h1.logo-container img {
     display: inline-block;
 }
 
+.main-nav li a {
+    border-top: var(--nav-border-width) solid transparent;
+    border-bottom: var(--nav-border-width) solid transparent;
+}
+
 .main-nav li a, [data-opens-menu] {
     display: block;    
     text-decoration: none;
@@ -197,13 +202,14 @@ Child Nav
 }
 
 li.my-active-class a {
-    text-decoration: underline;
+    border-bottom: var(--nav-border-width) solid var(--body-bg-accent);
+    text-decoration: none;
     font-weight: var(--body-bold-weight);
 }
 
 /* Bottom nav option */
 @media (max-width: 800px) {
-    footer#main-footer {
+    .menu-bottom footer#main-footer {
         padding-bottom: 5rem;
     }
 
