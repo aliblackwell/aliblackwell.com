@@ -42,7 +42,7 @@ With its strong foundations in accessibility and privacy, and its scaffolding, t
 
 ## Use it for your projects
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/aliblackwell/jamstack-starter)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/779f57bf-6b25-4bd2-9d1b-9135e2e148fc/deploy-status)](https://app.netlify.com/sites/ecstatic-dijkstra-8ac4ed/deploys)
 
 The button above will clone this repository to your account and deploy it to Netlify.
 
