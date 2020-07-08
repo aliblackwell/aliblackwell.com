@@ -1,5 +1,5 @@
 ---
-title: Contact Us
+title: Contact Me
 showTitle: true
 permalink: /contact/
 eleventyNavigation:
