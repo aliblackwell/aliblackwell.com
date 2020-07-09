@@ -2,6 +2,9 @@
 
 header.nav-container nav {
     margin-bottom: 0rem;
+    float: right;
+    margin: 2rem 0;
+    line-height: 1;
 }
 
 nav ul {
@@ -23,22 +26,36 @@ nav ul li {
     z-index: 100;
 }
 
+header .contain-content-all {
+    text-align: left;
+}
+
 .nav-container h1.logo-container {
     font-size: var(--text-medium);
-    width: 100%;
     z-index: 1;
-    position: absolute;
+    margin: 2.6rem 0 1rem 0;
+    font-size: var(--text-jumbo);
+    display: inline-block;
+    line-height: 1;
+}
+
+#site-logo a {
+    padding-bottom: 0.05em;
+    border-bottom: 0.1em solid var(--body-bg-accent);
+    
+}
+
+#site-logo a:hover {
+    text-decoration: none;
 }
 
 .logo-centre.nav-container h1.logo-container {
     text-align: center;
-    right: 0;
 }
 
 .logo-left h1.logo-container {
     text-align: left;
-    left: 0;
-}
+ }
 
 h1.logo-container img {
     width: 16rem;
@@ -51,7 +68,6 @@ h1.logo-container img {
     .nav-container h1.logo-container {
         top: 2rem;
     }
- 
 }
 
 .main-nav ul, .main-nav li {
@@ -66,10 +82,11 @@ h1.logo-container img {
     border-bottom: var(--nav-border-width) solid transparent;
 }
 
-.main-nav li a, [data-opens-menu] {
-    display: block;    
+.main-nav li a {
+    margin: 0 0 0 1rem;
+    display: block;
     text-decoration: none;
-    padding: 1rem;
+    padding: 0.5em;
     line-height: 1;
     position: relative;
     z-index: 10;
@@ -208,15 +225,14 @@ li.my-active-class a {
 }
 
 /* Bottom nav option */
+
 @media (max-width: 800px) {
     .menu-bottom footer#main-footer {
         padding-bottom: 5rem;
     }
-
     .menu-bottom .secondary-nav-container ul {
         float: right;
     }
-
     .menu-bottom .primary-nav-container ul {
         position: fixed;
         z-index: 9999;

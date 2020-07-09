@@ -43,6 +43,10 @@ section.no-flex {
     max-width: var(--text-width);
 }
 
+section.primary-bg-tint p {
+    font-size: var(--text-large);
+}
+
 .contain-content-narrow {
     width: var(--narrow-width);
     margin: 0 auto;

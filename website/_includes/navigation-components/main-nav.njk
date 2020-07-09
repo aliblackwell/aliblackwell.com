@@ -1,4 +1,4 @@
-<nav class="main-nav group" aria-labelledby="site-logo">
+<nav class="main-nav" aria-labelledby="site-logo">
   {% set navPages = collections.all | eleventyNavigation('Primary') %}
   <div class="navs">
     <div class="primary-nav-container">
@@ -39,15 +39,6 @@
         <!-- / .burger-menu -->
       {% endif %}
     </div>
-    <div class="secondary-nav-container">
-      {% set navPages = collections.all | eleventyNavigation('Secondary') %}
-      <ul>
-        {%- for entry in navPages %}
-          <li{% if entry.url == page.url %} class="my-active-class" {% endif %}>
-            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-          </li>
-        {%- endfor %}
-      </ul>
-    </div>
+
   </div>
 </nav>
