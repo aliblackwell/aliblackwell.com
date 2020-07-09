@@ -2,7 +2,7 @@
 title: Services
 permalink: /services/
 hasContents: true
-showTitle: true
+showTitle: false
 navParentId: services
 eleventyNavigation:
   key: Services

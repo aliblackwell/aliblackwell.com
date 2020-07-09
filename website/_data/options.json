@@ -7,9 +7,10 @@
   "childNavs": [
     {
       "id": "services",
+      "menuParent": "Services",
       "name": "My offerings",
       "path": "/services/",
-      "label": "Sessions & Workshops",
+      "label": "Consultancy",
       "children": [
         "/wonder-workshop/"
       ]

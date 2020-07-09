@@ -4,9 +4,9 @@ metaDescription: I offer website design and development services with a focus on
 showTitle: false
 permalink: /
 eleventyNavigation:
-  key: Home
+  key: About
   order: 0
-  parent: none
+  parent: Primary
 dynamicContent:
   - type: gallery
     galleryItems:
@@ -38,8 +38,8 @@ dynamicContent:
         label: Find out more
         url: /wonder-workshop/
       - title: Consulting 
-        blurb: My career has seen me launch a global business, lead a bunch of cutting-edge product teams, work at the bleeding edge of blockchain/cryptoeconomics, and most recently launch an AI-powered product that detects if your cat is typing on your keyboard. Everything I've done has been accessible, ethically motivated and private by default. 
-        label: About
-        url: /about/
+        blurb: My career has seen me launch a global business, work at the bleeding edge of blockchain/cryptoeconomics, lead cutting edge product teams, and most recently launch KeyPaws, an AI-powered tool that protects your computer from cats on the keyboard. Everything I've done has been accessible, ethically motivated and private by default. 
+        label: Work with me
+        url: /services/
     bg: secondary-bg-tint
 ---

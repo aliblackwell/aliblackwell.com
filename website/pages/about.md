@@ -1,10 +1,10 @@
 ---
 title: About
-showTitle: true
+showTitle: false
 permalink: /about/
 eleventyNavigation:
   key: About
   order: 0
-  parent: Primary
+  parent: None
 ---
 We have a website.

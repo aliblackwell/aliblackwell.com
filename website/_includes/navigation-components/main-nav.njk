@@ -21,7 +21,7 @@
                 {% set gotChild = 'not!' %}
               {%endif %}
               {% for nav in options.childNavs %}
-                {% if nav.name == entry.title%}
+                {% if nav.menuParent == entry.title%}
                   {% if nav.children.includes(page.url)%}
                      {% set gotChild = 'got!' %}
 
