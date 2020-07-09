@@ -3,5 +3,25 @@
   "menuStyle": "bottom",
   "showBurger": "mobile",
   "navStyle": "standard-bg",
-  "footerStyle": "contrast-bg"
+  "footerStyle": "contrast-bg",
+  "childNavs": [
+    {
+      "id": "services",
+      "name": "My offerings",
+      "path": "/services/",
+      "label": "Sessions & Workshops",
+      "children": [
+        "/wonder-workshop/"
+      ]
+    },
+    {
+      "id": "about",
+      "name": "About me",
+      "path": "/about/",
+      "label": "About Ali",
+      "children": [
+        "/accessibility/"
+      ]
+    }
+  ]
 }
