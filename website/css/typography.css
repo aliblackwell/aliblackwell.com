@@ -179,22 +179,20 @@ strong {
   font-weight: var(--body-font-weight);
 }
 
-.contrast-bg p.main-blurb a { 
+
+
+a.custom-underline {
+  box-shadow:
+    inset 0 -0.140em var(--contrast-bg),
+    inset 0 -0.2em var(--primary-bg);
   display: inline;
-  padding-bottom: -0.2em; 
-  border-bottom: 0.1em solid var(--contrast-bg-accent);
   font-family: var(--title-font);
   font-weight: var(--title-font-weight);
+  padding-bottom: -2em; 
+ 
+  text-decoration: none;
 }
 
-/* .contrast-bg p.main-blurb a::after {
-  content: "";
-  background: var(--contrast-bg-accent);
-  width: 100%;
-  height: 0.1em;
-  position: absolute;
-  bottom: 0;
-} */
 
 .contrast-bg p.main-blurb a:hover {
   text-decoration: none;

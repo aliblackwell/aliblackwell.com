@@ -10,9 +10,19 @@
       "menuParent": "Services",
       "name": "My offerings",
       "path": "/services/",
-      "label": "Consultancy",
+      "label": "Tech consultancy",
       "children": [
-        "/wonder-workshop/"
+        "/energy/", "/privacy-audits/"
+      ]
+    },
+    {
+      "id": "products",
+      "menuParent": "Products",
+      "name": "Products",
+      "path": "/wonder-workshop/",
+      "label": "Website Wonder Workshop",
+      "children": [
+        "/keypaws/", "/wonder-workshop"
       ]
     },
     {

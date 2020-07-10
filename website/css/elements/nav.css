@@ -108,7 +108,7 @@ h1.logo-container img {
     position: relative;
     z-index: 10;
     cursor: pointer;
-    font-size: var(--text-small);
+    font-size: var(--text-medium);
     font-family: var(--body-font);
     font-weight: var(--body-font-weight);
 }
@@ -127,6 +127,10 @@ h1.logo-container img {
     width: 100%;
     text-align: right;
     float: left;
+}
+
+.logo-left .navs div {
+    display: inline;
 }
 
 [data-menu-component] {

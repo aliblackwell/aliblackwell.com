@@ -1,8 +1,8 @@
 ---
-title: Services
+title: Ethical tech consultancy
 permalink: /services/
 hasContents: true
-showTitle: false
+showTitle: true
 navParentId: services
 eleventyNavigation:
   key: Services

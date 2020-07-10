@@ -3,11 +3,11 @@ title: Website wonder workshop
 permalink: /wonder-workshop/
 hasContents: true
 showTitle: false
-navParentId: services
+navParentId: products
 eleventyNavigation:
-  key: Wonder Workshop
-  parent: services
-  order: 0
+  key: Products
+  parent: Primary
+  order: 2
 dynamicContent:
   - type: cardsList
     title: Websites with soul

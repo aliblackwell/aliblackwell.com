@@ -9,4 +9,3 @@ eleventyNavigation:
   order: 0
   parent: about 
 ---
-We have a website.

@@ -23,7 +23,7 @@
               {% for nav in options.childNavs %}
                 {% if nav.menuParent == entry.title%}
                   {% if nav.children.includes(page.url)%}
-                     {% set gotChild = 'got!' %}
+                    {% set gotChild = 'got!' %}
 
                   {% endif %}
                 {% endif %}
@@ -38,6 +38,16 @@
         </div>
         <!-- / .burger-menu -->
       {% endif %}
+    </div>
+    <div class="secondary-nav-container">
+      {% set navPages = collections.all | eleventyNavigation('Secondary') %}
+      <ul>
+        {%- for entry in navPages %}
+          <li{% if entry.url == page.url %} class="my-active-class" {% endif %}>
+            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+          </li>
+        {%- endfor %}
+      </ul>
     </div>
 
   </div>
