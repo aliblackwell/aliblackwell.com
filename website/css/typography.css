@@ -212,4 +212,5 @@ h1 strong, h2 strong, h3 strong {
 
 p.main-blurb {
   font-size: var(--text-jumbo);
+  margin-bottom: 0;
 }

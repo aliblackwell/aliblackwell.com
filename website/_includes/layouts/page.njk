@@ -39,6 +39,10 @@
 
       {% for content in dynamicContent %}
 
+        {% if content.type == 'aboutNav' %}
+          {% include 'navigation-components/contents-nav.njk' %}
+        {% endif %}
+
         {% if content.type == 'textCTAs'%}
           <section class="{{content.bg}} text-ctas two-up">
             <div class="contain-content-all">

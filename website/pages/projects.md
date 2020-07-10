@@ -1,12 +1,11 @@
 ---
-title: Bio
+title: Projects
 showTitle: false
-permalink: /about/
+permalink: /projects/
 navParentId: about
 hasContents: true
 eleventyNavigation:
-  key: Bio
+  key: Projects
   order: 0
   parent: about 
 ---
-We have a website.

@@ -17,11 +17,12 @@
     },
     {
       "id": "about",
+      "menuParent": "About",
       "name": "About me",
-      "path": "/about/",
-      "label": "About Ali",
+      "path": "/",
+      "label": "Home",
       "children": [
-        "/accessibility/"
+        "/about/", "/projects/"
       ]
     }
   ]

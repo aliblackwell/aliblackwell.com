@@ -2,12 +2,17 @@
 title: Home
 metaDescription: I offer website design and development services with a focus on usability, accessibility and privacy, as well as a broader consultancy service covering crypto/socioeconomics, ethics, artificial intelligence and everything in between.
 showTitle: false
+navParentId: about
 permalink: /
 eleventyNavigation:
   key: About
   order: 0
   parent: Primary
 dynamicContent:
+  - type: mainBlurb
+    bg: contrast-bg
+  - type: aboutNav
+    bg: contrast-bg
   - type: gallery
     galleryItems:
       - image: /img/ali-blackwell-colour-0.jpg
@@ -25,18 +30,5 @@ dynamicContent:
         alt: A white rowing boat full of duvets and flowers
         url: /none
         description: None
-    bg: contrast-bg
-  - type: mainBlurb
-    bg: contrast-bg
-  - type: textCTAs
-    ctaItems:
-      - title: Website wonder workshop
-        blurb: My "[revolution in website design services](/testimonials)", come and spend a day with Imogen and me in Crystal Palace, and leave with a website you're thrilled with. 
-        label: Find out more
-        url: /wonder-workshop/
-      - title: Consulting 
-        blurb: My career has seen me launch a global business, work at the bleeding edge of blockchain/cryptoeconomics, lead cutting edge product teams, and most recently launch KeyPaws, an AI-powered tool that protects your computer from cats on the keyboard. Everything I've done has been accessible, ethically motivated and private by default. 
-        label: Work with me
-        url: /services/
     bg: contrast-bg
 ---
