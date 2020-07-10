@@ -3,7 +3,7 @@
   "menuStyle": "bottom",
   "showBurger": "mobile",
   "navStyle": "standard-bg",
-  "footerStyle": "contrast-bg",
+  "footerStyle": "primary-bg",
   "childNavs": [
     {
       "id": "services",

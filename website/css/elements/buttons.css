@@ -3,8 +3,7 @@
 a {
   color: var(--color-links);
   display: inline-block;
-  font-family: var(--title-font);
-  font-weight: var(--title-font-weight);
+
   text-decoration: none;
 }
 

@@ -6,6 +6,7 @@ figure {
 
 figure img {
     max-width: 100%;
+    display: block;
 }
 
 figure figcaption {
@@ -13,5 +14,24 @@ figure figcaption {
 }
 
 svg {
-    fill: var(--secondary-bg);
+    fill: var(--primary-bg);
+}
+
+.home .gallery figure {
+    position: relative;
+}
+
+.home .gallery figure::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.home .gallery figure:nth-child(1)::before {
+    background: 
 }
