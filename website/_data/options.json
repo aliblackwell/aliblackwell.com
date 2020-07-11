@@ -3,6 +3,7 @@
   "menuStyle": "bottom",
   "showBurger": "mobile",
   "navStyle": "standard-bg",
+  "headerStyle": "standard-bg",
   "footerStyle": "primary-bg",
   "childNavs": [
     {

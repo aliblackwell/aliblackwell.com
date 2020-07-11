@@ -1,4 +1,4 @@
-<nav class="child-nav" aria-labelledby="nav-title">
+<nav class="child-nav {{options.navStyle}}" aria-labelledby="nav-title">
 
   {% set navPages = collections.all | eleventyNavigation(navParentId) %}
   {% for nav in options.childNavs %}

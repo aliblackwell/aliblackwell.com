@@ -1,12 +1,8 @@
-footer {
-    padding: 2rem 1rem;
+body {
+    background: var(--primary-bg);
 }
 
-html {
-    background: url() var(--primary-bg);
-}
-
-html::before {
+body::before {
     content: "👇🏻";
     width: 50px;
     font-size: var(--text-jumbo);
@@ -17,8 +13,11 @@ html::before {
     z-index: -1;
 }
 
-body {
-    border-top: solid 0.5rem var(--primary-bg);
+ 
+
+
+footer {
+    padding: 2rem 1rem;
 }
 
 hr {
@@ -76,6 +75,7 @@ section.primary-bg-tint p {
 
 main header h1 {
     text-align: center;
+    margin-top: 0;
 }
 
 article header, div header, main header {
