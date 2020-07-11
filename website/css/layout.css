@@ -1,5 +1,6 @@
 body {
     background: var(--primary-bg);
+    position: relative;
 }
 
 body::before {
