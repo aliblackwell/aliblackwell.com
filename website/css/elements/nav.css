@@ -58,7 +58,7 @@ header .contain-content-all {
 
 #site-logo a {
     padding-bottom: 0em;
-    border-bottom: 0.1em solid var(--body-bg-accent);
+    border-bottom: 0.2rem solid var(--body-bg-accent);
     
 }
 
@@ -112,6 +112,7 @@ h1.logo-container img {
     font-family: var(--body-font);
     font-weight: var(--body-font-weight);
 }
+
 
 .logo-centre .primary-nav-container {
     width: 100%;
@@ -266,4 +267,15 @@ li.my-active-class a {
         max-width: 100%;
         text-align: center;
     }
+    .menu-bottom .main-nav .primary-nav-container li a {
+        margin: 0;
+        color: var(--primary-color);
+        padding: 0.5em 1.2em;
+    }
+
+    .menu-bottom .primary-nav-container li.my-active-class a {
+        color: var(--primary-color);
+        font-weight: var(--title-font-weight);
+    }
+    
 }

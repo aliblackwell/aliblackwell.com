@@ -12,7 +12,7 @@
       "path": "/services/",
       "label": "Tech consultancy",
       "children": [
-        "/energy/", "/privacy-audits/"
+        "/energy/", "/design-and-development/"
       ]
     },
     {

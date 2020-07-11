@@ -7,9 +7,9 @@
       <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     {% endif %}
   </head>
-  <body class="dark {{title | slug }}">
+  <body class="dark {{title | slug }} menu-{{options.menuStyle}} ">
     <a class="skip-link" href="#primary">Skip to content</a>
-    <header class="nav-container {{options.navStyle}} logo-{{options.logoAlign}} menu-{{options.menuStyle}} {% if options.menuStyle == 'burger' %} show-burger-{{options.showBurger}} {% endif %}">
+    <header class="nav-container {{options.navStyle}} logo-{{options.logoAlign}} {% if options.menuStyle == 'burger' %} show-burger-{{options.showBurger}} {% endif %}">
       <div class="contain-content-all">
         <h1 class="logo-container" id="site-logo">
           <a href="/">

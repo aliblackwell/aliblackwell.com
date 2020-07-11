@@ -1,13 +1,13 @@
 <nav class="child-nav" aria-labelledby="nav-title">
 
   {% set navPages = collections.all | eleventyNavigation(navParentId) %}
-  
-  <ul>
-    {% for nav in options.childNavs %}
+  {% for nav in options.childNavs %}
       {% if nav.id == navParentId%}
         <h1 id="nav-title">{{nav.name}}</h1>
       {% endif %}
     {% endfor %}
+  <ul>
+    
     {% for nav in options.childNavs %}
       {% if nav.id == navParentId%}
         <li{% if nav.path == page.url %} class="my-active-class" {% endif %}>

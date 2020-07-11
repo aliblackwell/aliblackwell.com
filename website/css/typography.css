@@ -29,8 +29,7 @@ body, select, option, li, span, optgroup, input, textarea, p {
 
 body {
   margin: 0;
-  width: 100%;
-  min-height: 100%;
+  width: 100%; 
   color: var(--body-color);
   background: var(--body-bg);
   margin: 0;
@@ -175,19 +174,17 @@ strong {
 }
 
 .contrast-bg strong {
-  color: var(--contrast-bg-accent);
-  font-weight: var(--body-font-weight);
+ color: var(--contrast-color);
+  font-weight: var(--title-font-weight);
 }
 
 
 
 a.custom-underline {
   box-shadow:
-    inset 0 -0.140em var(--contrast-bg),
+    inset 0 -0.1em var(--contrast-bg),
     inset 0 -0.2em var(--primary-bg);
   display: inline;
-  font-family: var(--title-font);
-  font-weight: var(--title-font-weight);
   padding-bottom: -2em; 
  
   text-decoration: none;

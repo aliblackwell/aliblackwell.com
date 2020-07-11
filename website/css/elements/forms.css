@@ -15,7 +15,7 @@ button[disabled]:hover {
 form {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow) var(--color-shadow);
+ 
     display: block;
     max-width: var(--width-form);
     padding: 1.5rem;
