@@ -3,7 +3,7 @@ body {
     position: relative;
 }
 
-body::before {
+html::before {
     content: "👇🏻";
     width: 50px;
     font-size: var(--text-jumbo);
