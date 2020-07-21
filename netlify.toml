@@ -8,4 +8,4 @@
   functions = "./functions-built"
 
 [[plugins]]
-package = "aliblackwell/netlify-plugin-image-optim#complete-plugin-list"
+package = "netlify-plugin-optimise-images"
