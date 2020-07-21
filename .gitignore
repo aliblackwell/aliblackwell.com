@@ -6,4 +6,4 @@ build
 .env
 ship-site/*
 .netlify
-lambda-built
+functions-built

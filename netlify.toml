@@ -5,7 +5,7 @@
   # This is where we will look for package.json/.nvmrc/etc.
   command = "npm run site:build"
   publish = "ship-site"
-  functions = "./lambda-built"
+  functions = "./functions-built"
 
 [[plugins]]
-package = "netlify-plugin-image-optim"
+package = "aliblackwell/netlify-plugin-image-optim#complete-plugin-list"
