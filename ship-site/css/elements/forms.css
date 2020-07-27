@@ -1,0 +1,65 @@
+/* MVP.css starter */
+
+button:disabled,
+input:disabled {
+    background: var(--border-color);
+    border-color: var(--border-color);
+    color: var(--color-text-secondary);
+    cursor: not-allowed;
+}
+
+button[disabled]:hover {
+    filter: none;
+}
+
+form {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+ 
+    display: block;
+    max-width: var(--width-form);
+    padding: 1.5rem;
+    text-align: var(--justify-normal);
+    margin: var(--default-spacing) auto;
+}
+
+form header {
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+}
+
+input,
+label,
+select,
+textarea {
+    display: block;
+    font-size: inherit;
+    max-width: var(--width-form);
+}
+
+
+
+input[type="checkbox"]+label,
+input[type="radio"]+label {
+    position: relative;
+    top: 1px;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    padding: 0.4rem 0.8rem;
+}
+
+input[readonly],
+textarea[readonly] {
+    background-color: var(--border-color);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
