@@ -1,10 +1,10 @@
-
 /* Quotes */
+
 blockquote {
   display: block;
   font-size: var(--text-medium);
   line-height: var(--line-height);
-  margin: 3rem auto; 
+  margin: 3rem auto;
   position: relative;
   max-width: 90%;
   text-align: left;
@@ -26,32 +26,32 @@ blockquote::before {
 }
 
 @media (max-width: 600px) {
-blockquote {
-  padding-left: 1rem;
-}
-blockquote::before {
-  left: -1.7rem;
-}
+  blockquote {
+    padding-left: 1rem;
+  }
+  blockquote::before {
+    left: -1.7rem;
+  }
 }
 
 cite {
-color: var(--color-text-secondary); 
-font-size: var(--text-medium);
-line-height: var(--line-height);
-padding: 0;
-display: flex;
-justify-content: flex-end;
-align-items: center;
+  color: var(--color-text-secondary);
+  font-size: var(--text-medium);
+  line-height: var(--line-height);
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 cite span {
-font-weight: 400;
+  font-weight: 400;
 }
 
 cite img {
-width: 2.5rem;
-height: 2.5rem;
-display: inline;
-margin-right: 1rem;
-border-radius: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline;
+  margin-right: 1rem;
+  border-radius: 100%;
 }
