@@ -13,8 +13,6 @@ module.exports.handler = (event, context, callback) => {
                 sendmail: true,
                 newline: 'unix',
                 path: '/usr/sbin/sendmail',
-                host: SMTP_HOST,
-                //port: 465,
                 port: 587,
                 secure: true,
                 auth: {
