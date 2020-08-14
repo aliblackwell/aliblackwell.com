@@ -9,7 +9,9 @@ eleventyNavigation:
 dynamicContent:
   - type: form
     formName: Contact
-    formSuccessMessage: Thank you for getting in touch. We will respond soon.
+    formId: contact-form
+    bg: standard-bg
+    formSuccessMessage: Thanks for your message. It has passed validation!
     fields:
       - fieldType: inputText
         inputLabel: Your name
@@ -23,6 +25,4 @@ dynamicContent:
         fieldType: textarea
         field: textarea
 ---
-You can contact us via email at info@email.com.
-
-Or you can use the form below:
+ 

@@ -48,18 +48,17 @@ module.exports = function (config) {
 
   config.addShortcode("form", function (form, fields) {
     const fieldGroups = fields.map(field => {
-      console.log(field.fieldType)
       let fieldGroup
       if (field.fieldType === 'inputText' || field.fieldType === 'inputEmail' || field.fieldType === 'inputNumber') {
         fieldGroup = `
         <label for="${slugify(field.inputLabel)}">${field.inputLabel}</label>
-        <input type="${field.fieldType === 'inputEmail' ? 'email' : field.fieldType === 'inputNumber' ? 'tel' : 'text'}" name="${slugify(field.inputLabel)}" />
+        <input id="${slugify(field.inputLabel)}" type="${field.fieldType === 'inputEmail' ? 'email' : field.fieldType === 'inputNumber' ? 'tel' : 'text'}" name="${slugify(field.inputLabel)}" />
         `
       }
       if (field.fieldType === 'textarea') {
         fieldGroup = `
         <label for="${slugify(field.inputLabel)}">${field.inputLabel}</label>
-        <textarea name="${slugify(field.inputLabel)}"></textarea>
+        <textarea name="${slugify(field.inputLabel)}" id="${slugify(field.inputLabel)}"></textarea>
         `
       }
       return fieldGroup
@@ -68,7 +67,7 @@ module.exports = function (config) {
     for (let i = 0; i < fieldGroups.length; i++) {
       fieldGroupsNoCommas += fieldGroups[i]
     }
-    return `<form netlify netlify-honeypot="username-1">
+    return `<form id="${form.formId}" netlify netlify-honeypot="username-1" action="http://localhost:3227/handle-form" novalidate>
     <p class="hidden">
       <label>Don’t fill this out if you're human: <input name="username-1" /></label>
     </p>

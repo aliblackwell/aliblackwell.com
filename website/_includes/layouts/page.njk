@@ -117,14 +117,43 @@
         {% if content.type == 'mainBlurb' %}
           <section class="{{content.bg}} form">
             <div class="contain-content-text">
-              <p class="main-blurb">I offer a <a href="/wonder-workshop" class="custom-underline inline">website design and development service</a> with a focus on <strong>usability</strong>, <strong>accessibility</strong> and <strong>privacy</strong>, as well as a <a href="/services" class="custom-underline">broader consultancy service</a> covering <strong>crypto / socioeconomics</strong>, <strong>ethics</strong>, <strong>artificial intelligence</strong> and everything in between.</p>
+              <p class="main-blurb">I offer a
+                <a href="/wonder-workshop" class="custom-underline inline">website design and development service</a>
+                with a focus on
+                <strong>usability</strong>,
+                <strong>accessibility</strong>
+                and
+                <strong>privacy</strong>, as well as a
+                <a href="/services" class="custom-underline">broader consultancy service</a>
+                covering
+                <strong>crypto / socioeconomics</strong>,
+                <strong>ethics</strong>,
+                <strong>artificial intelligence</strong>
+                and everything in between.</p>
             </div>
           </section>
         {% endif %}
 
         {% if content.type == 'form' %}
-          <section class="{{content.bg}} form">
+          <section class="{{content.bg}} form" id="{{content.formId}}-wrapper">
+            <aside class="loading hidden" id="{{content.formId}}-loading" aria-hidden="true">
+              <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+              </div>
+              Loading</aside>
             <div class="contain-content-text">
+              <article class="success-message hidden" id="{{content.formId}}-success" aria-hidden="true">
+                <p>{{content.formSuccessMessage}}</p>
+              </article>
+              <article class="error-messages hidden" id="{{content.formId}}-errors" aria-hidden="true">
+                <h2>Unable to submit the form</h2>
+                <p>Please check the following fields:</p>
+                <ul id="{{content.formId}}-error-list"></ul>
+              </article>
+              <article class="error-messages hidden" id="{{content.formId}}-connection-error" aria-hidden="true">
+                <p>There is a problem with the connection. Please check your internet and try again.</p>
+              </article>
               {% form content,
               content.fields %}
               </div>

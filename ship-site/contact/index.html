@@ -142,24 +142,41 @@
         
 
         
-          <section class=" form">
+          <section class="standard-bg form" id="contact-form-wrapper">
+            <aside class="loading hidden" id="contact-form-loading" aria-hidden="true">
+              <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+              </div>
+              Loading</aside>
             <div class="contain-content-text">
-              <form netlify netlify-honeypot="username-1">
+              <article class="success-message hidden" id="contact-form-success" aria-hidden="true">
+                <p>Thanks for your message. It has passed validation!</p>
+              </article>
+              <article class="error-messages hidden" id="contact-form-errors" aria-hidden="true">
+                <h2>Unable to submit the form</h2>
+                <p>Please check the following fields:</p>
+                <ul id="contact-form-error-list"></ul>
+              </article>
+              <article class="error-messages hidden" id="contact-form-connection-error" aria-hidden="true">
+                <p>There is a problem with the connection. Please check your internet and try again.</p>
+              </article>
+              <form id="contact-form" netlify netlify-honeypot="username-1" action="http://localhost:3227/handle-form" novalidate>
     <p class="hidden">
       <label>Don’t fill this out if you're human: <input name="username-1" /></label>
     </p>
         
         <label for="Your-name">Your name</label>
-        <input type="text" name="Your-name" />
+        <input id="Your-name" type="text" name="Your-name" />
         
         <label for="Your-number">Your number</label>
-        <input type="tel" name="Your-number" />
+        <input id="Your-number" type="tel" name="Your-number" />
         
         <label for="Your-email">Your email</label>
-        <input type="email" name="Your-email" />
+        <input id="Your-email" type="email" name="Your-email" />
         
         <label for="Your-message">Your message</label>
-        <textarea name="Your-message"></textarea>
+        <textarea name="Your-message" id="Your-message"></textarea>
         
         <button>Submit</button>
     </form>
@@ -201,6 +218,7 @@
 </footer>
 
         <script src="/js/generic-core.js"></script>
+<script src="/js/handle-forms.js"></script>
         
           
         

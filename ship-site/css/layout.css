@@ -28,7 +28,7 @@ hr {
     margin: 4rem 0;
 }
 
-section{
+header, section{
     padding: var(--default-spacing) 0;
 }
 
@@ -37,10 +37,7 @@ header.content,
     padding-top: var(--default-spacing);
 }
 
-header.content + section {
-    padding-top: 0;
-}
-
+ 
 section.no-flex {
     display: block;
     flex-wrap: unset;
@@ -76,7 +73,7 @@ section.primary-bg-tint p {
 
 main header h1 {
     text-align: center;
-    margin-top: 0;
+    margin: 0;
 }
 
 article header, div header, main header {

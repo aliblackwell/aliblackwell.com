@@ -1,4 +1,10 @@
 module.exports.handler = (event, context, callback) => {
+    let environment;
+    if(process.env.NODE_ENV === 'production') {
+        environment = 'Production'
+    } else {
+        environment = 'Development'
+    }
 
     callback(null, {
         statusCode: 200,
@@ -8,7 +14,7 @@ module.exports.handler = (event, context, callback) => {
             "Access-Control-Allow-Credentials": "true"
         },
         body: JSON.stringify({
-            status: "Lambda function working"
+            status: `${environment} Lambda function working`
         })
     })
 
