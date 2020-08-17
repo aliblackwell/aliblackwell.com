@@ -1,11 +1,11 @@
 ---
-title: Ethical tech consultancy
-permalink: /services/
+title: Services I offer
+permalink: /tech/
 hasContents: true
 showTitle: true
-navParentId: services
+navParentId: tech
 eleventyNavigation:
-  key: Services
+  key: Tech
   parent: Primary
   order: 0
 ---

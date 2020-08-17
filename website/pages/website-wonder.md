@@ -4,10 +4,7 @@ permalink: /wonder-workshop/
 hasContents: true
 showTitle: false
 navParentId: products
-eleventyNavigation:
-  key: Products
-  parent: Primary
-  order: 2
+ 
 dynamicContent:
   - type: cardsList
     title: Websites with soul

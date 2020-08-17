@@ -1,11 +1,11 @@
 ---
-title: Projects
-showTitle: false
-permalink: /projects/
+title: Life so far
+showTitle: true
+permalink: /career/
 navParentId: about
 hasContents: true
 eleventyNavigation:
-  key: Projects
-  order: 0
+  key: Career
+  order: 3
   parent: about 
 ---

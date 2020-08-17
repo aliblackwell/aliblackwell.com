@@ -11,7 +11,7 @@ dynamicContent:
     formName: Contact
     formId: contact-form
     bg: standard-bg
-    formSuccessMessage: Thanks for your message. It has passed validation!
+    formSuccessMessage: Thanks for your message.
     fields:
       - fieldType: inputText
         inputLabel: Your name

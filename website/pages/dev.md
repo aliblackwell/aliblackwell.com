@@ -3,10 +3,10 @@ title: Full-stack web, app & widget design and development
 permalink: /design-and-development/
 hasContents: true
 showTitle: true
-navParentId: services
+navParentId: tech
 eleventyNavigation:
   key: Design and development
-  parent: services
+  parent: tech
   order: 0
 ---
  

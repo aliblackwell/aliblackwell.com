@@ -9,9 +9,9 @@ eleventyNavigation:
   order: 0
   parent: Primary
 dynamicContent:
-  - type: mainBlurb
-    bg: contrast-bg
   - type: aboutNav
+    bg: contrast-bg
+  - type: mainBlurb
     bg: contrast-bg
   - type: gallery
     galleryItems:

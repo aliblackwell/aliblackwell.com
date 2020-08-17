@@ -3,10 +3,10 @@ title: Colour Mirrors and Reiki Energy Therapy
 permalink: /energy/
 hasContents: true
 showTitle: true
-navParentId: services
+navParentId: energy
 eleventyNavigation:
-  key: Energy work
-  parent: services
-  order: 0
+  key: Energy
+  parent: Primary
+  order: 1
 ---
  

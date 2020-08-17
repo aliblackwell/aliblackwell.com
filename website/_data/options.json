@@ -7,20 +7,20 @@
   "footerStyle": "primary-bg",
   "childNavs": [
     {
-      "id": "services",
-      "menuParent": "Services",
-      "name": "My offerings",
-      "path": "/services/",
-      "label": "Tech consultancy",
+      "id": "tech",
+      "menuParent": "Tech",
+      "name": "Values-driven Tech Consultancy",
+      "path": "/tech/",
+      "label": "Overview",
       "children": [
-        "/energy/", "/design-and-development/"
+         "/design-and-development/", "/portfolio/"
       ]
     },
     {
-      "id": "products",
-      "menuParent": "Products",
-      "name": "Products",
-      "path": "/wonder-workshop/",
+      "id": "energy",
+      "menuParent": "Energy",
+      "name": "Joy",
+      "path": "/energy/",
       "label": "Website Wonder Workshop",
       "children": [
         "/keypaws/", "/wonder-workshop"
@@ -31,9 +31,9 @@
       "menuParent": "About",
       "name": "About me",
       "path": "/",
-      "label": "Home",
+      "label": "Ali Blackwell",
       "children": [
-        "/about/", "/projects/"
+        "/values/",  "/career/"
       ]
     }
   ]

@@ -7,11 +7,10 @@ eleventyNavigation:
   order: 0
   key: Privacy
   parent: Footer
+dynamicContent:
+  - type: freeContent
+    bg: standard-bg
+    content: 
+      <p>I reject all products and services that allow tracking scripts or tracking cookies to be installed on your devices.</p>
+      <p>This website uses <a href="https://plausible.io/" target="_blank">Plausible Analytics</a>, which has been designed from the ground up to respect your privacy. No personal data or personally identifiable information is being collected.</p>
 ---
-At JamstackStarter we reject all products and services that allow tracking scripts or tracking cookies to be installed on our users' devices.
-
-We don't use cookies.
-
-The only third-party service we use is Stripe, to handle our payments, and we embed their JavaScript using the "?advancedFraudSignals=false" flag that disables the tracking they use for fraud purposes - but could use for more nefarious purposes if their management team wanted to. So we disable it.
-
-JamstackStarter has been built with love and care to protect its users' privacy.

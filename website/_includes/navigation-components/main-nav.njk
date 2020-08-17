@@ -1,7 +1,9 @@
 <nav class="main-nav" aria-labelledby="site-logo">
   {% set navPages = collections.all | eleventyNavigation('Primary') %}
   <div class="navs">
+
     <div class="primary-nav-container">
+      {% set navPages = collections.all | eleventyNavigation('Primary') %}
       {% if options.menuStyle == 'burger' %}
         <div class="burger-menu">
           <input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="vh">

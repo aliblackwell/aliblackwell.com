@@ -5,9 +5,9 @@ module.exports = function (config) {
 
   const markdownIt = require('markdown-it');
   const markdownItOptions = {
-    html: false,
+    html: true,
     breaks: true,
-    linkify: true,
+    linkify: false,
   };
   const markdownItContainer = require('markdown-it-container');
   const markdownItAbbr = require('markdown-it-abbr');
@@ -67,7 +67,7 @@ module.exports = function (config) {
     for (let i = 0; i < fieldGroups.length; i++) {
       fieldGroupsNoCommas += fieldGroups[i]
     }
-    return `<form id="${form.formId}" netlify netlify-honeypot="username-1" action="http://localhost:3227/handle-form" novalidate>
+    return `<form id="${form.formId}" netlify netlify-honeypot="username-1" action="https://api.aliblackwell.com/handle-form" novalidate>
     <p class="hidden">
       <label>Don’t fill this out if you're human: <input name="username-1" /></label>
     </p>
