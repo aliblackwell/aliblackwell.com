@@ -209,3 +209,7 @@ p.main-blurb {
   font-size: var(--text-jumbo);
   margin-bottom: 0;
 }
+
+p.haiku {
+  font-size: var(--text-jumbo);
+}

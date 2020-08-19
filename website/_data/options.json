@@ -9,7 +9,7 @@
     {
       "id": "tech",
       "menuParent": "Tech",
-      "name": "Values-driven Tech Consultancy",
+      "name": "Tech Consultancy",
       "path": "/tech/",
       "label": "Overview",
       "children": [

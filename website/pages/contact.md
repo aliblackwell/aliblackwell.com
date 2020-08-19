@@ -4,7 +4,7 @@ showTitle: true
 permalink: /contact/
 eleventyNavigation:
   key: Contact
-  parent: Secondary
+  parent: Footer
   order: 0
 dynamicContent:
   - type: form

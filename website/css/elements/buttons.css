@@ -4,7 +4,7 @@ a {
   color: var(--color-links);
   display: inline-block;
 
-  text-decoration: none;
+  
 }
 
 a:hover, a:active {
@@ -25,7 +25,7 @@ a b, a em, a i, a strong, strong a, .button, button {
   background-color: var(--body-bg-accent);
   border: 2px solid var(--body-bg-accent);
   color: var(--body-bg-accent-color);
-  text-decoration: none;
+ 
 }
 
 .big-button {
@@ -33,7 +33,7 @@ a b, a em, a i, a strong, strong a, .button, button {
 }
 
 a:hover b, a:hover em, a:hover i, a:hover strong, strong a:hover, .button:hover, button:hover {
-  text-decoration: none;
+ 
   color: var(--body-bg-accent-color-hover);
   cursor: pointer;
   filter: brightness(var(--hover-brightness));
