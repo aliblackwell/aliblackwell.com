@@ -37,7 +37,14 @@ header.content,
     padding-top: var(--default-spacing);
 }
 
+header.content {
+    padding-bottom: 0;
+}
  
+header.content h1#page-title {
+    margin-bottom: 0;
+}
+
 section.no-flex {
     display: block;
     flex-wrap: unset;

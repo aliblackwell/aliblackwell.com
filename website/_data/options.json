@@ -4,37 +4,5 @@
   "showBurger": "mobile",
   "navStyle": "standard-bg",
   "headerStyle": "standard-bg",
-  "footerStyle": "primary-bg",
-  "childNavs": [
-    {
-      "id": "tech",
-      "menuParent": "Tech",
-      "name": "Tech Consultancy",
-      "path": "/tech/",
-      "label": "Overview",
-      "children": [
-         "/design-and-development/", "/portfolio/"
-      ]
-    },
-    {
-      "id": "energy",
-      "menuParent": "Energy",
-      "name": "Joy",
-      "path": "/energy/",
-      "label": "Website Wonder Workshop",
-      "children": [
-        "/keypaws/", "/wonder-workshop"
-      ]
-    },
-    {
-      "id": "about",
-      "menuParent": "About",
-      "name": "About me",
-      "path": "/",
-      "label": "Ali Blackwell",
-      "children": [
-        "/values/",  "/career/"
-      ]
-    }
-  ]
+  "footerStyle": "primary-bg"
 }

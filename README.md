@@ -1,4 +1,6 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/720a007c-d050-4b77-8ca6-876306c314d8/deploy-status)](https://app.netlify.com/sites/jamstack-blaster/deploys)
+# My personal website
+
+This repository contains the source code for my personal website. It was developed using [JAMstack Starter](https://github.com/aliblackwell/jamstack-starter), my accessible and privacy-friendly open source starter kit for static sites. The README of that project is included below:
 
 # JAMstack starter
 

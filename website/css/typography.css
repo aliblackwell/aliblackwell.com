@@ -104,8 +104,7 @@ nav + .content h1 {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: var(--title-font);
-  font-weight: var(--title-font-weight);
+ 
   font-style: normal;
 }
 
@@ -144,7 +143,7 @@ a:hover, a:active {
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 
 dfn, cite, em, i {
@@ -205,11 +204,18 @@ h1 strong, h2 strong, h3 strong {
   line-height: 1;
 }
 
-p.main-blurb {
+p.jumbo {
   font-size: var(--text-jumbo);
-  margin-bottom: 0;
+}
+
+p.main-blurb {
+ 
 }
 
 p.haiku {
   font-size: var(--text-jumbo);
+}
+
+.center {
+  text-align: center;
 }
