@@ -71,8 +71,8 @@ header .contain-content-all {
 
 .logo-container::before {
     content: "";
-    position: absolute;
-    top: 0rem;
+    position: fixed;
+    top: 3rem;
     left: -10rem;
     width: 200vh;
     height: 5px;
@@ -143,9 +143,9 @@ h1.logo-container img {
 
 .primary-nav-container::before {
     content: "";
-    position: absolute;
-    top: 0rem;
-    right: 0rem;
+    position: fixed;
+    top: 3.8rem;
+    right: 3.8rem;
     width: 20rem;
     height: 20rem;
     border-radius: 100%;

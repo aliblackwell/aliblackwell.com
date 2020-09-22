@@ -233,3 +233,7 @@ p.haiku {
 .text-large {
   font-size: var(--text-large); 
 }
+
+.highlight {
+  color: var(--primary-bg);
+}

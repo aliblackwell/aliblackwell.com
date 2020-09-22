@@ -188,3 +188,20 @@ main {
 footer {
     flex-shrink: 0;
 }
+
+.projects-list h1 {
+    float: left;
+    transform: rotate(25deg);
+}
+
+.projects-list h2 {
+    font-weight: 600;
+    color: var(--primary-bg);
+}
+
+.energy-work section.content .contain-content-text {
+    position: relative;
+    top: 0rem;
+    max-width: var(--text-width);
+    margin: 0 auto 5rem auto;
+}
