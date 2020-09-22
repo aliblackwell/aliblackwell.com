@@ -7,7 +7,7 @@ html::before {
     content: "👇🏻";
     width: 50px;
     font-size: var(--text-jumbo);
-    top: 20px;
+    top: -60px;
     left: 50%;
     margin-left: -25px;
     position: absolute; 

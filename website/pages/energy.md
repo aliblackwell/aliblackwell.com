@@ -11,7 +11,9 @@ dynamicContent:
   - type: freeContent
     bg: standard-bg 
     content: >-
-      <p class="main-blurb"> In 2020 I learnt to dowse and qualified as both a Reiki and Colour Mirrors practitioner.</p>
-      <p>Please <a href="/contact">contact me</a> if you'd like to book a session.</p>
+      <p class="first-para">In 2020 I learnt to dowse and qualified as both a Reiki and Colour Mirrors practitioner.</p>
+      <p>Throughout my career I have mentored and been mentored and have always found the relationship—whichever way it was meant to be going—tremendously rewarding.</p>
+      <p>I am excited to combine my energy work and my career experience as both a mentor and mentee to develop a new coaching service.</p>
+      <p>If you are interested in working with me, please <a class="custom-underline" href="/contact">get in touch</a>.</p>
 ---
  

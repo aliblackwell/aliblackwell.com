@@ -18,7 +18,7 @@
 }
 
 header.nav-container {
-    border-top: solid 0.5rem var(--primary-bg);
+    border-top: solid 0.5em var(--primary-bg);
 }
 
 header.nav-container nav {
@@ -44,8 +44,7 @@ nav ul li {
 .nav-container {
     width: 100%;
     height: auto;
-    position: relative;
-    z-index: 100;
+    position: relative; 
 }
 
 header .contain-content-all {
@@ -61,11 +60,31 @@ header .contain-content-all {
     line-height: 1;
 }
 
+#primary {
+    position: relative;
+    z-index: 10;
+}
+
+.logo-container {
+   position: relative; 
+}
+
+.logo-container::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    left: -10rem;
+    width: 250vh;
+    height: 5px;
+    background: rgba(0,0,0,.08);
+    transform: rotate(25deg);
+    transform-origin: 0% 0%;
+    z-index: -1;
+}
+
 #site-logo a {
     text-decoration: none;
-    padding-bottom: 0em;
-    border-bottom: 0.2rem solid var(--body-bg-accent);
-    
+    padding-bottom: 0em;   
 }
 
 #site-logo a:hover {
@@ -105,12 +124,10 @@ h1.logo-container img {
     border-bottom: var(--nav-border-width) solid transparent;
 }
 
-.main-nav li a {
+.main-nav li a  {
     margin: 0 0 0 1rem;
-    display: block;
     text-decoration: none;
-    padding: 0em;
-    line-height: 1;
+    padding: 0em; 
     position: relative;
     z-index: 10;
     cursor: pointer;
@@ -120,8 +137,25 @@ h1.logo-container img {
 }
 
 
-.logo-centre .primary-nav-container {
+.primary-nav-container {
     width: 100%;
+    position: relative;
+}
+
+.primary-nav-container::before  {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 100%;
+    background: rgba(0,0,0,.16);
+}
+ 
+
+.logo-container {
+    position: relative;
 }
 
 .logo-centre .secondary-nav-container {
@@ -247,7 +281,7 @@ Child Nav
 }
 
 li.my-active-class a {
-    border-bottom: var(--nav-border-width) solid var(--body-bg-accent);
+    
     text-decoration: none;
     font-weight: var(--body-bold-weight);
 }

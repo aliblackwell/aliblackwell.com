@@ -9,7 +9,7 @@
     <header class="nav-container {{options.navStyle}} logo-{{options.logoAlign}} {% if options.menuStyle == 'burger' %} show-burger-{{options.showBurger}} {% endif %}">
       <div class="contain-content-all">
         <h1 class="logo-container" id="site-logo">
-          <a href="/">
+          <a href="/" class="custom-underline">
             {# <span class="r">r</span><span class="g">g</span><span class="b">b</span> #}
             Ali B.
           </a>
@@ -24,7 +24,7 @@
       {% endif %}
 
       {% if showTitle == true %}
-        <header class="content {{options.headerStyle}}">
+        <header class="content">
           <div class="contain-content-text">
 
             <h1 id="page-title">{{title}}</h1>
@@ -41,7 +41,7 @@
         {% endif %}
 
         {% if content.type == 'textCTAs'%}
-          <section class="{{content.bg}} text-ctas two-up">
+          <section class="text-ctas two-up">
             <div class="contain-content-all">
               {% for item in content.ctaItems %}
                 <article>
@@ -57,7 +57,7 @@
         {% endif %}
 
         {% if content.type == 'freeContent'%}
-          <section class="{{content.bg}} content no-flex">
+          <section class="content no-flex">
             <div class="contain-content-text">
               {{ content.content | markdownify | safe }}
             </div>
@@ -65,7 +65,7 @@
         {% endif %}
 
         {% if content.type == 'gallery' %}
-          <section class="{{content.bg}} gallery">
+          <section class="gallery">
             <div class="contain-content-all">
               {% for item in content.galleryItems %}
                 <article>
@@ -80,7 +80,7 @@
         {% endif %}
 
         {% if content.type == 'testimonial' %}
-          <section class="{{content.bg}} testimonial">
+          <section class="testimonial">
             <div class="contain-content-text">
               {% testimonial content.testimonial,
               content.author %}
@@ -89,7 +89,7 @@
         {% endif %}
 
         {% if content.type == 'sharer' %}
-          <section class="{{content.bg}} sharer">
+          <section class="sharer">
             <div class="contain-content-all">
               {% include 'partials/sharer.njk' %}
             </div>
@@ -97,7 +97,7 @@
         {% endif %}
 
         {% if content.type == 'textWithImage' %}
-          <section class="{{content.bg}} text-with-image group">
+          <section class="text-with-image group">
             <div class="contain-content-text">
               <header>
                 <p>{{content.firstPara | markdownify | safe }}</p>
@@ -118,7 +118,7 @@
 
           {% for period in projects %}
 
-            <section class="{{content.bg}} projects-list content group">
+            <section class="projects-list content group">
               <div class="contain-content-text">
                 <h1>{{period.period}}</h1>
                 <h2 class="center">{{period.theme}}</h2>
@@ -141,7 +141,7 @@
       {% endif %}
 
       {% if content.type == 'form' %}
-        <section class="{{content.bg}} form" id="{{content.formId}}-wrapper">
+        <section class="form" id="{{content.formId}}-wrapper">
           <aside class="loading hidden" id="{{content.formId}}-loading" aria-hidden="true">
             <div class="spinner">
               <div class="double-bounce1"></div>
@@ -167,7 +167,7 @@
         {% endif %}
 
         {% if content.type == 'cardsList' %}
-          <section class="{{content.bg}} cards {{content.layout}}">
+          <section class="cards {{content.layout}}">
             <div class="contain-content-text">
               {% if content.title %}
                 <header>

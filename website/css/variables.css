@@ -32,7 +32,7 @@
 
   /* Main content area colours */
   --body-bg: #227;
-  --body-color: #fff;
+  --body-color: #fefeee;
   --border-color: #ccc;
   --body-bg-accent: var(--highlight-colour); /* bg saturation of secondary hue */
   --body-bg-accent-color: #111; /* white or black accessible hue on secondary colour bg */
@@ -40,6 +40,7 @@
   --body-link-color: #111;
   --body-link-hover: #333;
   --body-muted-color: #777; /*i.e. grey */
+  --body-highlight-color: #fefeee; /* accessible saturation of primary hue on body-bg */
   
 
   /* Primary content area colours - COMPLETE */
@@ -52,7 +53,7 @@
   --primary-link-color: #111;
   --primary-link-hover: #222;
   --primary-muted-color: #777; /*i.e. grey */
-  --body-highlight-color: white; /* accessible saturation of primary hue on body-bg */
+
 
 
   /* Primary colour tint areas - COMPLETE */
@@ -90,10 +91,10 @@
   --secondary-tint-muted-color: #777; /*i.e. grey */
 
   /* Contrast content area colours */
-  --contrast-bg: hsl(var(--contrast-colour-hue), 55.6%, 30%);
+  --contrast-bg: hsl(var(--contrast-colour-hue), 55.6%, 20%);
   --contrast-color: #fff;
   --contrast-highlight-color: #070807;
-  --contrast-bg-accent: var(--primary-bg);
+  --contrast-bg-accent: hsl(var(--primary-colour-hue), 86%, 53%);
   --contrast-bg-accent-color: #111;
   --contrast-bg-accent-color-hover: #111;
   --contrast-link-color: #fff;

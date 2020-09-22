@@ -28,5 +28,5 @@ dynamicContent:
                 artificial intelligence
                 and everything in between.</p>
                 <p>I live and work in Crystal Palace, South London.</p>
-                <p>If you'd like to collaborate, please <a href="/contact/">contact me</a>.</p> 
+                <p>If you'd like to collaborate, please <a href="/contact/" class="custom-underline">contact me</a>.</p> 
 ---

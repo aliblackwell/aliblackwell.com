@@ -1,8 +1,7 @@
-
 .text-with-image header p {
     font-size: var(--text-jumbo);
     text-align: left;
-    margin:  1rem 0 2rem;
+    margin: 1rem 0 2rem;
 }
 
 .text-with-image img {
@@ -14,12 +13,44 @@
 }
 
 .text-with-image header p {
-     font-size: var(--text-jumbo);
+    font-size: var(--text-jumbo);
     max-width: 100%;
 }
 
 .text-with-image figure {
     margin: 0 2rem 2rem 0;
+    position: relative;
+}
+
+.text-with-image figure img {
+    position: relative;
+    z-index: 10;
+}
+
+.text-with-image figure::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .32);
+    transform: rotate(6deg);
+    overflow-y: hidden;
+    z-index: 0;
+}
+
+.text-with-image figure::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .16);
+    transform: rotate(12deg);
+    overflow-y: hidden;
+    z-index: 0;
 }
 
 .text-with-image article {
@@ -31,8 +62,6 @@
 }
 
 .text-with-image .grid {
- 
- 
     margin: 0;
     display: grid;
     grid-template-columns: 2fr 3fr;

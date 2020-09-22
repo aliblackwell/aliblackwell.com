@@ -12,7 +12,7 @@ button[disabled]:hover {
 }
 
 form {
-    border: 1px solid var(--border-color);
+    position: relative;
     border-radius: var(--border-radius);
     display: block;
     max-width: var(--width-form);

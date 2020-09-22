@@ -1,16 +1,14 @@
 /* Links */
 
 a {
-  color: var(--color-links);
+  color: var(--body-highlight-color);
   display: inline-block;
 
   
 }
 
 a:hover, a:active {
-  color: var(--color-links-hover);
-  filter: brightness(var(--hover-brightness));
-  text-decoration: underline;
+ color: inherit; 
 }
 
 a b, a em, a i, a strong, strong a, .button, button {
