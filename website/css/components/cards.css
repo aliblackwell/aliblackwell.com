@@ -25,7 +25,7 @@
 
 @media (max-width: 600px) {
     .cards .card {
-        margin: 0 0rem var(--default-spacing);
+        margin: 0 0rem 5rem;
     }
 }
 
@@ -44,6 +44,12 @@
     font-family: var(--bold-font);
     font-weight: var(--bold-font-weight);
     line-height: var(--line-height);
+}
+
+@media (max-width: 800px) {
+    .card h3 {
+        margin-top: 1.5rem;
+    }
 }
 
 .card .text p {
@@ -136,7 +142,7 @@
     @media (max-width: 700px) {
         section.cards.fullWide .card, .card {
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
     }
 }
