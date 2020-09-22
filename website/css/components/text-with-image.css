@@ -8,6 +8,16 @@
     margin: 0 2rem 0 0;
 }
 
+@media (max-width: 600px) {
+    .text-with-image img {
+        margin: 0 0rem 0 0;
+    }
+
+    .text-with-image img {
+        max-width: 300px;
+    }
+}
+
 .text-with-image header {
     width: 100%;
 }
@@ -26,7 +36,7 @@ figure {
     position: relative;
 }
 
- figure img {
+figure img {
     position: relative;
     z-index: 10;
 }
@@ -60,6 +70,7 @@ figure::after {
 .card figure::before {
     transform: rotate(-3deg)
 }
+
 .card figure::after {
     transform: rotate(2deg);
 }

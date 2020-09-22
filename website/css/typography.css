@@ -234,6 +234,6 @@ p.haiku {
   font-size: var(--text-large); 
 }
 
-.highlight {
+.highlight, [role=alert] {
   color: var(--primary-bg);
 }
