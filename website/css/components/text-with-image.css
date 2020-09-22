@@ -22,12 +22,16 @@
     position: relative;
 }
 
-.text-with-image figure img {
+figure {
+    position: relative;
+}
+
+ figure img {
     position: relative;
     z-index: 10;
 }
 
-.text-with-image figure::before {
+figure::before {
     content: "";
     position: absolute;
     top: 0%;
@@ -40,7 +44,7 @@
     z-index: 0;
 }
 
-.text-with-image figure::after {
+figure::after {
     content: "";
     position: absolute;
     top: 0%;
@@ -51,6 +55,13 @@
     transform: rotate(12deg);
     overflow-y: hidden;
     z-index: 0;
+}
+
+.card figure::before {
+    transform: rotate(-3deg)
+}
+.card figure::after {
+    transform: rotate(2deg);
 }
 
 .text-with-image article {

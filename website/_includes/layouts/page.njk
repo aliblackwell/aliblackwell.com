@@ -122,112 +122,118 @@
               <div class="contain-content-text">
                 <h1>{{period.period}}</h1>
                 <h2 class="center">{{period.theme}}</h2>
-                <ul>
+                <ul class="cards">
                   {% for project in period.projects %}
-                    <li>
-                      <h3>{{project.name}}</a>
-                    </h3>
-                    <p>{{project.blurb}}<br/><a href="{{project.url}}">{{project.url}}</a></p>
-                    
-                  </li>
-                {% endfor %}
-              </ul>
+                    <li class="card">
+                      <figure class="img">
+                        <img src="{{project.imgSrc}}" alt="Screenshot of {{project.name}} website"/>
+                      </figure>
+                      <div class="text">
+                        <h2 class="text-large">{{project.name}}
+                        </h2>
+                        <p>{{project.blurb}}<br/>
+                          <a href="{{project.url}}">{{project.url}}</a>
+                        </p>
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
 
-            </div>
-          </section>
+              </div>
+            </section>
 
-        {% endfor %}
+          {% endfor %}
 
-      {% endif %}
-
-      {% if content.type == 'form' %}
-        <section class="form" id="{{content.formId}}-wrapper">
-          <aside class="loading hidden" id="{{content.formId}}-loading" aria-hidden="true">
-            <div class="spinner">
-              <div class="double-bounce1"></div>
-              <div class="double-bounce2"></div>
-            </div>
-            Loading</aside>
-          <div class="contain-content-text">
-            <article class="success-message hidden" id="{{content.formId}}-success" aria-hidden="true">
-              <p>{{content.formSuccessMessage}}</p>
-            </article>
-            <article class="error-messages hidden" id="{{content.formId}}-errors" aria-hidden="true">
-              <h2>Unable to submit the form</h2>
-              <p>Please check the following fields:</p>
-              <ul id="{{content.formId}}-error-list"></ul>
-            </article>
-            <article class="error-messages hidden" id="{{content.formId}}-connection-error" aria-hidden="true">
-              <p>There is a problem with the connection. Please check your internet and try again.</p>
-            </article>
-            {% form content,
-            content.fields %}
-            </div>
-          </section>
         {% endif %}
 
-        {% if content.type == 'cardsList' %}
-          <section class="cards {{content.layout}}">
+        {% if content.type == 'form' %}
+          <section class="form" id="{{content.formId}}-wrapper">
+            <aside class="loading hidden" id="{{content.formId}}-loading" aria-hidden="true">
+              <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+              </div>
+              Loading</aside>
             <div class="contain-content-text">
-              {% if content.title %}
-                <header>
-                  <h1>{{content.title}}</h1>
-                </header>
-                {%endif%}
-                {% for card in content.cards %}
-                  <article class="card">
-                    <figure class="img">
-                      {% if card.svg %}
-                        {% include 'undraw-illustrations/'+card.svg+'.svg' %}
-                      {% endif %}
-                      {% if card.img %}
-                        <img src="{{card.img}}" alt="{{card.alt}}"/>
-                      {% endif %}
-                    </figure>
-                    <div class="text">
-                      <h2>{{card.title}}</h2>
-                      <p>{{card.text}}</p>
-                      {% if card.label %}
-                        <a href="{{card.url}}">{{card.label}}
-                          →</a>
-                      {% endif %}
-                    </div>
-                  </article>
-                {% endfor %}
+              <article class="success-message hidden" id="{{content.formId}}-success" aria-hidden="true">
+                <p>{{content.formSuccessMessage}}</p>
+              </article>
+              <article class="error-messages hidden" id="{{content.formId}}-errors" aria-hidden="true">
+                <h2>Unable to submit the form</h2>
+                <p>Please check the following fields:</p>
+                <ul id="{{content.formId}}-error-list"></ul>
+              </article>
+              <article class="error-messages hidden" id="{{content.formId}}-connection-error" aria-hidden="true">
+                <p>There is a problem with the connection. Please check your internet and try again.</p>
+              </article>
+              {% form content,
+              content.fields %}
               </div>
             </section>
           {% endif %}
+
+          {% if content.type == 'cardsList' %}
+            <section class="cards {{content.layout}}">
+              <div class="contain-content-text">
+                {% if content.title %}
+                  <header>
+                    <h1>{{content.title}}</h1>
+                  </header>
+                  {%endif%}
+                  {% for card in content.cards %}
+                    <article class="card">
+                      <figure class="img">
+                        {% if card.svg %}
+                          {% include 'undraw-illustrations/'+card.svg+'.svg' %}
+                        {% endif %}
+                        {% if card.img %}
+                          <img src="{{card.img}}" alt="{{card.alt}}"/>
+                        {% endif %}
+                      </figure>
+                      <div class="text">
+                        <h2>{{card.title}}</h2>
+                        <p>{{card.text}}</p>
+                        {% if card.label %}
+                          <a href="{{card.url}}">{{card.label}}
+                            →</a>
+                        {% endif %}
+                      </div>
+                    </article>
+                  {% endfor %}
+                </div>
+              </section>
+            {% endif %}
+          {% endfor %}
+
+        </main>
+
+        {% include 'partials/footer.njk' %}
+
+        {% include 'partials/global-js.njk' %}
+        {% for content in dynamicContent %}
+          {% if content.type == 'sharer' %}
+            <script src="/js/sharer.js"></script>
+          {% endif %}
         {% endfor %}
 
-      </main>
-
-      {% include 'partials/footer.njk' %}
-
-      {% include 'partials/global-js.njk' %}
-      {% for content in dynamicContent %}
-        {% if content.type == 'sharer' %}
-          <script src="/js/sharer.js"></script>
+        {% if permalink == '/' %}
+          <script src="/js/homepage.js"></script>
+          <script>
+            if (window.netlifyIdentity) {
+              window
+                .netlifyIdentity
+                .on("init", user => {
+                  if (!user) {
+                    window
+                      .netlifyIdentity
+                      .on("login", () => {
+                        document.location.href = "/admin/";
+                      });
+                  }
+                });
+            }
+          </script>
         {% endif %}
-      {% endfor %}
 
-      {% if permalink == '/' %}
-        <script src="/js/homepage.js"></script>
-        <script>
-          if (window.netlifyIdentity) {
-            window
-              .netlifyIdentity
-              .on("init", user => {
-                if (!user) {
-                  window
-                    .netlifyIdentity
-                    .on("login", () => {
-                      document.location.href = "/admin/";
-                    });
-                }
-              });
-          }
-        </script>
-      {% endif %}
-
-    </body>
-  </html>
+      </body>
+    </html>

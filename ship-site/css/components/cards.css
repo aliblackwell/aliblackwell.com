@@ -1,3 +1,8 @@
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 .cards .card {
     list-style: none;
     margin: 0;
@@ -8,7 +13,6 @@
     position: relative;
     max-width: var(--width-card-wide);
     margin: 0 auto;
-    ;
 }
 
 .card figure {
@@ -16,7 +20,7 @@
 }
 
 .cards .card {
-    margin: 0 var(--default-spacing) var(--default-spacing);
+    margin: 0 var(--default-spacing) 3rem;
 }
 
 @media (max-width: 600px) {
@@ -60,8 +64,14 @@
     flex-direction: column;
 }
 
+.card {
+    flex-direction: row;
+}
+
 .card .text {
-    flex-grow: 1;
+    flex-grow: 0;
+    position: relative;
+    z-index: 10;
 }
 
 .card .text>*+* {
@@ -85,6 +95,11 @@
 }
 
 @supports (display: flex) {
+    .card .img {
+        flex-basis: 50%;
+        flex-grow: 0;
+        padding: 0.5em;
+    }
     .card {
         flex: 1 0 25%;
     }
@@ -120,14 +135,13 @@
     }
     @media (max-width: 700px) {
         section.cards.fullWide .card, .card {
-            display: flex; 
+            display: flex;
             flex-direction: column-reverse;
         }
     }
 }
 
 .card .img, .card svg {
-    height: 10rem;
     width: auto;
     max-width: 100%;
     margin: 0 auto;
@@ -149,14 +163,13 @@
     height: 100%;
     width: 100%;
     display: block;
-    margin-top: 4rem;
 }
 
 .card:first-of-type:last-of-type {
     flex-direction: row;
     margin: 0 auto var(--default-spacing);
 }
- 
+
 .card .button-holder {
     display: flex;
     justify-content: flex-start;
@@ -183,4 +196,10 @@
 
 .card .button.font-size-smaller {
     color: white;
+}
+
+@media (min-width: 600px) {
+    .card .text {
+        margin: 1rem;
+    }
 }

@@ -6,31 +6,37 @@
             {
                 "name": "KeyPaws",
                 "url": "https://www.keypa.ws",
+                "imgSrc": "/img/projects/keypaws.png",
                 "blurb": "KeyPaws is my side project that uses AI to protect your computer from cats on your keyboard."
             },
             {
                 "name": "Mindfulpuss",
                 "url": "https://www.mindfulpuss.com",
-                "blurb": "Mindfulpuss is my podcast that encourages you to live life in the meow."
+                "imgSrc": "/img/projects/mindfulpuss.png",
+                "blurb": "Mindfulpuss is an experimental podcast that encourages you to live life in the meow."
             },
             {
                 "name": "Ask EveryDoctor",
                 "url": "https://ask.everydoctor.org.uk/",
+                "imgSrc": "/img/projects/ask-everydoctor.png",
                 "blurb": "At the height of the pandemic I developed a survey tool for campaigning organisation EveryDoctor to track PPE in the NHS."
             },
             {
                 "name": "Pembroke House",
                 "url": "https://www.pembrokehouse.org.uk",
+                "imgSrc": "/img/projects/pembroke-house.png",
                 "blurb": "Working with designer Rosalba Ellis again, I built a fully customisable website for Pembroke House, a centre for social action and residential community in Walworth."
             },
             {
                 "name": "JAMstack Starter",
                 "url": "https://jamstack-blaster.netlify.app/",
+                "imgSrc": "/img/projects/jamstack-starter.png",
                 "blurb": "All web projects share the same foundations. JAMstack Starter condenses my sixteen years of experience building accessible and privacy-friendly websites and apps into an open source starter template to robustly jumpstart new projects."
             },
             {
                 "name": "Gwen Hustwit",
                 "url": "https://www.gwenhustwit.com",
+                "imgSrc": "/img/projects/gwen-hustwit.png",
                 "blurb": "Made possible by JAMstack Starter, Gwen's affordable, accessible website—fully editable and customisable via a CMS—was put together in a single day of collaboration in Crystal Palace."
             }
         ]
@@ -42,16 +48,19 @@
             {
                 "name": "Compass",
                 "url": "https://www.compassonline.org.uk",
+                "imgSrc": "/img/projects/compass.png",
                 "blurb": "Collaborating with designer Rosalba Ellis I developed a new website for the centre-left thinktank Compass."
             },
             {
                 "name": "Democracy Club's Election Widget",
                 "url": "https://democracyclub.org.uk/projects/election-widget/",
+                "imgSrc": "/img/projects/election-widget.png",
                 "blurb": "Working in a distributed team well before it was trendy, I collaborated with the team at Democracy Club to develop a fully unit-tested, accessible polling station finder and election information widget in time for the 2019 election."
             },
             {
                 "name": "Can I Vote?",
                 "url":"https://www.canivote.org.uk",
+                "imgSrc": "/img/projects/can-i-vote.png",
                 "blurb": "Another project for the 2019 election, Can I Vote highlighted to Commonwealth citizens that they are eligible to vote in UK elections."
             }
         ]

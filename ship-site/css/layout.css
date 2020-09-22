@@ -10,12 +10,9 @@ html::before {
     top: -60px;
     left: 50%;
     margin-left: -25px;
-    position: absolute; 
+    position: absolute;
     z-index: 100;
 }
-
- 
-
 
 footer {
     padding: 2rem 1rem;
@@ -28,19 +25,18 @@ hr {
     margin: 4rem 0;
 }
 
-header, section{
+header, section {
     padding: var(--default-spacing) 0;
 }
 
-header.content,
-.child-nav  {
+header.content, .child-nav {
     padding-top: var(--default-spacing);
 }
 
 header.content {
     padding-bottom: 0;
 }
- 
+
 header.content h1#page-title {
     margin-bottom: 0;
 }
@@ -170,4 +166,25 @@ footer nav ul li {
     text-align: right;
 }
 
+/* Sticky footer
 
+https://css-tricks.com/couple-takes-sticky-footer/
+
+*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}

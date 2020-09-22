@@ -44,7 +44,7 @@ nav ul li {
 .nav-container {
     width: 100%;
     height: auto;
-    position: relative; 
+    position: relative;
 }
 
 header .contain-content-all {
@@ -66,7 +66,7 @@ header .contain-content-all {
 }
 
 .logo-container {
-   position: relative; 
+    position: relative;
 }
 
 .logo-container::before {
@@ -74,9 +74,9 @@ header .contain-content-all {
     position: absolute;
     top: 0rem;
     left: -10rem;
-    width: 250vh;
+    width: 200vh;
     height: 5px;
-    background: rgba(0,0,0,.08);
+    background: rgba(0, 0, 0, .08);
     transform: rotate(25deg);
     transform-origin: 0% 0%;
     z-index: -1;
@@ -84,7 +84,7 @@ header .contain-content-all {
 
 #site-logo a {
     text-decoration: none;
-    padding-bottom: 0em;   
+    padding-bottom: 0em;
 }
 
 #site-logo a:hover {
@@ -97,7 +97,7 @@ header .contain-content-all {
 
 .logo-left h1.logo-container {
     text-align: left;
- }
+}
 
 h1.logo-container img {
     width: 16rem;
@@ -124,10 +124,10 @@ h1.logo-container img {
     border-bottom: var(--nav-border-width) solid transparent;
 }
 
-.main-nav li a  {
+.main-nav li a {
     margin: 0 0 0 1rem;
     text-decoration: none;
-    padding: 0em; 
+    padding: 0em;
     position: relative;
     z-index: 10;
     cursor: pointer;
@@ -136,13 +136,12 @@ h1.logo-container img {
     font-weight: var(--body-font-weight);
 }
 
-
 .primary-nav-container {
     width: 100%;
     position: relative;
 }
 
-.primary-nav-container::before  {
+.primary-nav-container::before {
     content: "";
     position: absolute;
     top: 0rem;
@@ -150,9 +149,8 @@ h1.logo-container img {
     width: 20rem;
     height: 20rem;
     border-radius: 100%;
-    background: rgba(0,0,0,.16);
+    background: rgba(0, 0, 0, .16);
 }
- 
 
 .logo-container {
     position: relative;
@@ -281,9 +279,7 @@ Child Nav
 }
 
 li.my-active-class a {
-    
     text-decoration: none;
-    font-weight: var(--body-bold-weight);
 }
 
 /* Bottom nav option */
@@ -312,10 +308,8 @@ li.my-active-class a {
         color: var(--primary-color);
         padding: 0.5em 1.2em;
     }
-
     .menu-bottom .primary-nav-container li.my-active-class a {
         color: var(--primary-color);
         font-weight: var(--title-font-weight);
     }
-    
 }
