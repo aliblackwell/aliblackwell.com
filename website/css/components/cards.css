@@ -1,6 +1,7 @@
 .cards {
     display: grid;
     grid-template-columns: 1fr;
+    clear: both;
 }
 
 .cards .card {
@@ -29,7 +30,7 @@
     }
 }
 
-.card a::after {
+/* .card a::after {
     content: "";
     position: absolute;
     top: 0;
@@ -37,7 +38,7 @@
     right: 0;
     bottom: 0;
     z-index: 22;
-}
+} */
 
 .card h3 {
     margin: 0;
@@ -88,9 +89,9 @@
     margin-top: auto;
 }
 
-.card .text :nth-last-child(2) {
+/* .card .text :nth-last-child(2) {
     margin-bottom: 0.75rem;
-}
+} */
 
 .card .text {
     max-width: 60ch;
@@ -145,6 +146,17 @@
             flex-direction: column;
         }
     }
+}
+
+.card {
+    transition: all 0.25s ease-in;
+}
+
+.card.hidden {
+    transition: none;
+    opacity: 0;
+    position: absolute;
+    z-index: -9;
 }
 
 .card .img, .card svg {
@@ -209,3 +221,13 @@
         margin: 1rem;
     }
 }
+
+p.links {
+    margin: 0;
+}
+
+p.links a +a {
+    float: right;
+}
+
+ 

@@ -199,7 +199,8 @@ footer {
     color: var(--primary-bg);
 }
 
-.energy-work section.content .contain-content-text {
+.energy-work section.content .contain-content-text,
+.projects .intro {
     position: relative;
     top: 0rem;
     max-width: var(--text-width);

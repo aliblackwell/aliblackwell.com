@@ -1,2 +1,7 @@
 <script src="/js/generic-core.js"></script>
-<script src="/js/handle-forms.js"></script>
+{% if hasForm %}
+    <script src="/js/handle-forms.js"></script>
+{% endif %}
+{% if id == 'projects' %}
+    <script src="/js/filter.js"></script>
+{% endif %}

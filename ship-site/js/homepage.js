@@ -5,17 +5,17 @@ function loopAnimateImage() {
     intervalHolder = setInterval(function () {
         ali.setAttribute('src', srcs[i])
         i = i === 0 ? 1 : i === 1 ? 2 : 0;
-    }, 350)
+    }, 700)
 }
 
 function singleAnimateImage() {
 
     setTimeout(function () {
         ali.setAttribute('src', srcs[1])
-    }, 350)
+    }, 700)
     setTimeout(function () {
         ali.setAttribute('src', srcs[2])
-    }, 700)
+    }, 1400)
 }
 
 function stopAnimateImage() {
@@ -31,4 +31,3 @@ mediaQuery.addEventListener('change', function () {
 !mediaQuery.matches && ali.addEventListener('mouseover', loopAnimateImage)
 !mediaQuery.matches && singleAnimateImage()
 ali.addEventListener('mouseout', stopAnimateImage)
-

@@ -116,30 +116,42 @@
 
         {% if content.type == 'projectsList' %}
 
-          {% for period in projects %}
+          <section class="projects">
+            <div class="contain-content-text intro">
+              {{content.intro | markdownify | safe}}
+            </div>
+            {% for period in projects %}
 
-            <section class="projects-list content group">
-              <div class="contain-content-text">
-                <h1>{{period.period}}</h1>
-                <h2 class="center">{{period.theme}}</h2>
-                <ul class="cards">
-                  {% for project in period.projects %}
-                    <li class="card">
-                      <figure class="img">
-                        <img src="{{project.imgSrc}}" alt="Screenshot of {{project.name}} website"/>
-                      </figure>
-                      <div class="text">
-                        <h3 class="text-large">{{project.name}}
-                        </h3>
-                        <p>{{project.blurb}}<br/>
-                          <a href="{{project.url}}">{{project.url}}</a>
-                        </p>
-                      </div>
-                    </li>
-                  {% endfor %}
-                </ul>
+              <article class="projects-list content group">
+                <div class="contain-content-text">
+                  <h1 class="period">{{period.period}}</h1>
+                  <h2 class="center theme">{{period.theme}}</h2>
+                  <ul class="cards">
+                    {% for project in period.projects %}
+                      <li class="card project{% for tag in project.categories %} {{tag}}{% endfor %} {{project.startingClass}}">
+                        <figure class="img">
+                          <img src="/img/projects/{{project.slug}}.png" alt="Screenshot of {{project.name}} website"/>
+                        </figure>
+                        <div class="text">
+                          <h3 class="text-large">{{project.name}}
+                          </h3>
+                          <p>{{project.blurb | markdownify | safe}}
+                          </p>
 
-              </div>
+                          <p class="links">
+                            <a href="{{project.url}}">{{project.urlLabel}}</a>
+                            {% if project.repoUrl %}
+                              <a href="{{project.repoUrl}}" target="_blank">{{project.repoUrlLabel}}</a>
+                            {% endif %}
+                          </p>
+
+                        </div>
+                      </li>
+                    {% endfor %}
+                  </ul>
+
+                </div>
+              </article>
             </section>
 
           {% endfor %}
@@ -174,6 +186,7 @@
 
           {% if content.type == 'cardsList' %}
             <section class="cards {{content.layout}}">
+
               <div class="contain-content-text">
                 {% if content.title %}
                   <header>

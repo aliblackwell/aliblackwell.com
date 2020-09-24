@@ -2,6 +2,7 @@
 title: Contact Me
 showTitle: true
 permalink: /contact/
+hasForm: true
 eleventyNavigation:
   key: Contact
   parent: Footer
