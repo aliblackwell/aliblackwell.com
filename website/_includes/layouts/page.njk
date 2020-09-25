@@ -128,7 +128,7 @@
                   <h2 class="center theme">{{period.theme}}</h2>
                   <ul class="cards">
                     {% for project in period.projects %}
-                      <li class="card project{% for tag in project.categories %} {{tag}}{% endfor %} {{project.startingClass}}">
+                      <li aria-hidden="{{project.startingClass == 'hidden'}}" class="card project{% for tag in project.categories %} {{tag}}{% endfor %} {{project.startingClass}}">
                         <figure class="img">
                           <img src="/img/projects/{{project.slug}}.png" alt="Screenshot of {{project.name}} website"/>
                         </figure>
