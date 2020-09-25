@@ -31,7 +31,7 @@
                 {% endif %}
               {% endfor %}
               <li{% if gotChild == 'got!' %} class="my-active-class" {% endif %}>
-                <a href="{{ entry.url | url }}" role="menuitem">{{ entry.title }}</a>
+                <a href="{{ entry.url | url }}">{{ entry.title }}</a>
               </li>
             {%- endfor %}
           </ul>

@@ -10,7 +10,7 @@
                 "repoUrl": "https://github.com/aliblackwell/keypa.ws",
                 "repoUrlLabel": "View GitHub",
                 "slug": "keypaws",
-                "blurb": "KeyPaws is my side project that uses AI to protect your computer from cats on your keyboard.",
+                "blurb": "You protect your computer from threats you can't see. Now's the time to protect it from those you can CUDDLE. Cutting-edge AI that definitely won't replace you.",
                 "categories": [
                     "entrepreneurship",
                     "app-design",
@@ -103,6 +103,15 @@
         "period": "2018/19",
         "theme": "The Wilderness Years",
         "projects": [
+            
+            {
+                "name": "Landscape gardening",
+                "slug": "gardening",
+                "blurb": "In 2019 I moved into a garden flat in Crystal Palace with a wild and overgrown garden. They say you haven't lived until you've battled a nemesis, and I can vouch for Fallopia japonica as a worthy opponent.",
+                "categories": [
+                    "other"
+                ]
+            },
             {
                 "name": "Lead Lecturer @ Ada, National College for Digital Skills",
                 "url": "https://www.ada.ac.uk",

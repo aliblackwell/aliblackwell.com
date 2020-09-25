@@ -100,7 +100,7 @@
           <section class="text-with-image group">
             <div class="contain-content-text">
               <header>
-                <p>{{content.firstPara | markdownify | safe }}</p>
+                {{content.firstPara | markdownify | safe }}
               </header>
               <div class="grid">
                 <figure>
@@ -135,9 +135,7 @@
                         <div class="text">
                           <h3 class="text-large">{{project.name}}
                           </h3>
-                          <p>{{project.blurb | markdownify | safe}}
-                          </p>
-
+                          {{project.blurb | markdownify | safe}}
                           <p class="links">
                             <a href="{{project.url}}">{{project.urlLabel}}</a>
                             {% if project.repoUrl %}

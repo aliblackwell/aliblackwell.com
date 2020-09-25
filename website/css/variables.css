@@ -32,7 +32,7 @@
 
   /* Main content area colours */
   --body-bg: #227;
-  --body-color: #fefeee;
+
   --border-color: #ccc;
   --body-bg-accent: var(--highlight-colour); /* bg saturation of secondary hue */
   --body-bg-accent-color: #111; /* white or black accessible hue on secondary colour bg */
@@ -40,7 +40,8 @@
   --body-link-color: #111;
   --body-link-hover: #333;
   --body-muted-color: #777; /*i.e. grey */
-  --body-highlight-color: #fefeee; /* accessible saturation of primary hue on body-bg */
+  --body-color: hsl(25,50%, 90%);
+  --body-highlight-color: hsl(25,50%, 90%); /* accessible saturation of primary hue on body-bg */
   
 
   /* Primary content area colours - COMPLETE */

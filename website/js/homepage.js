@@ -5,7 +5,7 @@ function loopAnimateImage() {
     intervalHolder = setInterval(function () {
         ali.setAttribute('src', srcs[i])
         i = i === 0 ? 1 : i === 1 ? 2 : 0;
-    }, 700)
+    }, 227)
 }
 
 function singleAnimateImage() {

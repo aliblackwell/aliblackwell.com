@@ -230,10 +230,25 @@ p.haiku {
   text-align: center;
 }
 
+.text-small {
+  font-size: var(--text-small);
+}
+
 .text-large {
   font-size: var(--text-large); 
 }
 
+.alignright {
+  text-align: right;
+}
+
 .highlight, [role=alert] {
   color: var(--primary-bg);
+}
+
+.footnote {
+  position: absolute;
+  bottom: -3rem;
+  text-align: left;
+  display: block;
 }
