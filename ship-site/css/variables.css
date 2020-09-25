@@ -40,8 +40,8 @@
   --body-link-color: #111;
   --body-link-hover: #333;
   --body-muted-color: #777; /*i.e. grey */
-  --body-color: hsl(25,50%, 90%);
-  --body-highlight-color: hsl(25,50%, 90%); /* accessible saturation of primary hue on body-bg */
+  --body-color: hsl(25,50%, 80%);
+  --body-highlight-color: hsl(25,50%, 80%); /* accessible saturation of primary hue on body-bg */
   
 
   /* Primary content area colours - COMPLETE */

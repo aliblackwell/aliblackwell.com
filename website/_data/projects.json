@@ -107,6 +107,7 @@
             {
                 "name": "Landscape gardening",
                 "slug": "gardening",
+                "startingClass": "hidden",
                 "blurb": "In 2019 I moved into a garden flat in Crystal Palace with a wild and overgrown garden. They say you haven't lived until you've battled a nemesis, and I can vouch for Fallopia japonica as a worthy opponent.",
                 "categories": [
                     "other"
