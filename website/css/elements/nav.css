@@ -136,6 +136,10 @@ h1.logo-container img {
     font-weight: var(--body-font-weight);
 }
 
+nav li a:hover {
+    color: inherit;
+}
+
 .primary-nav-container {
     width: 100%;
     position: relative;
