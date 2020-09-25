@@ -4,14 +4,6 @@
         "theme": "Moving towards joy",
         "projects": [
             {
-                "name": "Learning to draw",
-                "slug": "drawing",
-                "blurb": "This year I am learning to draw as I'd love to be a better illustrator and it's a beautifully meditative thing to do and gets me away from the screen. I am learning with the help of a painting and drawing course with the <a href='https://www.londonartcollege.co.uk/'>London Art College</a> and a fantastic book <a href='https://www.goodreads.com/book/show/627206.The_New_Drawing_on_the_Right_Side_of_the_Brain'>Drawing on the Right Side of the Brain</a>. So far I'm really enjoying it and will aim to post regular updates here.",
-                "categories": [
-                    "other"
-                ]
-            },
-            {
                 "name": "Entre-purrrr-neurship",
                 "url": "https://www.keypa.ws",
                 "urlLabel": "Download KeyPaws",
@@ -24,6 +16,14 @@
                     "app-design",
                     "open-source",
                     "info-sec"
+                ]
+            },
+            {
+                "name": "Learning to draw",
+                "slug": "drawing",
+                "blurb": "This year I am learning to draw as I'd love to be a better illustrator and it's a beautifully meditative thing to do and gets me away from the screen. I am learning with the help of a painting and drawing course with the <a href='https://www.londonartcollege.co.uk/'>London Art College</a> and a fantastic book <a href='https://www.goodreads.com/book/show/627206.The_New_Drawing_on_the_Right_Side_of_the_Brain'>Drawing on the Right Side of the Brain</a>. So far I'm really enjoying it and will aim to post regular updates here.",
+                "categories": [
+                    "other"
                 ]
             },
             {
@@ -68,7 +68,7 @@
                 "urlLabel": "Visit Pembroke House",
                 "startingClass": "hidden",
                 "slug": "pembroke-house",
-                "blurb": "Working with designer Rosalba Ellis again, I built a fully customisable website for Pembroke House, a centre for social action and residential community in Walworth.",
+                "blurb": "Working with <a href='https://www.thesmallaxe.org/'>The Small Axe</a> and their designer Rosalba Ellis, I built a fully customisable website for Pembroke House, a centre for social action and residential community in Walworth.",
                 "categories": [
                     "full-stack"
                 ]
@@ -119,7 +119,7 @@
                 "urlLabel": "Join Compass",
                 "startingClass": "hidden",
                 "slug": "compass",
-                "blurb": "Collaborating with designer Rosalba Ellis I developed a new website for the centre-left thinktank Compass.",
+                "blurb": "Collaborating with <a href='https://www.thesmallaxe.org/'>The Small Axe</a> designer Rosalba Ellis I developed a new website for the centre-left thinktank Compass.",
                 "categories": [
                     "full-stack",
                     "full-stack"
@@ -144,7 +144,7 @@
                 "url": "https://www.canivote.org.uk",
                 "urlLabel": "View site",
                 "slug": "can-i-vote",
-                "blurb": "Another project for the 2019 election, Can I Vote highlighted to Commonwealth citizens that they are eligible to vote in UK elections.",
+                "blurb": "Collaborating with <a href='https://www.thesmallaxe.org/'>Small Axe</a> designer Rosalba Ellis, Can I Vote highlighted to Commonwealth citizens that they were eligible to vote in the 2019 General Election",
                 "categories": [
                     "election tech",
                     "full-stack"
@@ -156,7 +156,7 @@
                 "urlLabel": "View the MVP",
                 "startingClass": "hidden",
                 "slug": "commit-me",
-                "blurb": "CommitMe was 'an innovative way to engage individuals and institutions on climate change'. Our MVP won an award at 2018's Future of Blockchain competition.",
+                "blurb": "CommitMe was an innovative way to engage individuals and institutions on climate change, using cryptoeconomic incentives. Our MVP won an award at 2018's Future of Blockchain competition.",
                 "categories": [
                     "crypto"
                 ]
@@ -220,7 +220,7 @@
                 "url": "https://clearhonestdesign.com/work/progressive-alliance/",
                 "urlLabel": "View at CHD",
                 "slug": "progressive-alliance",
-                "blurb": "For the 2017 election I joined <a href='https://www.compassonline.com'>Compass</a> to help them launch their Progressive Alliance. We delivered the UK's first tactical voting tool of the election, as well as a host of other innovations. I also helped the Compass team run a Barnstorm in Carlisle.",
+                "blurb": "For the 2017 election I joined <a href='https://www.compassonline.com'>Compass</a> to help them launch the Progressive Alliance. We delivered the UK's first tactical voting tool of the 2017 General Election, as well as a host of other innovations. Beyond the screen I helped run a Barnstorm in Carlisle.",
                 "categories": [
                     "political-tech"
                 ]
@@ -249,7 +249,7 @@
         ]
     },
     {
-        "period": "2011 - 2015",
+        "period": "2009 - 2015",
         "theme": "Full-time technology education",
         "projects": [
             {
@@ -263,6 +263,16 @@
                     "tech-education",
                     "crypto",
                     "info-sec"
+                ]
+            },{
+                "name": "Creative Director @ .web{Devign}",
+                "url": "https://web.archive.org/web/20111104063624/http://www.divinewebdesign.com/",
+                "urlLabel": "Visit .web{devign} on the Wayback Machine",
+                "slug": "web-devign",
+                "blurb": ".web{devign} was run as a co-op and there were three of us in the studio by the time I went full-time on Decoded in 2011. We built standards-compliant, accessible websites for charities, personalities and small businesses.",
+                "categories": [
+                    "entrepreneurship",
+                    "full-stack"
                 ]
             }
         ]
