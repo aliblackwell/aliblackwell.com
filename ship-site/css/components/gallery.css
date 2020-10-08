@@ -1,5 +1,0 @@
-section.gallery .contain-content-all {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 1em;
-}

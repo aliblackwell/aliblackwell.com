@@ -114,6 +114,24 @@
           </section>
         {% endif %}
 
+        {% if content.type == 'error' %}
+          <section class="text-with-image group error">
+            <div class="contain-content-text">
+              <header>
+                <h1>{{content.title  | safe }}</h1>
+              </header>
+
+              <figure>
+                <span class="highlight">{{content.errorCode}}</span>
+              </figure>
+              <article>
+                {{ content.content | markdownify | safe }}
+              </article>
+
+            </div>
+          </section>
+        {% endif %}
+
         {% if content.type == 'projectsList' %}
 
           <section class="projects">
