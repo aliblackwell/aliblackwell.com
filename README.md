@@ -1,6 +1,26 @@
 # My personal website
 
-This repository contains the source code for my personal website. It was developed using [JAMstack Starter](https://github.com/aliblackwell/jamstack-starter), my accessible and privacy-friendly open source starter kit for static sites. The README of that project is included below:
+This repository contains the source code for my personal website. It was developed using [JAMstack Starter](https://github.com/aliblackwell/jamstack-starter), my accessible and privacy-friendly open source starter kit for static sites. The README of that project is included below.
+
+## Plesk vs Netlify
+
+In mid-2019 [I left Netlify over their lack of a sustainability policy](https://community.netlify.com/t/is-netlify-powered-by-renewable-energy/3951/4) (something they [have now published](https://www.netlify.com/sustainability/))
+
+I chose self-hosted Plesk as my new environment, hosted in Digital Ocean's LON1 region, the actual data centre being [Equinix LD5](https://ideas.digitalocean.com/ideas/DO-I-1654), which is (powered by 100% renewable energy](https://equinix.box.com/shared/static/tyj2etkrfhi961mni3izodme701blhgf.pdf)(PDF).
+
+My trade-off for renewable energy was "developer experience"; many things that Netlify does for you / gives you for free you have to work hard for in a self-hosted environment:
+
+### Custom error pages
+
+To add custom error pages using Plesk: [source](https://support.plesk.com/hc/en-us/articles/213370209-How-to-enable-custom-error-pages-for-a-domain-in-Plesk)
+
+    1. create a template similar to ./website/pages/404.md for each custom error page
+    2. Head to Apache & nginx Settings for yourdomain.com
+    3. Under Additional Apache directives, create the alias and then add a line for each error document:
+        ```
+        Alias /site_root /var/www/vhosts/yourdomain.com/httpdocs/ship-site
+        ErrorDocument 404  /site_root/404/index.html
+        ```
 
 # JAMstack starter
 
