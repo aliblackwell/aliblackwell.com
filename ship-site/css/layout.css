@@ -1,0 +1,208 @@
+body {
+    background: var(--primary-bg);
+    position: relative;
+}
+
+html::before {
+    content: "👇🏻";
+    width: 50px;
+    font-size: var(--text-jumbo);
+    top: -60px;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    z-index: 100;
+}
+
+footer {
+    padding: 2rem 1rem;
+}
+
+hr {
+    background-color: var(--secondary-bg);
+    border: none;
+    height: 1px;
+    margin: 4rem 0;
+}
+
+header, section {
+    padding: var(--default-spacing) 0;
+}
+
+header.content, .child-nav {
+    padding-top: var(--default-spacing);
+}
+
+header.content {
+    padding-bottom: 0;
+}
+
+header.content h1#page-title {
+    margin-bottom: 0;
+}
+
+section.no-flex {
+    display: block;
+    flex-wrap: unset;
+}
+
+.contain-content-all {
+    width: var(--widest-width);
+    margin: 0 auto;
+    position: relative;
+}
+
+.contain-content-text {
+    width: var(--content-width);
+    margin: 0 auto;
+    position: relative;
+}
+
+.contain-content-text p {
+    max-width: var(--text-width);
+}
+
+section.primary-bg-tint p {
+    font-size: var(--text-large);
+}
+
+.contain-content-narrow {
+    width: var(--narrow-width);
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Headers */
+
+main header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+article header, div header, main header {
+    padding-top: 0;
+}
+
+header a b, header a em, header a i, header a strong {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+header nav img {
+    margin: 1rem 0;
+}
+
+section header {
+    padding-top: 0;
+    width: 100%;
+}
+
+/* Footer */
+
+footer .content {
+    position: absolute;
+    z-index: 3;
+    padding-bottom: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer {
+    position: relative;
+    min-height: 4rem;
+    text-align: right;
+    z-index: 10;
+}
+
+.footer-content {
+    position: relative;
+}
+
+footer p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+footer li a, footer p {
+    font-size: var(--text-small);
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    footer p, footer .content {
+        position: relative;
+    }
+    footer p {
+        text-align: right;
+        margin-top: var(--default-spacing);
+    }
+}
+
+footer img {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+footer ul, footer li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li a {
+    font-size: var(--text-small);
+    text-decoration: none;
+}
+
+footer ul {
+    text-align: right;
+}
+
+footer nav ul li {
+    display: block;
+    text-align: right;
+}
+
+/* Sticky footer
+
+https://css-tricks.com/couple-takes-sticky-footer/
+
+*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.projects-list h1 {
+    float: left;
+    transform: rotate(25deg);
+}
+
+.projects-list h2 {
+    font-weight: 600;
+    color: var(--primary-bg);
+}
+
+.energy-work section.content .contain-content-text,
+.projects .intro {
+    position: relative;
+    top: 0rem;
+    max-width: var(--text-width);
+    margin: 0 auto 5rem auto;
+}

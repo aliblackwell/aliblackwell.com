@@ -1,0 +1,254 @@
+.body-text {
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
+  font-style: normal;
+}
+
+.title-text {
+  font-family: var(--title-font);
+  font-weight: var(--title-font-weight);
+  font-style: normal;
+}
+
+label, legend {
+  font-family: var(--title-font);
+  font-weight: var(--title-font-weight);
+  font-style: normal;
+}
+
+/*--------------------------------------------------------------
+# Core Typography
+--------------------------------------------------------------*/
+
+body, select, option, li, span, optgroup, input, textarea, p {
+  font-family: var(--body-font);
+  font-weight: var(--body-font-weight);
+  font-style: normal;
+  line-height: var(--line-height);
+}
+
+body {
+  margin: 0;
+  width: 100%; 
+  color: var(--body-color);
+  background: var(--contrast-bg);
+  margin: 0;
+  overflow-x: hidden;  
+}
+
+ 
+.primary-bg {
+  background: var(--primary-bg);
+  color: var(--primary-color);
+}
+
+.primary-bg-tint {
+  background: var(--primary-bg-tint);
+  color: var(--primary-tint-color);
+}
+
+.secondary-bg {
+  background: var(--secondary-bg);
+  color: var(--secondary-color);
+}
+
+.secondary-bg-tint {
+  background: var(--secondary-bg-tint);
+  color: var(--secondary-tint-color);
+}
+
+.contrast-bg, .standard-bg {
+  background: var(--contrast-bg);
+  color: var(--contrast-color);
+}
+
+h1 {
+  font-size: var(--text-jumbo);
+  color: var(--body-highlight-color);
+  text-align: center;
+}
+
+h2 {
+  color: var(--body-highlight-color);
+}
+
+.content h1,
+nav h1 {
+  margin:1rem auto;
+}
+
+nav + .content h1 {
+  margin-top: 0;
+  text-align: left;
+  color: var(--body-highlight-color);
+}
+
+.primary-bg-tint h1, .secondary-bg-tint h1 {
+  color: var(--body-color);
+}
+
+.primary-bg h2 {
+  color: var(--primary-highlight-color);
+}
+
+.primary-bg-tint h2 {
+  color: var(--primary-tint-highlight-color);
+}
+
+.secondary-bg h2 {
+  color: var(--secondary-highlight-color);
+}
+
+.secondary-bg-tint h2 {
+  color: var(--secondary-tint-highlight-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-weight: var(--title-font-weight);
+  font-style: normal;
+}
+
+a {
+  color: var(--body-link-color);
+  text-decoration: underline;
+}
+
+a:hover, a:active {
+  color: var(--body-link-hover);
+  text-decoration: underline;
+}
+
+.primary-bg a {
+  color: var(--primary-link-color);
+}
+
+.primary-bg a:hover, .primary-bg a:active {
+  color: var(--primary-link-hover);
+}
+
+.secondary-bg a {
+  color: var(--secondary-link-color);
+}
+
+.secondary-bg a:hover, .secondary-bg a:active {
+  color: var(--secondary-link-hover);
+}
+
+.contrast-bg a {
+  color: var(--contrast-link-color);
+}
+
+.contrast-bg a:hover, .contrast-bg a:active {
+  color: var(--contrast-link-hover);
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+.quotes {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+cite {
+  text-align: right;
+  width: 100%;
+  display: block;
+  max-width: 70%;
+  margin: 0rem auto 3rem;
+  font-size: var(--text-large);
+  line-height: 1;
+  font-style: normal;
+}
+
+strong {
+  font-family: var(--title-font);
+  font-weight: var(--title-font-weight);
+}
+
+.contrast-bg strong {
+ color: var(--contrast-color);
+  font-weight: var(--title-font-weight);
+}
+
+nav li a {
+  box-shadow: none;
+}
+
+a,
+li.my-active-class a,
+nav li a:hover, nav li a:active {
+  transition: all 0.1s ease-in;
+  box-shadow:
+    inset 0 -0.1em var(--contrast-bg),
+    inset 0 -0.2em var(--contrast-bg-accent);
+  display: inline; 
+  text-decoration: none;
+  line-height: var(--line-height);
+}
+
+a:hover, a.selected {
+  color: var(--primary-highlight-color);
+  box-shadow: inset 0 -0.1em var(--contrast-bg), inset 0 -1.1em var(--primary-bg)
+}
+
+
+.contrast-bg p.main-blurb a:hover {
+  text-decoration: none;
+}
+
+h1 strong, h2 strong, h3 strong {
+  font-family: var(--title-font);
+  font-weight: var(--title-font-weight);
+}
+
+.title-text {
+  font-size: var(--text-jumbo);
+  line-height: 1;
+}
+
+p.jumbo {
+  font-size: var(--text-jumbo);
+}
+
+p.main-blurb {
+ 
+}
+
+p.haiku {
+  font-size: var(--text-jumbo);
+}
+
+.center {
+  text-align: center;
+}
+
+.text-small {
+  font-size: var(--text-small);
+}
+
+.text-large {
+  font-size: var(--text-large); 
+}
+
+.alignright {
+  text-align: right;
+}
+
+.highlight, [role=alert] {
+  color: var(--primary-bg);
+}
+
+.footnote {
+  position: absolute;
+  bottom: -3rem;
+  text-align: left;
+  display: block;
+}

@@ -1,0 +1,148 @@
+:root {
+  --primary-colour-hue: 25; /* Orange 25, 86%, 53% */
+  --secondary-colour-hue: 60; /* Olive #722 60, 55.6%, 30% */ 
+  --contrast-colour-hue: 240; /* Blue #227 240, 55.6%, 30% */
+  --highlight-colour: hsl(25,86%, 53%);
+ 
+  --text-jumbo: 1.8rem;
+  --text-large: 1.2rem;
+  --text-medium: 20px;
+  --text-small: 0.8rem;
+  --line-height: 1.2;
+  --box-width: 30rem;
+  --outline-focus: #fafa00;
+  --body-font: jubilat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  ;
+  --body-font-weight: 400;
+  --title-font: jubilat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --title-font-weight: 600;
+  --widest-width: 1600px;
+  --content-width: 1100px;
+  --narrow-width: 800px;
+  --default-spacing: 1rem;
+  --text-width: 33rem;
+  --nav-border-width: 0.2em;
+  /* Below names from MVP.css by Andy Brewer */
+  --border-radius: 5px;
+  --box-shadow: 2px 2px 10px;
+
+  --color-shadow: #f4f4f4;
+
+  
+
+  /* Main content area colours */
+  --body-bg: #227;
+
+  --border-color: #ccc;
+  --body-bg-accent: var(--highlight-colour); /* bg saturation of secondary hue */
+  --body-bg-accent-color: #111; /* white or black accessible hue on secondary colour bg */
+  --body-bg-accent-color-hover: #222;
+  --body-link-color: #111;
+  --body-link-hover: #333;
+  --body-muted-color: #777; /*i.e. grey */
+  --body-color: hsl(25,50%, 87%);
+  --body-highlight-color: hsl(25,50%, 87%); /* accessible saturation of primary hue on body-bg */
+  
+
+  /* Primary content area colours - COMPLETE */
+  --primary-bg: hsl(var(--primary-colour-hue), 86%, 53%);
+  --primary-color: #111;
+  --primary-highlight-color: #070807;
+  --primary-bg-accent: hsl(var(--contrast-colour-hue),  94.1%, 20%); /* contrast colour full */
+  --primary-bg-accent-color: #fff;
+  --primary-bg-accent-color-hover: #eee;
+  --primary-link-color: #111;
+  --primary-link-hover: #222;
+  --primary-muted-color: #777; /*i.e. grey */
+
+
+
+  /* Primary colour tint areas - COMPLETE */
+  --primary-bg-tint: hsl(var(--primary-colour-hue), 64%, 80%);
+  --primary-tint-color: #111;
+  --primary-tint-highlight-color: #070807;
+  --primary-bg-tint-accent: hsl(var(--contrast-colour-hue),  94.1%, 20%); /* contrast colour full */
+  --primary-bg-tint-accent-color: #fff;
+  --primary-bg-tint-accent-color-hover: #eee;
+  --primary-tint-link-color: #111;
+  --primary-tint-link-hover: #222;
+  --primary-tint-muted-color: #777; /*i.e. grey */
+
+  /* Secondary content area colours - COMPLETE */
+  --secondary-bg: hsl(var(--secondary-colour-hue), 55.6%, 30%);
+  --secondary-color: #fff;
+  --secondary-highlight-color: #070807;
+  --secondary-bg-accent: hsl(var(--contrast-colour-hue),  94.1%, 20%); /* contrast colour full */
+  --secondary-bg-accent-color: #fff;
+  --secondary-bg-accent-color-hover: #eee;
+  --secondary-link-color: #fff;
+  --secondary-link-hover: #eee;
+  --secondary-muted-color: #bbb; /*i.e. grey */
+
+
+  /* Secondary content area colours */
+  --secondary-bg-tint: hsl(var(--secondary-colour-hue), 26%, 81.2%);
+  --secondary-tint-color: #111;
+  --secondary-tint-highlight-color: #070807;
+  --secondary-bg-tint-accent: hsl(var(--contrast-colour-hue),  94.1%, 20%); /* contrast colour full */
+  --secondary-bg-tint-accent-color: #fff;
+  --secondary-bg-tint-accent-color-hover: #eee;
+  --secondary-tint-link-color: #111;
+  --secondary-tint-link-hover: #333;
+  --secondary-tint-muted-color: #777; /*i.e. grey */
+
+  /* Contrast content area colours */
+  --contrast-bg: hsl(var(--contrast-colour-hue), 55.6%, 20%);
+  --contrast-color: #fff;
+  --contrast-highlight-color: #070807;
+  --contrast-bg-accent: hsl(var(--primary-colour-hue), 86%, 53%);
+  --contrast-bg-accent-color: #111;
+  --contrast-bg-accent-color-hover: #111;
+  --contrast-link-color: #fff;
+  --contrast-link-hover: #eee;
+  --contrast-muted-color: #aaa; /*i.e. grey */
+
+
+  --hover-brightness: 1.2;
+  --justify-important: center;
+  --justify-normal: left;
+  --width-card: 285px;
+  --width-card-medium: 460px;
+  --width-card-wide: 60rem;
+  --width-content: 1080px;
+  --width-form: 18rem;
+}
+
+
+/*
+Core breakpoints
+*/
+
+@media (max-width: 1600px) {
+  :root {
+    --widest-width: 90%;
+    --content-width: 70%;
+  }
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --widest-width: 95%;
+    --content-width: 85%;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --text-medium: 18px;
+    --content-width: 90%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  :root {
+    --text-jumbo: 1.2rem;
+    --text-medium: 16px;
+  }
+}
