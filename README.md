@@ -6,7 +6,7 @@ This repository contains the source code for my personal website. It was develop
 
 In mid-2019 [I left Netlify over their lack of a sustainability policy](https://community.netlify.com/t/is-netlify-powered-by-renewable-energy/3951/4) (something they [have now published](https://www.netlify.com/sustainability/))
 
-I chose self-hosted Plesk as my new environment, hosted in Digital Ocean's LON1 region, the actual data centre being [Equinix LD5](https://ideas.digitalocean.com/ideas/DO-I-1654), which is (powered by 100% renewable energy](https://equinix.box.com/shared/static/tyj2etkrfhi961mni3izodme701blhgf.pdf)(PDF).
+I chose self-hosted Plesk as my new environment, hosted in Digital Ocean's LON1 region, the actual data centre being [Equinix LD5](https://ideas.digitalocean.com/ideas/DO-I-1654), which is [powered by 100% renewable energy](https://equinix.box.com/shared/static/tyj2etkrfhi961mni3izodme701blhgf.pdf)(PDF).
 
 My trade-off for renewable energy was "developer experience"; many things that Netlify does for you / gives you for free you have to work hard for in a self-hosted environment:
 
