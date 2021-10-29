@@ -1,8 +1,36 @@
 [
     {
-        "period": "2020",
+        "period": "2020/21",
         "theme": "Moving towards joy",
         "projects": [
+            {
+                "name": "Hexagons",
+                "url": "https://www.hexagons.app",
+                "urlLabel": "Visit Hexagons",
+                "repoUrl": "https://github.com/aliblackwell/hexagons",
+                "repoUrlLabel": "View GitHub",
+                "slug": "hexagons",
+                "blurb": "Hexagons  is an assessment tool designed for learners with SEND and the professionals who support them. I worked closely with the team at <a href='http://torfield-saxonmount.com/'>TASMAT</a> to develop the app via a user-centred design process with test-driven development, producing an accessible, secure, multi-platform web app.",
+                "categories": [
+                    "full-stack",
+                    "app-design",
+                    "open-source"
+                ]
+            },
+            {
+                "name": "Open Democracy: Comment Incentives",
+                "url": "https://www.opendemocracy.net/en/digitaliberties/user-comments-are-critical-debate-should-we-pay-for-them/",
+                "urlLabel": "View the live project",
+                "startingClass": "hidden",
+                "slug": "web-monetisation",
+                "blurb": "This project, funded by <a href='https://www.grantfortheweb.org/'>Grant for the Web</a>, seeks to incentivise high quality comments on digital journalism using the new Web Monetization draft web standard specification.",
+                "categories": [
+                    "crypto",
+                    "full-stack",
+                    "app-design",
+                    "open-source"
+                ]
+            },
             {
                 "name": "Entre-purrrr-neurship",
                 "url": "https://www.keypa.ws",
@@ -22,6 +50,7 @@
                 "name": "Learning to draw",
                 "slug": "drawing",
                 "blurb": "This year I am learning to draw as I'd love to be a better illustrator and it's a beautifully meditative thing to do and gets me away from the screen. I am learning with the help of a painting and drawing course with the <a href='https://www.londonartcollege.co.uk/'>London Art College</a> and a fantastic book <a href='https://www.goodreads.com/book/show/627206.The_New_Drawing_on_the_Right_Side_of_the_Brain'>Drawing on the Right Side of the Brain</a>. So far I'm really enjoying it and will aim to post regular updates here.",
+                "startingClass": "hidden",
                 "categories": [
                     "other"
                 ]
@@ -35,19 +64,6 @@
                 "blurb": "Mindfulpuss is an experimental podcast that encourages you to live life in the meow.",
                 "categories": [
                     "entrepreneurship"
-                ]
-            },
-            {
-                "name": "Open Democracy: Comment Incentives",
-                "url": "https://www.opendemocracy.net/en/digitaliberties/our-website-laboratory-thought-and-code/",
-                "urlLabel": "View the background",
-                "startingClass": "hidden",
-                "slug": "web-monetisation",
-                "blurb": "This upcoming project, funded by <a href='https://www.grantfortheweb.org/'>Grant for the Web</a>, seeks to incentivise high quality comments on digital journalism using the new Web Monetization draft web standard specification.",
-                "categories": [
-                    "crypto",
-                    "full-stack",
-                    "open-source"
                 ]
             },
             {
@@ -100,27 +116,16 @@
         ]
     },
     {
-        "period": "2018/19",
-        "theme": "The Wilderness Years",
+        "period": "2016-19",
+        "theme": "Developing new interests",
         "projects": [
-            
             {
                 "name": "Landscape gardening",
                 "slug": "gardening",
                 "startingClass": "hidden",
-                "blurb": "In 2019 I moved into a garden flat in Crystal Palace with a wild and overgrown garden. They say you haven't lived until you've battled a nemesis, and I can vouch for Fallopia japonica as a worthy opponent.",
+                "blurb": "In 2019 I moved into a garden flat in Crystal Palace with a weed-filled and overgrown garden. Now half the lawn is a wild-flower meadow, and new beds provide pollen for bees and food for our pot.",
                 "categories": [
                     "other"
-                ]
-            },
-            {
-                "name": "Lead Lecturer @ Ada, National College for Digital Skills",
-                "url": "https://www.ada.ac.uk",
-                "urlLabel": "Visit Ada",
-                "slug": "ada",
-                "blurb": "In 2018 Ada needed someone to come in and finesse the design and delivery of their Software Developer and Data Analyst courses for apprentices from organisations including Google, Facebook and Hackney Council.",
-                "categories": [
-                    "tech-education"
                 ]
             },
             {
@@ -131,7 +136,6 @@
                 "slug": "compass",
                 "blurb": "Collaborating with <a href='https://www.thesmallaxe.org/'>The Small Axe</a> designer Rosalba Ellis I developed a new website for the centre-left thinktank Compass.",
                 "categories": [
-                    "full-stack",
                     "full-stack"
                 ]
             },
@@ -154,7 +158,7 @@
                 "url": "https://www.canivote.org.uk",
                 "urlLabel": "View site",
                 "slug": "can-i-vote",
-                "blurb": "Collaborating with <a href='https://www.thesmallaxe.org/'>Small Axe</a> designer Rosalba Ellis, Can I Vote highlighted to Commonwealth citizens that they were eligible to vote in the 2019 General Election",
+                "blurb": "Collaborating with <a href='https://www.thesmallaxe.org/'>Small Axe</a> designer Rosalba Ellis, Can I Vote highlighted to Commonwealth citizens that they were eligible to vote in the 2019 General Election and the 2021 local elections.",
                 "categories": [
                     "election tech",
                     "full-stack"
@@ -186,21 +190,15 @@
                 "name": "Verto",
                 "url": "https://app.playverto.com/agenda",
                 "urlLabel": "Play Verto",
+                "startingClass": "hidden",
                 "slug": "verto",
                 "blurb": "I led a skunkworks team of designers, developers, researchers, copywriters and influencers to create Verto, a campaigning tool that weaves together survey and story telling via short interactive video articles that educate, provoke and inspire.",
                 "categories": [
-                    "entrepreneurship",
                     "crypto",
                     "info-sec",
                     "political-tech"
                 ]
-            }
-        ]
-    },
-    {
-        "period": "2016-18",
-        "theme": "Developing new interests",
-        "projects": [
+            },
             {
                 "name": "Co-founder: Blox",
                 "url": "https://financeinnovationlab.org/projects/financial-health-fellowship/",
@@ -208,6 +206,7 @@
                 "slug": "blox",
                 "blurb": "Blox was a social network for buildings enabling communities to thrive and alternative socioeconomic systems to flourish. We were incubated by the <a href='https://financeinnovationlab.org/'>Finance Innovation Lab's</a> Financial Health Fellowship.",
                 "categories": [
+                    "full-stack",
                     "entrepreneurship",
                     "crypto",
                     "info-sec"
@@ -229,21 +228,12 @@
                 "name": "Progressive Alliance",
                 "url": "https://clearhonestdesign.com/work/progressive-alliance/",
                 "urlLabel": "View at CHD",
+                "startingClass": "hidden",
                 "slug": "progressive-alliance",
                 "blurb": "For the 2017 election I joined <a href='https://www.compassonline.com'>Compass</a> to help them launch the Progressive Alliance. We delivered the UK's first tactical voting tool of the 2017 General Election, as well as a host of other innovations. Beyond the screen I helped run a Barnstorm in Carlisle.",
                 "categories": [
+                    "full-stack",
                     "political-tech"
-                ]
-            },
-            {
-                "name": "Bridge at Waterloo: Digital Futures",
-                "url": "https://www.bridgeatwaterloo.org/",
-                "urlLabel": "Visit the project",
-                "startingClass": "hidden",
-                "slug": "bridge-at-waterloo",
-                "blurb": "Climaxing in a performance of Rebecca Evans' contemporary dance David at the Southbank Centre, I led a team of novices who learnt how to code by building an app that let the audience control the performance using their phones.",
-                "categories": [
-                    "tech-education"
                 ]
             },
             {
@@ -255,11 +245,33 @@
                 "categories": [
                     "other"
                 ]
+            },
+            {
+                "name": "Lead Lecturer @ Ada, National College for Digital Skills",
+                "url": "https://www.ada.ac.uk",
+                "startingClass": "hidden",
+                "urlLabel": "Visit Ada",
+                "slug": "ada",
+                "blurb": "In 2018 Ada needed someone to come in and finesse the design and delivery of their Software Developer and Data Analyst courses for apprentices from organisations including Google, Facebook and Hackney Council.",
+                "categories": [
+                    "tech-education"
+                ]
+            },
+            {
+                "name": "Bridge at Waterloo: Digital Futures",
+                "url": "https://www.bridgeatwaterloo.org/",
+                "startingClass": "hidden",
+                "urlLabel": "Visit the project",
+                "slug": "bridge-at-waterloo",
+                "blurb": "Climaxing in a performance of Rebecca Evans' contemporary dance David at the Southbank Centre, I led a team of novices who learnt how to code by building an app that let the audience control the performance using their phones.",
+                "categories": [
+                    "tech-education"
+                ]
             }
         ]
     },
     {
-        "period": "2009 - 2015",
+        "period": "2011-15",
         "theme": "Full-time technology education",
         "projects": [
             {
@@ -269,12 +281,19 @@
                 "slug": "decoded",
                 "blurb": "I was CTO and Head of Innovation at Decoded, a global technology education company that has taught hundreds of thousands of people key digital skills.",
                 "categories": [
+                    "full-stack",
                     "entrepreneurship",
                     "tech-education",
-                    "crypto",
                     "info-sec"
                 ]
-            },{
+            }
+        ]
+    },
+    {
+        "period": "2009-11",
+        "theme": "Learning the ropes",
+        "projects": [
+            {
                 "name": "Creative Director @ .web{Devign}",
                 "url": "https://web.archive.org/web/20111104063624/http://www.divinewebdesign.com/",
                 "urlLabel": "Visit .web{devign} on the Wayback Machine",

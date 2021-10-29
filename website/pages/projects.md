@@ -7,7 +7,7 @@ showTitle: true
 eleventyNavigation:
   key: Projects
   parent: Primary
-  order: 0
+  order: 2
 dynamicContent:
   - type: projectsList
     intro: >-

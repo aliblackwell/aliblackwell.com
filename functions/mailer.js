@@ -46,7 +46,7 @@ module.exports.handler = (event, context, callback) => {
         let info = await transporter.sendMail({
             from: senderAddress, // sender address
             to: "aliblackwell@protonmail.com", // list of receivers
-            subject: "New contact form", // Subject line
+            subject: `Contact form - ${event['Your-email']}`, // Subject line
             text: `Name: ${event['Your-name']}
 Email: ${event['Your-email']}
 Number: ${event['Your-number']}

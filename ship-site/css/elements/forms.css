@@ -15,10 +15,8 @@ form {
     position: relative;
     border-radius: var(--border-radius);
     display: block;
-    max-width: var(--width-form);
-    padding: 1.5rem;
-    text-align: var(--justify-normal);
-    margin: 0 auto;
+    max-width: var(--width-form); 
+    text-align: var(--justify-normal); 
 }
 
 form header {
